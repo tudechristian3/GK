@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    android:orientation="vertical">
+
+    <!--loader-->
+    <include layout="@layout/loader" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Voucher Layout-->
+        <LinearLayout
+            android:id="@+id/voucherLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!--last update-->
+            <TextView
+                android:id="@+id/lastupdate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/bluegray"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/colorwhite"
+                android:visibility="gone" />
+
+            <!--drag down to refresh-->
+            <ImageView
+                android:id="@+id/dragdown"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/dragdown"
+                android:visibility="visible" />
+
+            <!--refresh layout-->
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--Button Functions-->
+                            <LinearLayout
+                                android:id="@+id/btnFunctionsLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/color_FAFAFA"
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                android:baselineAligned="false">
+
+                                <LinearLayout
+                                    android:id="@+id/linearGroupVoucherLayout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="3dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn_make_new_dropoff"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_9sdp"
+                                        android:layout_height="@dimen/_9sdp"
+                                        android:src="@drawable/voucher_img_group" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="3dp"
+                                        android:text="Group Voucher"
+                                        android:textAllCaps="true"
+                                        android:textAppearance="@style/roboto.regular"
+                                        android:textColor="@color/whitePrimary"
+                                        android:textSize="@dimen/_8sdp" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/linearTransferVoucherLayout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_weight="1"
+                                    android:padding="2dp"
+                                    android:background="@drawable/btn_make_new_dropoff"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_9sdp"
+                                        android:layout_height="@dimen/_9sdp"
+                                        android:src="@drawable/transfervoucher" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="3dp"
+                                        android:text="Transfer Vouchers"
+                                        android:textAllCaps="true"
+                                        android:textAppearance="@style/roboto.regular"
+                                        android:textColor="@color/whitePrimary"
+                                        android:textSize="@dimen/_7sdp" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/linearMoreLayout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn_make_new_dropoff"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_9sdp"
+                                        android:layout_height="@dimen/_9sdp"
+                                        android:src="@drawable/ellipses" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="3dp"
+                                        android:text="More"
+                                        android:textAllCaps="true"
+                                        android:textAppearance="@style/roboto.regular"
+                                        android:textColor="@color/whitePrimary"
+                                        android:textSize="@dimen/_8sdp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:contentDescription="@null"
+                                    android:src="@drawable/logowatermark" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/recyclerView"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="4dp"
+                                        android:clipToPadding="false"/>
+
+                                    <View
+                                        android:id="@+id/view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="10dp"/>
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/rv_vouchers_payoutone"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="4dp"
+                                        android:clipToPadding="false"/>
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+        <!--Layout for empty -->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/emptyswiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:fillViewport="true"
+            android:visibility="gone"
+            android:overScrollMode="never">
+
+            <FrameLayout
+                android:id="@+id/emptyvoucher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorwhite"
+                android:gravity="center_horizontal"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/novoucher"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_marginTop="25dp"
+                        android:contentDescription="@null"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/novouchersyet"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_refer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button"
+                            android:minWidth="210dp"
+                            android:text="GET FREE VOUCHER"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_or"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="15dp"
+                            android:text="OR"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textColor="@color/buttons"
+                            android:textSize="18sp"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_buy_vocher"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_bg_white_brdr_blue_radius"
+                            android:minWidth="210dp"
+                            android:text="BUY VOUCHER"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textColor="@color/buttons"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:paddingBottom="8dp"
+                    android:src="@drawable/logowatermark" />
+
+            </FrameLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--Layout for no connection -->
+        <RelativeLayout
+            android:id="@+id/nointernetconnection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/nointernet" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView1"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:padding="30dp"
+                android:text="Opps! It looks like you're not connected. Please check your internet connection."
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/refreshnointernet"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:src="@drawable/refresh4"
+                android:text="REFRESH"
+                android:textColor="@color/colorwhite"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/refreshdisabled1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:src="@drawable/refreshdisabled"
+                android:text="REFRESH"
+                android:textColor="@color/colorwhite"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="8dp"
+                android:src="@drawable/logowatermark" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/scrollindicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top|center_horizontal"
+            android:background="#88676767"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="200dp"
+                android:alpha="0.7"
+                android:src="@drawable/slider_up" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="200dp"
+                android:alpha="0.7"
+                android:src="@drawable/slider_down" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/menu_gk_services" />
+
+        <!--voucher summary layout-->
+        <RelativeLayout
+            android:id="@+id/vouchersummarywrap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/translucentblack"
+            android:gravity="right|end"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/vouchersummarylist"
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorwhite"
+                android:listSelector="@android:color/transparent"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

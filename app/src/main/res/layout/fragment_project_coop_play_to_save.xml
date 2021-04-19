@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_EFEFEF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nested_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linearCoopPlayToSave"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@color/color_EFEFEF"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.5"
+                                android:backgroundTint="@color/color_204499"
+                                android:contentDescription="@null"
+                                android:padding="20dp"
+                                android:src="@drawable/cpmpc_p2s" />
+
+                            <TextView
+                                android:id="@+id/txvPlayToSave"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="start|center_vertical"
+                                android:textColor="@color/color_204499"
+                                android:textSize="30dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txvPreviousEntries"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/btn_paramount_rounded_sides"
+                            android:elevation="4dp"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="VIEW PREVIOUS ENTRIES"
+                            android:textColor="@color/whitePrimary"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/linearResultsLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingStart="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/txvResultDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="Results"
+                                android:textColor="@color/color_A5A5A5"
+                                android:textSize="16dp"
+                                tools:ignore="TooDeepLayout" />
+
+                            <LinearLayout
+                                android:gravity="end"
+                                android:orientation="horizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:layout_weight="1">
+
+                                <EditText
+                                    android:id="@+id/edtResultDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="end"
+                                    android:background="@null"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:gravity="end"
+                                    android:hint="yy/mm/dd"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:longClickable="false"
+                                    android:textColor="@color/color_ED2228"
+                                    android:textSize="16dp" />
+
+                                <ImageView
+                                    android:id="@+id/imgAccordion"
+                                    android:layout_width="25dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="right"
+                                    android:contentDescription="@null"
+                                    android:rotation="90"
+                                    android:layout_marginEnd="-1dp"
+                                    android:layout_marginRight="-1dp"
+                                    android:tint="@color/color_ED2228"
+                                    android:src="@mipmap/arrow2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorwhite">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/txvResult"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingBottom="20dp"
+                                android:paddingTop="20dp"
+                                android:textColor="@color/colorblack"
+                                android:textSize="24dp"
+                                android:visibility="gone" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/txvPlayTheGame"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingBottom="20dp"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            android:paddingTop="15dp"
+                            android:text="Play the Game"
+                            android:textColor="@color/colorblack"
+                            android:textSize="36dp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewDigits"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/colorwhite"
+                            android:focusableInTouchMode="true"
+                            android:orientation="vertical"
+                            android:paddingBottom="20dp">
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/txvMechanicsNotes"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:paddingBottom="10dp"-->
+                            <!--android:paddingEnd="20dp"-->
+                            <!--android:paddingLeft="20dp"-->
+                            <!--android:paddingRight="20dp"-->
+                            <!--android:paddingStart="20dp"-->
+                            <!--android:paddingTop="10dp"-->
+                            <!--android:textColor="@color/colorblack"-->
+                            <!--android:textSize="16dp" />-->
+
+                            <WebView
+                                android:id="@+id/webView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

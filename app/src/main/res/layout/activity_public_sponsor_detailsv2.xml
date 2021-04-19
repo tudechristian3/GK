@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitePrimary"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/spscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_sponsorlogo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:src="@drawable/emptylogdefault" />
+
+            <HorizontalScrollView
+                android:id="@+id/horzontal_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_sponsorlogo"
+                android:background="#fafafa"
+                android:padding="5dp"
+                android:layout_marginTop="23dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/txv_option_website"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="WEBSITE"
+                        android:textColor="@color/tabcolor"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:textAppearance="@style/roboto.bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="|"
+                        android:textColor="@color/tabcolor"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:textAppearance="@style/roboto.bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/txv_option_promotions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="PROMOTIONS"
+                        android:textColor="@color/tabcolor"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:textAppearance="@style/roboto.bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="|"
+                        android:textColor="@color/tabcolor"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:textAppearance="@style/roboto.bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/txv_option_terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="TERMS AND CONDITIONS"
+                        android:textColor="@color/tabcolor"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:textAppearance="@style/roboto.bold"
+                        />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TableLayout
+                android:id="@+id/layoutinfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/horzontal_scrollview"
+                android:layout_centerInParent="true"
+                android:stretchColumns="*"
+                android:layout_marginTop="20dp"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp"
+                    android:weightSum="100"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70"
+                        android:layout_marginTop="0dp"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="25dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txv_sponsorname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(CPMC) Cebu Peoples Multipurpose Coorperative"
+                            android:textColor="@color/tabcolor"
+                            android:textSize="16sp"/>
+
+
+                        <TextView
+                            android:id="@+id/txv_sponsoraddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:text="Mandaue"/>
+
+                        <TextView
+                            android:id="@+id/txv_sponsoremail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="anncamarador@gmail.com" />
+
+                        <TextView
+                            android:id="@+id/txv_sponsortel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="09232274448" />
+
+                        <TextView
+                            android:id="@+id/txv_sponsormobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="09323123213" />
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="30dp">
+
+                        <Button
+                            android:id="@+id/btn_apply"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button"
+                            android:text="APPLY"
+                            android:gravity="center"
+                            android:textColor="@color/whitePrimary" />
+
+                    </RelativeLayout>
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/aboutuslabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutinfo"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:text="About Us : "
+                android:textColor="@color/tabcolor"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/aboutusval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutuslabel"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Sample about us" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/termscondition"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/aboutusval"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:text="@string/termsandconditions"-->
+            <!--android:textColor="@color/tabcolor"-->
+            <!--android:onClick="openSponsorTermandCondition"/>-->
+
+            <TextView
+                android:id="@+id/locationlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutusval"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:text="Location : "
+                android:textColor="@color/tabcolor"
+                android:textSize="16dp" />
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationlbl"
+                android:layout_marginBottom="20dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <fragment
+                        android:id="@+id/map"
+                        class="com.goodkredit.myapplication.utilities.CustomMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="20dp" />
+
+                </FrameLayout>
+
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/container_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorwhite"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+
+</LinearLayout>

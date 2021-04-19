@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/mLoaderDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Processing..."
+        android:textSize="25sp"
+        android:textAppearance="@style/roboto.bold"
+        android:textColor="@color/colortoolbar"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/mLoaderDialogImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/mLoaderDialogTitle" />
+
+    <TextView
+        android:id="@+id/mLoaderDialogMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mLoaderDialogImage"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="Transaction is in progress.\n Please wait..."
+        android:textSize="16sp" />
+
+</RelativeLayout>

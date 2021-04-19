@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:id="@+id/scrollView"
+    android:background="@color/whitePrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Referral Code:"
+                android:textColor="@color/color_gkearn_blue"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <EditText
+                android:id="@+id/edt_enter_referralcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gray_box"
+                android:hint="Optional"
+                android:padding="10dp" />
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/tblrow1"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:paddingBottom="10dp"-->
+<!--                android:paddingTop="5dp">-->
+
+<!--                <EditText-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:focusable="false"-->
+<!--                    android:gravity="center"-->
+<!--                    android:background="#DBDBDB"-->
+<!--                    android:inputType="number"-->
+<!--                    android:paddingBottom="14.4sp"-->
+<!--                    android:paddingTop="14.4sp"-->
+<!--                    android:textAppearance="@style/roboto.regular"-->
+<!--                    android:textColor="@color/colorblack"-->
+<!--                    android:text="+63"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/edt_referredby"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="4.7"-->
+<!--                    android:background="@drawable/border_freesms_bordertopbottomright"-->
+<!--                    android:fontFamily="sans-serif"-->
+<!--                    android:hint="(ex. 9123456789)"-->
+<!--                    android:digits="0123456789"-->
+<!--                    android:inputType="number"-->
+<!--                    android:maxLength="10"-->
+<!--                    android:padding="14.4sp"-->
+<!--                    android:textColor="@color/freesms_textcolor"-->
+<!--                    android:textSize="16sp"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/btn_open_contacts"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:contentDescription="@null"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:src="@drawable/ic_contacts"-->
+<!--                    android:padding="2dp"/>-->
+
+<!--            </TableRow>-->
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_gkearn_register"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="@dimen/_220sdp"
+            android:src="@drawable/gkearn_register"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

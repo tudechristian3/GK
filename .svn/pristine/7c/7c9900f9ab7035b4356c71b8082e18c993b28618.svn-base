@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/whitePrimary"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/gk_services_logo"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:padding="4dp"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/gk_services_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/gk_services_logo"
+        android:layout_toRightOf="@+id/gk_services_logo"
+        android:padding="4dp" />
+
+
+</RelativeLayout>

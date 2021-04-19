@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/home_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:visibility="visible">
+
+        <!--android:layout_above="@+id/btn_action_container"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.shuhart.stepview.StepView
+                    android:id="@+id/step_view"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="16dp"
+                    app:sv_animationType="All"
+                    app:sv_doneCircleColor="@color/color_success_green"
+                    app:sv_doneCircleRadius="12dp"
+                    app:sv_doneStepLineColor="@color/coopassist_green"
+                    app:sv_doneStepMarkColor="@color/coopassist_superlightgray"
+                    app:sv_nextStepLineColor="@color/coopassist_lightgray"
+                    app:sv_nextTextColor="@color/coopassist_lightgray"
+                    app:sv_selectedCircleColor="@color/coopassist_green"
+                    app:sv_selectedCircleRadius="14dp"
+                    app:sv_selectedStepNumberColor="@color/colorwhite"
+                    app:sv_selectedTextColor="@color/colorwhite"
+                    app:sv_stepLineWidth="1dp"
+                    app:sv_stepNumberTextSize="16sp"
+                    app:sv_stepViewStyle="@style/StepView" />
+
+            </LinearLayout>
+
+            <!--STATIC FIELDS-->
+            <include layout="@layout/fragment_coopassistant_newapplication_include" />
+
+            <!--CUSTOM FIELDS PAGE 2-->
+            <LinearLayout
+                android:id="@+id/layout_custom_fields_page2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10ssp"
+                android:visibility="gone" />
+
+            <!--CUSTOM FIELDS PAGE 3-->
+            <LinearLayout
+                android:id="@+id/layout_custom_fields_page3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10ssp"
+                android:visibility="gone" />
+
+            <!--BUTTON ACTION-->
+            <include layout="@layout/global_layout_btn_action" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

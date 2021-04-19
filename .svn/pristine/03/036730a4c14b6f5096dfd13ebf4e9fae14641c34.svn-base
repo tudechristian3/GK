@@ -1,0 +1,14 @@
+
+#BASE URL
+OLD_LINK = "http://staging-wsborrower.goodkredit.com/"
+SECURED_LINK = "http://staging-wsborrowerv2.goodkredit.com/"
+PUSH_NOTIFICATION_LINK = "http://staging-wspush.goodkredit.com/"
+S3_LINK = "https://s3-us-west-1.amazonaws.com/goodkredit/"
+DEBUG_MODE = "true"
+BUCKET_NAME = "gk-profile"
+SUPPORT_BUCKET_NAME = "gk-support"
+FREE_NET_KEY = "b2JHRJTbjaAOVXVo7X6eZx8iihiDDR70sb6dijJm3Oe8S5K"
+SPONSOR_TERMS_AND_CONDITION_URL = "http://staging-www.goodkredit.com/#/sponsor/termsandconditions/"
+HTTP_LOGS = "true"
+ENCRYPT = "true"
+TERMS_GUARANTOR_SIGN_UP = "https://www.goodkredit.com/#/termsofuse"

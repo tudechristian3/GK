@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dropoff_merchants"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/img_merchantlogo"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:contentDescription="@null"
+            android:padding="5dp"
+            android:scaleType="fitStart" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Merchant Name :"
+                android:textAppearance="@style/roboto.regular"
+                android:textColor="@color/colorsilver" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txv_merchantname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chooks to Go"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/colorTextGrey" />
+
+                <!--<ImageView-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:src="@drawable/ic_chevron_right"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_marginRight="30dp"/>-->
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address :"
+                android:textAppearance="@style/roboto.regular"
+                android:textColor="@color/colorsilver" />
+
+            <TextView
+                android:id="@+id/txv_merchantaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Escario St., Camputhaw, Cebu"
+                android:textAppearance="@style/roboto.bold"
+                android:textColor="@color/colorTextGrey" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_dropoff_right"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

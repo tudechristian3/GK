@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Layout for empty-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emptyLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/txv_empty_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:textColor="@color/colorTextGrey"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imv_empty_box"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/emptybox" />
+
+    <ImageView
+        android:id="@+id/imv_empty_box_watermark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:paddingBottom="8dp"
+        android:src="@drawable/logowatermark" />
+
+    <ImageView
+        android:id="@+id/imv_empty_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/imv_empty_box"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:visibility="gone"
+        android:src="@drawable/refresh4" />
+
+</RelativeLayout>

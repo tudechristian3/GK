@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FAFAFA"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--MAIN LAYOUT-->
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nested_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@null"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_email_hint_icon"
+                                    android:tint="@color/color_8A6D3B" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/string_skycable_ppv_hint"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <!--Skycable-->
+                                <TextView
+                                    android:id="@+id/txvSkycableAccountNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="SKYCABLE Account No*"
+                                    android:textSize="14dp"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtSkycableAccountNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:text="Your account number is provided on your Statement of Account."
+                                    android:textSize="12dp"
+                                    android:textStyle="italic" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvFirstName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:textSize="14dp"
+                                    android:text="First Name*"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtFirstName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvLastName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:textSize="14dp"
+                                    android:text="Last Name*"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtLastName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvMobileNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:textSize="14dp"
+                                    android:text="Mobile Number*"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtMobileNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:digits="0123456789"
+                                    android:inputType="number|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvEmailAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:textSize="14dp"
+                                    android:text="Email Address*"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtEmailAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textEmailAddress|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Address"
+                                    android:textSize="14dp"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/edtAddress"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/border"
+                                        android:gravity="top|start"
+                                        android:inputType="textMultiLine|textPersonName|textNoSuggestions"
+                                        android:lines="8"
+                                        android:maxLines="10"
+                                        android:minLines="3"
+                                        android:padding="10dp"
+                                        android:scrollbars="vertical"
+                                        android:textColor="@color/colorTextGrey"
+                                        android:textSize="16dp" />
+
+                                    <ImageView
+                                        android:id="@+id/imgAddress"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_weight="0.2"
+                                        android:src="@drawable/ic_gk_store_map"
+                                        tools:ignore="ContentDescription" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvCity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="City"
+                                    android:textSize="14dp"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtCity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom">
+
+                            <Button
+                                android:id="@+id/btnProceed"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/color_24BDD9"
+                                android:text="PROCEED"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="18dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </LinearLayout>
+
+        <!--Layout for no connection -->
+        <RelativeLayout
+            android:id="@+id/nointernetconnection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/nointernet" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView1"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="30dp"
+                android:text="Opps! It looks like you're not connected. Please check your internet connection."
+                android:textSize="16dp" />
+
+
+            <ImageView
+                android:id="@+id/refreshnointernet"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:src="@drawable/refresh4" />
+
+            <ImageView
+                android:id="@+id/refreshdisabled1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:src="@drawable/refreshdisabled"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="8dp"
+                android:src="@drawable/logowatermark" />
+        </RelativeLayout>
+
+        <include layout="@layout/loader" />
+
+    </FrameLayout>
+
+</LinearLayout>

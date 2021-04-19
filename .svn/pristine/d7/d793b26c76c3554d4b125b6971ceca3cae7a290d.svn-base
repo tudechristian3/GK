@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FAFAFA">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <!--MAIN LAYOUT-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_FAFAFA"
+            android:orientation="vertical">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nested_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:contentDescription="@null"
+                                android:gravity="center_vertical"
+                                android:maxHeight="150dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/paramount_header" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/string_vehicle_details"
+                                android:textAllCaps="true"
+                                android:textColor="@color/color_4A90E2"
+                                android:textSize="20sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="@string/string_mv_file_number"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtMVFileNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:maxLength="16"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16sp"
+                                    tools:ignore="TextFields" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="@string/string_plate_number"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtPlateNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textCapCharacters|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16sp"
+                                    tools:ignore="TextFields" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="@string/string_engine_motor_number"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtEngineMotorNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16sp"
+                                    tools:ignore="TextFields" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="@string/string_serial_chassis_number"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtSerialChassisNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16sp"
+                                    tools:ignore="TextFields"
+                                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom">
+
+                            <Button
+                                android:id="@+id/btnNext"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/color_0160B0"
+                                android:text="@string/string_next"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlayLayout"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:background="#CFD7DB"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/freeModeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="20dp"
+        android:text="You're in Data Mode" />
+
+    <Button
+        android:id="@+id/freeModeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/button"
+        android:elevation="4dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Go to Free"
+        android:textAllCaps="false"
+        android:textColor="@color/colorwhite" />
+
+</LinearLayout>
+
+    <!--android:background="#25BED9"-->

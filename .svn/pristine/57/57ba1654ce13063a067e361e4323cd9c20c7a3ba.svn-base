@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colortoolbar"
+            app:popupTheme="@style/MyMaterialTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarwrap">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@color/colorwhite"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/gvd_voucherImage"
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:scaleType="fitCenter" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="VOUCHER ID"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/gvd_vouchercode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="00-0000-00000-0"
+                            android:textColor="@color/colorblack"
+                            android:textSize="18sp"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="PIN"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/gvd_voucherpin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="0000"
+                            android:textColor="@color/colorblack"
+                            android:textSize="18sp"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="GROUP NAME"
+                            android:visibility="gone"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/gvd_groupName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/colorblack"
+                            android:textSize="18sp"
+                            android:visibility="gone"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:ellipsize="middle"
+                            android:singleLine="true"
+                            android:text="VOUCHERS"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/gvd_nofVoucher"
+                            style="@style/GroupedVouchersSpaceBetweenUs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/colorblack"
+                            android:textSize="18sp"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="AMOUNT"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/gvd_totalAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/colorblack"
+                            android:textSize="18sp"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="-16dp"
+                    android:background="@color/colorwhite"
+                    android:orientation="vertical">
+
+
+
+                    <TextView
+                        android:id="@+id/gvd_edit_mode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordertop"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Edit Group"
+                        android:textColor="@color/colortoolbar" />
+
+                    <TextView
+                        android:id="@+id/renamegroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordertop"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Rename Group"
+                        android:textColor="@color/colortoolbar" />
+
+                    <LinearLayout
+                        android:id="@+id/gvd_regen_pin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bordertop"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/gvd_regen_progress"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:text="Regenerate PIN"
+                            android:textColor="@color/colortoolbar" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="To consume, scan the barcode below." />
+
+                <RelativeLayout
+                    android:id="@+id/barCodeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@color/colorwhite"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/barcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="95dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:id="@+id/barcodeValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/barcode"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp" />
+
+                    <ImageView
+                        android:id="@+id/arrowdown"
+                        android:layout_width="15dp"
+                        android:layout_height="9dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/expand_more" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightgray"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <com.goodkredit.myapplication.view.ExpandableHeightGridView
+                        android:id="@+id/gridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorwhite"
+                        android:columnWidth="85dp"
+                        android:drawSelectorOnTop="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:numColumns="auto_fit"
+                        android:padding="10dp"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="5dp"
+                        tools:listitem="@layout/fragment_available_item" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/barcodeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/linearLayoutVPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/left"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="4dp"
+                android:paddingStart="4dp"
+                android:paddingTop="16dp">
+
+                <ImageView
+
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/top_pointer" />
+
+            </RelativeLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/left"
+                android:layout_toLeftOf="@+id/right"
+                android:layout_toRightOf="@+id/left"
+                android:layout_toStartOf="@+id/right"
+                android:gravity="center"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+            <RelativeLayout
+                android:id="@+id/right"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:paddingEnd="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="16dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:rotation="180"
+                    android:src="@drawable/top_pointer" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/whitebarcodeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutVPager"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-4dp"
+            android:textColor="@color/colorwhite"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

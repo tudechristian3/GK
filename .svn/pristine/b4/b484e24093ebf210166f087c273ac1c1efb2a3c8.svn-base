@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPadding="@dimen/padding_10"
+    android:layout_margin="@dimen/_8sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/pmes_video_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Video Presentation"
+            android:textColor="@color/quantum_black_100"
+            android:textSize="18sp"
+           />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/quantum_black_divider"
+            android:layout_marginTop="@dimen/padding_10"
+            android:layout_marginBottom="@dimen/padding_10"
+            />
+
+        <TextView
+            android:id="@+id/pmes_video_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:layout_marginTop="@dimen/default_padding_top"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

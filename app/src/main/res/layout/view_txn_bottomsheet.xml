@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#00000000">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_margin">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="@dimen/padding_10">
+
+           <ImageView
+               android:id="@+id/closeImg"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_close_grey600_24dp"
+               android:padding="@dimen/padding_10"
+               android:layout_alignParentEnd="true"
+             />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_alignParentEnd="true"
+               android:layout_alignParentStart="true"
+               android:layout_below="@id/closeImg">
+
+               <ImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:srcCompat="@drawable/gkblacklogo"
+                   />
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="0.5dp"
+                   android:layout_marginTop="@dimen/activity_vertical_margin"
+                   android:layout_marginBottom="@dimen/activity_vertical_margin"
+                   android:background="@color/quantum_black_divider"/>
+
+               <TextView
+                   android:id="@+id/view_txn_no"
+                   android:layout_width="match_parent"
+                   android:text="Transaction #: 01123456"
+                   android:gravity="center"
+                   android:padding="@dimen/padding_10"
+                   android:layout_height="wrap_content"
+                   android:paddingStart="@dimen/inner_padding_right"
+                   android:ellipsize="end"/>
+               <TextView
+                   android:id="@+id/view_ref_no"
+                   android:layout_width="match_parent"
+                   android:text="GK Ref # : 0121212121"
+                   android:padding="@dimen/padding_10"
+                   android:gravity="center"
+                   android:layout_height="wrap_content"
+                   android:paddingStart="@dimen/inner_padding_right"
+                   android:ellipsize="end"/>
+               <TextView
+                   android:id="@+id/view_txn_network"
+                   android:layout_width="match_parent"
+                   android:text="Network: Talk N Text"
+                   android:gravity="center"
+                   android:padding="@dimen/padding_10"
+                   android:layout_height="wrap_content"
+                   android:paddingStart="@dimen/inner_padding_right"
+                   android:ellipsize="end"/>
+               <TextView
+                   android:id="@+id/view_txn_mobile"
+                   android:layout_width="match_parent"
+                   android:text="Mobile #: 09561845979"
+                   android:gravity="center"
+                   android:padding="@dimen/padding_10"
+                   android:layout_height="wrap_content"
+                   android:paddingStart="@dimen/inner_padding_right"
+                   android:ellipsize="end"/>
+               <TextView
+                   android:id="@+id/view_txn_productcode"
+                   android:layout_width="match_parent"
+                   android:text="Product Code: LD"
+                   android:padding="@dimen/padding_10"
+                   android:gravity="center"
+                   android:layout_height="wrap_content"
+                   android:paddingStart="@dimen/inner_padding_right"
+                   android:ellipsize="end"/>
+               <TextView
+                   android:id="@+id/view_txn_producttype"
+                   android:layout_width="match_parent"
+                   android:text="Product Type : Regular"
+                   android:gravity="center"
+                   android:layout_height="wrap_content"
+                   android:paddingStart="@dimen/inner_padding_right"
+                   android:ellipsize="end"/>
+               <TextView
+                   android:id="@+id/view_txn_amount"
+                   android:layout_width="match_parent"
+                   android:text="Load Amount: 10.00"
+                   android:gravity="center"
+                   android:padding="@dimen/padding_10"
+                   android:layout_height="wrap_content"
+                   android:paddingStart="@dimen/inner_padding_right"
+                   android:ellipsize="end"/>
+               <TextView
+                   android:id="@+id/view_txn_datecompleted"
+                   android:layout_width="match_parent"
+                   android:text="Date &amp; Time: 2019/12/03 11:03:46 AM"
+                   android:gravity="center"
+                   android:layout_height="wrap_content"
+                   android:paddingStart="@dimen/inner_padding_right"
+                   android:padding="@dimen/padding_10"
+                   android:ellipsize="end"/>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="0.5dp"
+                   android:layout_marginTop="@dimen/activity_vertical_margin"
+                   android:layout_marginBottom="@dimen/activity_vertical_margin"
+                   android:background="@color/quantum_black_divider"/>
+
+           </LinearLayout>
+
+
+       </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        app:cardElevation="@dimen/cardview_default_elevation">
+
+        <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:id="@+id/txnLoadType"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/messenger"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/default_padding_bottom"
+                android:paddingStart="@dimen/padding_10"
+                android:layout_toEndOf="@id/txnLoadType"
+                tools:ignore="RtlSymmetry"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="From"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/inner_padding_right"
+                    android:ellipsize="end"/>
+
+                <TextView
+                    android:id="@+id/view_txn_name"
+                    android:layout_width="wrap_content"
+                    android:text="Miles Mushroom"
+                    android:ellipsize="end"
+                    android:autoSizeTextType="uniform"
+                    android:textColor="#0094FF"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:paddingStart="@dimen/inner_padding_right"
+                    android:textSize="20sp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:padding="@dimen/default_padding_bottom">
+
+                <TextView
+                    android:id="@+id/view_txn_id"
+                    android:layout_width="wrap_content"
+                    android:text="(01234556789)"
+                    android:gravity="end"
+                    android:autoSizeTextType="uniform"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"/>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

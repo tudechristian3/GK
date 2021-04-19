@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitePrimary"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_10sdp"
+                >
+
+                <ImageView
+                    android:id="@+id/imv_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180sdp"
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/txv_attendance_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/color_6FC7AF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txv_attendance_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/color_text_darkgray"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

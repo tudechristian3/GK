@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_380sdp"
+        app:fillColor="@color/color_gkearn_blue"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="4000"
+        app:strokeColor="@color/color_gkearn_blue"
+        app:strokeWidth="1dp" />
+
+    <LinearLayout
+        android:id="@+id/btn_registertoearn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carouselView"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_gkearn_blue"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minWidth="@dimen/_200sdp"
+            android:text="Register to EARN"
+            android:textColor="@color/whitePrimary" />
+    </LinearLayout>
+
+</RelativeLayout>

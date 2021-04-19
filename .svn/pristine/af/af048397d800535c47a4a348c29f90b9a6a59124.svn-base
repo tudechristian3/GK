@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    tools:context="com.goodkredit.myapplication.common.PaymentConfirmation"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:id="@+id/home_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/maincontainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp"
+                android:text="Confirm Transaction"
+                android:textColor="@color/colortoolbar"
+                android:textSize="16dp"
+                android:textAppearance="@style/roboto.bold"
+                android:textStyle="bold" />
+
+            <TableRow
+                android:id="@+id/mobilerow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="MOBILE NO"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txv_mobileno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/productcoderow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="PRODUCT CODE"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txv_productcode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <!--AMOUNT-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="AMOUNT"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txv_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <!--RESELLER DISCOUNT-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="RESELLER DISCOUNT"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txv_resellerdiscount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="AMOUNT TO PAY"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txv_amounttopay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="AMOUNT TENDERED"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txv_amounttendered"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="CHANGE"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txv_change"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

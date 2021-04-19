@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shadow_box"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingEnd="15dp"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/borrowings_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_676767"
+                android:textAppearance="@style/roboto.bold"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/color_FAFAFA"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usage_details_divider_item"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start|center_vertical"
+                    android:text="Time"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_B8B7B8" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/color_676767" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/billingNoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usage_details_divider_item"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start|center_vertical"
+                    android:text="Transaction No."
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_B8B7B8" />
+
+                <TextView
+                    android:id="@+id/billingNo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/color_676767" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/paymentTxnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usage_details_divider_item"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start|center_vertical"
+                    android:text="Payment Txn. No."
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_B8B7B8" />
+
+                <TextView
+                    android:id="@+id/paymentTxnNo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/color_676767" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usage_details_divider_item"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start|center_vertical"
+                    android:text="Transaction No."
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_B8B7B8" />
+
+                <TextView
+                    android:id="@+id/transactionno"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/color_676767" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usage_details_divider_item"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start|center_vertical"
+                    android:text="Total Vouchers"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_B8B7B8" />
+
+                <TextView
+                    android:id="@+id/totalvoucher"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/color_676767" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usage_details_divider_item"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start|center_vertical"
+                    android:text="Total Amount"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_B8B7B8" />
+
+                <TextView
+                    android:id="@+id/totalamount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/color_676767" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usage_details_divider_item"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start|top"
+                    android:text="Status"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_B8B7B8" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/color_676767" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/voucher_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/pbrecyclerProgress"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_borrowings_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/fragment_transactions_borrowings_details_item" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_view_voucher_details"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorwhite"
+                android:text="@string/string_view_voucher_details"
+                android:textAllCaps="false"
+                android:textColor="@color/color_4A90E2"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_hide_voucher_details"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorwhite"
+                android:text="@string/string_hide_voucher_details"
+                android:textAllCaps="false"
+                android:textColor="@color/color_4A90E2"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

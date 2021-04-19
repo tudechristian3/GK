@@ -1,0 +1,248 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/logowatermarklayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"
+                android:paddingBottom="8dp"
+                android:src="@drawable/logowatermark" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_scroll_logs_retailer_reloading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pagetitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_vertical"
+                    android:padding="10dp"
+                    android:text="CSB Redemption History"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_676767" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_retailer_reloading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginStart="1dp"
+                    android:paddingEnd="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"/>
+
+                <Button
+                    android:id="@+id/btn_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/colorwhite"
+                    android:textAllCaps="true"
+                    android:textColor="@color/buttons"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/roboto.bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </RelativeLayout>
+
+        <!--Layout for empty-->
+        <RelativeLayout
+            android:id="@+id/emptyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="No redemption yet."
+                android:textColor="@color/colorTextGrey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/viewarchive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView11"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="VIEW ARCHIVE"
+                android:textColor="@color/buttons"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAppearance="@style/roboto.bold"/>
+
+            <ImageView
+                android:id="@+id/box"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/emptybox" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"
+                android:paddingBottom="8dp"
+                android:src="@drawable/logowatermark" />
+
+            <ImageView
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/box"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@null"
+                android:gravity="center"
+                android:src="@drawable/refresh4" />
+
+        </RelativeLayout>
+
+        <!--Layout for empty filtering-->
+        <RelativeLayout
+            android:id="@+id/emptyvoucherfilter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/filteroption"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:padding="20dp"
+                android:paddingBottom="100dp"
+                android:text="No Record Found"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/filteroption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="FILTER OPTIONS"
+                android:textColor="@color/buttons"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/roboto.bold"/>
+
+        </RelativeLayout>
+
+        <!--Layout for no connection -->
+        <RelativeLayout
+            android:id="@+id/nointernetconnection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/nointernet" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView1"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="30dp"
+                android:text="Opps! It looks like you're not connected. Please check your internet connection."
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/refreshnointernet"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:src="@drawable/refresh4" />
+
+            <ImageView
+                android:id="@+id/refreshdisabled1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:src="@drawable/refreshdisabled"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="8dp"
+                android:src="@drawable/logowatermark" />
+        </RelativeLayout>
+
+        <include layout="@layout/loader" />
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

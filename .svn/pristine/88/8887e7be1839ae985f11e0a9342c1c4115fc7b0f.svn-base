@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FAFAFA"
+    tools:context="com.goodkredit.myapplication.activities.paramount.ParamountInsuranceConfirmationActivity">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="-20dp"
+                        android:layout_weight="2">
+
+                        <include layout="@layout/fragment_skycable_new_application_plans_item" />
+
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:text="Plan Information"
+                    android:textColor="@color/colortoolbar"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorwhite"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="DESCRIPTION"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="INSTALLATION FEE"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvInstallationFee"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="MONTHLY FEE"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvMonthlyFee"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="INITIAL CASH-OUT"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvInitialCashout"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="DISCOUNT"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvDiscount"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearButtonsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btnPay"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_btn_accent_pay"
+                        android:drawableLeft="@drawable/ic_confirm"
+                        android:drawableStart="@drawable/ic_confirm"
+                        android:textColor="@color/colorwhite"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:text="Client Information"
+                    android:textColor="@color/colortoolbar"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorwhite"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="REGISTRATION ID"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvRegistrationID"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="NAME"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvRegistrationsName"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="MOBILE NUMBER"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvMobileNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="TELEPHONE NUMBER"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvTelephoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="EMAIL ADDRESS"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvEmailAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="ADDRESS"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="BILLING ADDRESS"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvBillingAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="INSTALLATION ADDRESS"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvInstallationAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="GENDER"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="BIRTH DATE"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txvBirthDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text=""
+                            android:textColor="@color/colorblack"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:text="Documentary Information"
+                    android:textColor="@color/colortoolbar"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorwhite"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="IDENTIFICATION NUMBER"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:id="@+id/imgIdentificationNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@null"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:text="PROOF OF BILLING"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:id="@+id/imgProofOfBilling"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@null"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txvPaymentDetailsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:text="Payment Details"
+                    android:textColor="@color/colortoolbar"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/linearPaymentDetailsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorwhite"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <!--APPROVAL CODE-->
+                            <LinearLayout
+                                android:id="@+id/approvalCodeLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp"
+                                    android:text="APPROVAL CODE"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/txvApprovalCode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text=""
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <!--MONTHLY FEE AMOUNT-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp"
+                                    android:text="MONTHLY FEE"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/txvConfirmAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text=""
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <!--INSTALLATION FEE AMOUNT-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp"
+                                    android:text="INSTALLATION FEE"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/txvInstallationFeeConfirmAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text=""
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <!--OTHER CHARGES-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp"
+                                    android:text="SERVICE CHARGE"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/txvConfirmServiceCharge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text=""
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <!--INSTALLATION FEE AMOUNT-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp"
+                                    android:text="DISCOUNT"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/txvDiscountConfirmAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text=""
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <!--AMOUNT PAID-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp"
+                                    android:text="TOTAL AMOUNT PAID"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/txvConfirmAmountPaid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text=""
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--RECYCLER LIST-->
+                        <LinearLayout
+                            android:id="@+id/voucher_details_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:focusableInTouchMode="true"
+                                android:orientation="vertical">
+
+                                <ProgressBar
+                                    android:id="@+id/pbrecyclerProgress"
+                                    style="?android:attr/progressBarStyleSmall"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:visibility="gone" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerViewVouchers"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    tools:listitem="@layout/consumed_details_item" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <!--Layout for no connection -->
+    <RelativeLayout
+        android:id="@+id/nointernetconnection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorwhite"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/nointernet" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView1"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="Opps! It looks like you're not connected. Please check your internet connection."
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/refreshnointernet"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/textView2"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:src="@drawable/refresh4" />
+
+        <ImageView
+            android:id="@+id/refreshdisabled1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/textView2"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:src="@drawable/refreshdisabled"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="8dp"
+            android:src="@drawable/logowatermark" />
+    </RelativeLayout>
+
+    <include layout="@layout/loader" />
+
+</FrameLayout>

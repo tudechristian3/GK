@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical">
+
+    <!--@color/color_FAFAFA-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shadow_box"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingEnd="15dp"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/txv_datevoted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_676767"
+                android:textStyle="bold"
+                android:text="DATE"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/color_FAFAFA"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usage_details_divider_item"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start|center_vertical"
+                    android:text="Time"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_B8B7B8" />
+
+                <TextView
+                    android:id="@+id/txv_timevoted"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/color_676767" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usage_details_divider_item"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start|center_vertical"
+                    android:text="EVENT NAME"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_B8B7B8" />
+
+                <TextView
+                    android:id="@+id/txv_eventname"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/color_676767" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_participant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usage_details_divider_item"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start|center_vertical"
+                    android:text="PARTICIPANT"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_B8B7B8" />
+
+                <TextView
+                    android:id="@+id/txv_participant"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/color_676767" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_noofvotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usage_details_divider_item"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start|center_vertical"
+                    android:text="NO. OF VOTES"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_B8B7B8" />
+
+                <TextView
+                    android:id="@+id/txv_noofvotes"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/color_676767" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usage_details_divider_item"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start|center_vertical"
+                    android:text="Status"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_B8B7B8" />
+
+                <TextView
+                    android:id="@+id/txv_status"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/color_676767" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/payment_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Type:"
+                    android:layout_weight="0.5"/>
+
+                <TextView
+                    android:id="@+id/txv_paymentmethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="via card"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Txn No.:"
+                    android:layout_weight="0.5"/>
+
+                <TextView
+                    android:id="@+id/txv_paymenttxnno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="txn1234567890"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount:"
+                    android:layout_weight="0.5"/>
+
+                <TextView
+                    android:id="@+id/txv_totalamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="txn1234567890"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_view_payment_details"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorwhite"
+                android:text="View Payment Details"
+                android:textAllCaps="false"
+                android:textColor="@color/color_4A90E2"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_hide_payment_details"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorwhite"
+                android:text="Hide Payment Details"
+                android:textAllCaps="false"
+                android:textColor="@color/color_4A90E2"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

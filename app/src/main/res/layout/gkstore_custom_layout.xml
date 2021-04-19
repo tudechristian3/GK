@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/color_transparent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:overScrollMode="never"
+            android:scrollbarFadeDuration="4"
+            android:scrollbarSize="5dp"
+            android:scrollbars="vertical"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/dialog_global_roundedcorners"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="16dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:orientation="vertical">
+                            <!--CONTAINER FOR THE TITLE-->
+                            <TextView
+                                android:id="@+id/txv_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center_horizontal"
+                                android:padding="5dp"
+                                android:textAppearance="@style/roboto.regular"
+                                android:textColor="@color/colorTextGrey"
+                                android:text="Please select how you want to received your order"/>
+
+
+                            <!--CONTAINER FOR THE MESSAGE-->
+                            <LinearLayout
+                                android:id="@+id/layout_contentview_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="15dp"
+                                android:visibility="visible">
+
+                                <RadioGroup
+                                    android:id="@+id/deliveryTypeRadioGroup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RadioButton
+                                        android:id="@+id/radioButtonPickup"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Pickup"/>
+                                    <RadioButton
+                                        android:id="@+id/radioButtonForDelivery"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="For Delivery"/>
+
+                                </RadioGroup>
+
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+                        <!--CONTAINER FOR THE TITLE-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="10dp"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/colorTextGrey"
+                            android:text="Payment Option"/>
+
+
+                        <!--CONTAINER FOR THE MESSAGE-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp"
+                            android:visibility="visible">
+
+                            <RadioGroup
+                                android:id="@+id/paymentTypeRadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/radioButtonPaymentCash"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cash"/>
+
+                                <RadioButton
+                                    android:id="@+id/radioButtonPaymentVoucher"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Voucher" />
+
+                            </RadioGroup>
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/btn_global"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            android:visibility="visible"
+                          >
+
+                            <TextView
+                                android:id="@+id/gkstore_custom_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/color_transparent"
+                                android:gravity="center|center_horizontal"
+                                android:textAppearance="@style/roboto.regular"
+                                android:textColor="@color/colorTextGrey"
+                                android:textSize="18sp"
+                                tools:ignore="ButtonStyle"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                tools:targetApi="m" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_titlelogo_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/img_title_logo"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        tools:ignore="ContentDescription"
+                        android:src="@drawable/dialog_global_notice"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>

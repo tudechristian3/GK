@@ -1,0 +1,357 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/radiusallside">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmationwrap"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+           >
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/tblrow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:background="@color/colortoolbar">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/colorwhite"
+                    android:text="Transfer thru SMS"
+                    android:id="@+id/confirmationlbl"
+                    />
+            </TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colordarkgrey"
+                    android:layout_below="@+id/sortoptn"/>
+
+            <TableRow
+                android:id="@+id/tblrow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tblrow1"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:weightSum="1"
+                >
+
+
+                <TextView
+                    android:id="@+id/popnamelbl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="right"
+                    android:text="Name :"
+                    android:textSize="18dp"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colortoolbar"
+                    android:layout_weight="0.3"/>
+
+
+                <TextView
+                    android:id="@+id/popname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="left"
+                    android:text="09225090290"
+                    android:textSize="20dp"
+                    android:layout_weight="0.7"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/quantum_black_100"
+                    android:paddingRight="10dp"/>
+
+            </TableRow>
+
+
+
+            <TableRow
+                android:id="@+id/mobilerow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tblrow3"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="right"
+                    android:text="Mobile:"
+                    android:textSize="18dp"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colortoolbar"
+                    android:layout_weight="0.3"/>
+
+                <TextView
+                    android:id="@+id/popsms"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="left"
+                    android:text="Call"
+                    android:textSize="20dp"
+                    android:layout_weight="0.7"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/quantum_black_100"
+                    android:paddingRight="10dp"/>
+
+
+            </TableRow>
+
+                <TableRow
+                    android:id="@+id/emailrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tblrow3"
+                    android:paddingTop="5dp"
+
+                    android:paddingBottom="5dp"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="right"
+                        android:text="Email:"
+                        android:textSize="18dp"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/colortoolbar"
+                        android:layout_weight="0.3"/>
+
+                    <TextView
+                        android:id="@+id/popemail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="left"
+                        android:text="Call"
+                        android:textSize="20dp"
+                        android:layout_weight="0.7"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/quantum_black_100"
+                        android:paddingRight="10dp"/>
+
+
+                </TableRow>
+
+            <TableRow
+                android:id="@+id/tblrow6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tblrow5"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/popvouchercodelbl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Voucher:"
+                    android:gravity="end"
+                    android:textSize="18dp"
+                    android:textColor="@color/colortoolbar"
+                    android:layout_weight="0.3"/>
+
+                <TextView
+                    android:id="@+id/popvouchercode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="left"
+                    android:text="34567890"
+                    android:textSize="20dp"
+                    android:layout_weight="0.7"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/quantum_black_100"
+                    android:paddingRight="10dp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tblrow7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tblrow6"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:weightSum="1"
+               >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="right"
+                    android:text="Amount:"
+                    android:textSize="18dp"
+                    android:paddingLeft="20dp"
+                    android:layout_weight="0.3"
+                    android:textColor="@color/colortoolbar"
+                    />
+
+                <TextView
+                    android:id="@+id/popamount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="left"
+                    android:text="500"
+                    android:textSize="20dp"
+                    android:layout_weight="0.7"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/quantum_black_100"
+
+                    />
+
+            </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colordarkgrey"
+                android:layout_below="@+id/sortoptn"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_gravity="right"
+                    android:gravity="right">
+                    <TextView
+                        android:id="@+id/canceltxn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toLeftOf="@+id/popconfirm"
+                        android:fontFamily="sans-serif"
+                        android:gravity="left"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="20dp"
+                        android:text="CANCEL"
+                        android:textColor="@color/colordimgray"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:id="@+id/popconfirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="left"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="20dp"
+                        android:text="CONFIRM"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                </TableRow>
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/successwrap">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radiusfiltertop"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="Transfer thru SMS"
+                android:textColor="@color/colorwhite"
+                android:textSize="22dp"
+                android:id="@+id/succesconfirmationlbl"
+                />
+        </TableRow>
+        </TableLayout>
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/success"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="You have successfully transferred your voucher."
+                android:textColor="@color/colortoolbar"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:padding="20dp"/>
+
+            <TextView
+                android:id="@+id/popok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="right"
+                android:paddingBottom="30dp"
+                android:paddingRight="30dp"
+                android:text="CLOSE"
+                android:textColor="@color/colortoolbar"
+                android:textSize="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>

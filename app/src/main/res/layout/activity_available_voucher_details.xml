@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.goodkredit.myapplication.activities.vouchers.AvailableVoucherDetails">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colortoolbar"
+            app:popupTheme="@style/MyMaterialTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightgray"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:context="com.goodkredit.myapplication.activities.vouchers.AvailableVoucherDetails"
+        tools:showIn="@layout/activity_available_voucher_details">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorwhite">
+
+
+                    <TableLayout
+                        android:id="@+id/tablelayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:weightSum="1">
+
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="0.25">
+
+                                <ImageView
+                                    android:id="@+id/voucherimage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="116dp"
+                                    android:layout_gravity="right|end"
+                                    android:layout_marginTop="10dp"
+                                    android:contentDescription="@null"
+                                    android:paddingEnd="5dp"
+                                    android:paddingRight="5dp"
+                                    android:scaleType="fitStart" />
+
+                                <ImageView
+                                    android:id="@+id/prepaid_tag"
+                                    android:layout_width="13dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="top|right|end"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:contentDescription="@null"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/prepaid_voucher_tag1"
+                                    android:visibility="gone" />
+
+                            </FrameLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.75"
+                                android:orientation="vertical"
+                                android:paddingLeft="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="VOUCHER ID"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/vouchercode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:textAppearance="@style/roboto.bold"
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="PIN"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/voucherpin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:textAppearance="@style/roboto.bold"
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/tablelayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tablelayout1"
+                        android:layout_marginTop="10dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:orientation="vertical"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp">
+
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.75"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingStart="10dp">
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.32"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="2dp"
+                                                android:gravity="left"
+                                                android:text="DENOM"
+                                                android:textSize="17sp" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="2dp"
+                                                android:gravity="left"
+                                                android:text="USED"
+                                                android:textSize="17sp" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="2dp"
+                                                android:layout_marginTop="2dp"
+                                                android:background="@color/colorblack"
+                                                android:gravity="left"
+                                                android:paddingRight="10dp"
+                                                android:text="USED"
+                                                android:textSize="17sp" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:gravity="left"
+                                                android:text="BALANCE"
+                                                android:textAppearance="@style/roboto.bold"
+                                                android:textColor="@color/colorblack"
+                                                android:textSize="17sp"
+                                                android:textStyle="bold" />
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.45"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/amount"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="2dp"
+                                                android:gravity="right"
+                                                android:maxLines="1"
+                                                android:paddingLeft="10dp"
+                                                android:paddingRight="10dp"
+                                                android:textSize="17sp" />
+
+
+                                            <TextView
+                                                android:id="@+id/used"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="2dp"
+                                                android:gravity="right"
+                                                android:maxLines="1"
+                                                android:paddingLeft="10dp"
+                                                android:paddingRight="10dp"
+                                                android:textSize="17sp" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="2dp"
+                                                android:layout_marginRight="10dp"
+                                                android:layout_marginTop="2dp"
+                                                android:background="@color/colorblack"
+                                                android:gravity="left"
+                                                android:textSize="17sp" />
+
+                                            <TextView
+                                                android:id="@+id/remainingbalance"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:gravity="right"
+                                                android:maxLines="1"
+                                                android:paddingLeft="10dp"
+                                                android:paddingRight="10dp"
+                                                android:textAppearance="@style/roboto.bold"
+                                                android:textColor="@color/colorblack"
+                                                android:textSize="17sp"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+
+                                    </TableRow>
+
+
+                                </TableLayout>
+
+                            </LinearLayout>
+
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tablelayout3"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bordertop"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:indeterminate="true"
+                                android:indeterminateDrawable="@drawable/progress" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingBottom="12dp"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="12dp"
+                                android:text="Regenerating PIN.."
+                                android:textColor="@color/colortoolbar"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/generatepin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bordertop"
+                            android:gravity="center"
+                            android:onClick="generateNewPIN"
+                            android:padding="12dp"
+                            android:text="Regenerate PIN"
+                            android:textColor="@color/colortoolbar"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bordertop"
+                            android:gravity="center"
+                            android:onClick="openVoucherLogs"
+                            android:padding="12dp"
+                            android:text="View Transactions"
+                            android:textColor="@color/colortoolbar"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/transfervoucher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-1dp"
+                            android:background="@drawable/bordertop"
+                            android:gravity="center"
+                            android:onClick="openTransferOption"
+                            android:padding="12dp"
+                            android:text="Transfer this Voucher"
+                            android:textColor="@color/colortoolbar"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="To consume, scan the barcode below."
+                    android:textColor="@color/colorblack"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorwhite">
+
+                    <ImageView
+                        android:id="@+id/arrowdown"
+                        android:layout_width="15dp"
+                        android:layout_height="9dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/expand_more" />
+
+                    <ImageView
+                        android:id="@+id/barcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:id="@+id/barcodeValueNi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/barcode"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/barcodeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/linearLayoutVPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/left"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="4dp"
+                android:paddingStart="4dp"
+                android:paddingTop="16dp">
+
+                <ImageView
+
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/top_pointer" />
+
+            </RelativeLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/left"
+                android:layout_toLeftOf="@+id/right"
+                android:layout_toRightOf="@+id/left"
+                android:layout_toStartOf="@+id/right"
+                android:gravity="center"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+            <RelativeLayout
+                android:id="@+id/right"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:paddingEnd="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="16dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:rotation="180"
+                    android:src="@drawable/top_pointer" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/whitebarcodeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutVPager"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-4dp"
+            android:textColor="@color/colorwhite"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

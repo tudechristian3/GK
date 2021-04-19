@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F0F0F0"
+    tools:targetApi="m"
+    android:layout_marginTop="3dp"
+    android:elevation="1.5dp"
+    android:layout_marginBottom="3dp"
+    android:padding="5dp"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:id="@+id/section_item_mainLayout">
+        <TextView
+            android:id="@+id/section_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SERVICES"
+            android:fontFamily="@font/robotoregular"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:padding="10dp"
+            android:textColor="@color/black_85"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/section_item_imgbtn"
+            />
+
+        <ImageView
+            android:id="@+id/section_item_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_keyboard_arrow_right_teal_700_36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            tools:targetApi="m" />
+
+    </RelativeLayout>

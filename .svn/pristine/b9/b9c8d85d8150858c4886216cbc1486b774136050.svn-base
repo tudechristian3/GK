@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4F2185"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="top"
+        android:contentDescription="@null"
+        android:paddingEnd="@dimen/_30sdp"
+        android:paddingLeft="@dimen/_30sdp"
+        android:paddingRight="@dimen/_30sdp"
+        android:paddingStart="@dimen/_30sdp"
+        android:paddingTop="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/csb_logo" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/points_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_refresh_csb"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="YOUR POINTS"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/refresh_points"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_refresh_csb" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:text="*"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="@dimen/_20ssp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="@dimen/_25ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="*"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="@dimen/_20ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_convert_to_voucher"
+                    android:layout_width="@dimen/_210sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/btn_csb_yellow_rounded_sides"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:text="CONVERT TO VOUCHER"
+                    android:textColor="@color/whitePrimary"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btn_view_history"
+                    android:layout_width="@dimen/_210sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/btn_csb_yellow_rounded_sides"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:text="VIEW HISTORY"
+                    android:textColor="@color/whitePrimary"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/csb_link_activatesimcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activate SIM Card"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="#E79A2D"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal|bottom"
+                android:padding="@dimen/_12ssp"
+                android:text="*1 point = ₱1.00"
+                android:textColor="@color/whitePrimary"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/non_member_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_15sdp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/csblayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_csb_yellow_rounded_sides"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/csb_error" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/csb_non_member"
+                    android:textColor="@color/whitePrimary"
+                    android:textSize="@dimen/_14ssp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/csb_nonlink_activatesimcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activate SIM Card"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="#E79A2D"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_below="@id/csblayout1"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/failed_to_connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_15sdp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/csblayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_csb_yellow_rounded_sides"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/csb_error" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/csb_failed_connect"
+                    android:textColor="@color/whitePrimary"
+                    android:textSize="@dimen/_14ssp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/csb_failed_activatesimcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activate SIM Card"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="#E79A2D"
+                android:layout_below="@id/csblayout2"/>
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

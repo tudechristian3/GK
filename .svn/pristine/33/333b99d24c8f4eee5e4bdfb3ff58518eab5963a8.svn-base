@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorwhite">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="#FAFAFA"
+                    android:elevation="4dp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp">
+
+                        <ProgressBar
+                            android:id="@+id/progress"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginBottom="16dp"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/circleImageView"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginBottom="16dp"
+                            android:src="@drawable/emptyprofilepic"
+                            android:contentDescription="@null"
+                            android:visibility="gone"/>
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_edit_profpic"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:background="@drawable/bg_translucent_blue"
+                            android:src="@drawable/ic_photoedit" />
+
+                        <ImageView
+                            android:id="@+id/profile_edit_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|end|right"
+                            android:layout_margin="5dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_edit_profile" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:id="@+id/profile_fullname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/bg_white_radius"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/profile_mobile_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/bg_white_radius"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/profile_email_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/bg_white_radius"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/profile_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/bg_white_radius"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/profile_sponsor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_white_radius"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lLayoutAccountInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="#FAFAFA"
+                    android:elevation="4dp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="ACCOUNT INFO"
+                        android:textColor="#393939"
+                        android:textSize="18sp"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DFDFDF" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="16dp"
+                        android:paddingEnd="28dp"
+                        android:paddingLeft="28dp"
+                        android:paddingRight="28dp"
+                        android:paddingStart="28dp"
+                        android:paddingTop="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="CURRENCY"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right|end"
+                            android:text="PHP"
+                            android:textColor="#64A1D7"
+                            android:textSize="16sp"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DFDFDF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="16dp"
+                        android:paddingEnd="28dp"
+                        android:paddingLeft="28dp"
+                        android:paddingRight="28dp"
+                        android:paddingStart="28dp"
+                        android:paddingTop="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="CREDIT LIMIT"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_credit_limit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right|end"
+                            android:textColor="#64A1D7"
+                            android:textSize="16sp"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DFDFDF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="16dp"
+                        android:paddingEnd="28dp"
+                        android:paddingLeft="28dp"
+                        android:paddingRight="28dp"
+                        android:paddingStart="28dp"
+                        android:paddingTop="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="AVAILABLE CREDIT"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_available_credits"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right|end"
+                            android:textColor="#64A1D7"
+                            android:textSize="16sp"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DFDFDF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="16dp"
+                        android:paddingEnd="28dp"
+                        android:paddingLeft="28dp"
+                        android:paddingRight="28dp"
+                        android:paddingStart="28dp"
+                        android:paddingTop="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="USED CREDIT"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_used_credits"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right|end"
+                            android:textColor="#64A1D7"
+                            android:textSize="16sp"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DFDFDF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="16dp"
+                        android:paddingEnd="28dp"
+                        android:paddingLeft="28dp"
+                        android:paddingRight="28dp"
+                        android:paddingStart="28dp"
+                        android:paddingTop="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="OUTSTANDING BALANCE"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_outstanding_balance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right|end"
+                            android:textColor="#64A1D7"
+                            android:textSize="16sp"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#DFDFDF" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include layout="@layout/loader" />
+
+    </RelativeLayout>
+
+</LinearLayout>

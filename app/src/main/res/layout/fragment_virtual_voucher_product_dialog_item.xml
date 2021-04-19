@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutVoucherDialog"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginBottom="2dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="start|center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/virtualVoucherImage"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:maxHeight="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/profile_header" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorwhite">
+
+        <TextView
+            android:id="@+id/txvVoucherQty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center"
+            android:text="1"
+            android:textColor="@color/color_454646"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

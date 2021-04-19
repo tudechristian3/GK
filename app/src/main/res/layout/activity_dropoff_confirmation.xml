@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Transaction Details"
+                android:textAppearance="@style/roboto.bold"
+                android:textColor="@color/buttons"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/whitePrimary"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/text_dropoff_refno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reference No :"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/colorsilver" />
+
+                <TextView
+                    android:id="@+id/txv_dropoff_refno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1234567"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/colorTextGrey" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Drop-Off Amount :"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/colorsilver" />
+
+                <TextView
+                    android:id="@+id/tv_dropoff_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PHP 2000"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/colorTextGrey" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/lightgray" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount to Pay :"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/colorsilver" />
+
+                    <TextView
+                        android:id="@+id/tv_total_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end|right"
+                        android:text="2000 PHP"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/colorTextGrey" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Merchant Details"
+                android:textAppearance="@style/roboto.bold"
+                android:textColor="@color/buttons"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Merchant Name :"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/colorsilver" />
+
+                <TextView
+                    android:id="@+id/tv_merchant_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chooks to Go"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/colorTextGrey" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address :"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/colorsilver" />
+
+                <TextView
+                    android:id="@+id/tv_merchant_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Escario St., Camputhaw, Cebu"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/colorTextGrey" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_dropoff_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Notes :"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/colorsilver" />
+
+                    <TextView
+                        android:id="@+id/tv_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem ipsum dolor sit amet, consectetur
+adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad
+minim veniam, quis nostrud exercitation ullamco
+laboris nisi ut aliquip ex ea commodo consequat."
+                        android:textAppearance="@style/roboto.regular"
+                        android:textColor="@color/colorTextGrey" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="10dp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Payment Options"-->
+                <!--android:textAppearance="@style/roboto.bold"-->
+                <!--android:textColor="@color/buttons"-->
+                <!--android:textSize="18sp" />-->
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="10dp" />-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/whitePrimary"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<RadioGroup-->
+                    <!--android:id="@+id/rg_dropoff_paymentoptions"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="10dp">-->
+
+                    <!--<RadioButton-->
+                        <!--android:id="@+id/rb_pr_channel"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:checked="true"-->
+                        <!--android:padding="5dp"-->
+                        <!--android:text="Payment Channel"-->
+                        <!--android:textAppearance="@style/roboto.regular"-->
+                        <!--android:textColor="@color/colorsilver"-->
+                        <!--android:textSize="16sp" />-->
+
+                <!--</RadioGroup>-->
+            <!--</LinearLayout>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment Channels"
+                android:textAppearance="@style/roboto.bold"
+                android:textColor="@color/buttons"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:background="@color/whitePrimary">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp" />
+
+                <TextView
+                    android:id="@+id/tv_payment_channels_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="You can pay through any of the following Payment Channels:"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/color_757575"
+                    android:padding="8dp"
+                    android:textSize="12sp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_payment_channels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <Button
+                android:id="@+id/btn_continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="CONTINUE"
+                android:textAllCaps="true"
+                android:textAppearance="@style/roboto.bold"
+                android:textColor="@color/whitePrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

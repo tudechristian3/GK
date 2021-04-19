@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_notification_0"
+        android:icon="@drawable/ic_notification_0"
+        android:title="Notification"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_notification_1"
+        android:icon="@drawable/ic_notification_1"
+        android:title="Notification"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_notification_2"
+        android:icon="@drawable/ic_notification_2"
+        android:title="Notification"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_notification_3"
+        android:icon="@drawable/ic_notification_3"
+        android:title="Notification"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_notification_4"
+        android:icon="@drawable/ic_notification_4"
+        android:title="Notification"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_notification_5"
+        android:icon="@drawable/ic_notification_5"
+        android:title="Notification"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_notification_6"
+        android:icon="@drawable/ic_notification_6"
+        android:title="Notification"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_notification_7"
+        android:icon="@drawable/ic_notification_7"
+        android:title="Notification"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_notification_8"
+        android:icon="@drawable/ic_notification_8"
+        android:title="Notification"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_notification_9"
+        android:icon="@drawable/ic_notification_9"
+        android:title="Notification"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_notification_9plus"
+        android:icon="@drawable/ic_notification_9plus"
+        android:title="Notification"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_process_queue"
+        android:icon="@drawable/ic_processqueue_0"
+        android:title="Process Queue"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/sortitem"
+        android:icon="@drawable/funnel"
+        android:title="Sort Voucher"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/summary"
+        android:icon="@drawable/slidelist"
+        android:title="View Voucher Summary"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/group_voucher"
+        android:icon="@drawable/ic_multiple_vouchers"
+        android:title="Group Voucher"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom" />
+</menu>

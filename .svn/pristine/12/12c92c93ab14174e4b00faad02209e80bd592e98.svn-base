@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="140dp">
+    <!--INDIVIDUAL VOUCHER-->
+    <ImageView
+        android:id="@+id/imgv_voucher_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bg_drawer_header" />
+
+    <TextView
+        android:id="@+id/tv_voucher_balance"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="2dp"
+        android:background="@drawable/radius"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textAppearance="@style/roboto.bold"
+        android:textColor="@color/color_6C6C6C"
+        android:textStyle="bold" />
+    <!--GROUP VOUCHER-->
+    <View
+        android:id="@+id/centerViewAvailableVoucher"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="@color/zxing_transparent" />
+
+    <TextView
+        android:id="@+id/group_voucher_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/centerViewAvailableVoucher"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="-12dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/colorwhite"
+        android:textSize="16sp"
+        android:textAppearance="@style/roboto.bold"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/group_voucher_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_voucher_balance"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:maxLength="15"
+        android:maxLines="2"
+        android:textColor="@color/colorwhite"
+        android:textSize="12sp" />
+    <!--PREPAID OR NOT-->
+    <ImageView
+        android:id="@+id/imgv_prepaid_tag"
+        android:layout_width="18dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/prepaid_voucher_tag1"
+        android:visibility="visible" />
+
+</RelativeLayout>

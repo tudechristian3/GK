@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_purchase_retailer_load"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goodkredit.myapplication.activities.reloadretailer.PurchaseRetailerLoadActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <FrameLayout
+                android:id="@+id/imagewrapper"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <ImageView
+                android:id="@+id/smartlogo"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:foregroundGravity="center"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/smartretaillogo" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="MOBILE NUMBER"
+                android:textSize="16sp" />
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/billerlogo"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+
+                <TableRow
+                    android:id="@+id/tblrow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tblrow1"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/country"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/bordertopbottomleft"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:paddingBottom="15sp"
+                        android:paddingTop="15sp"
+                        android:text="+63"
+                        android:textColor="@color/colorblack" />
+
+
+                    <EditText
+                        android:id="@+id/mobilenumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:background="@drawable/borderbottomtopright"
+                        android:fontFamily="sans-serif"
+                        android:hint="(ex. 9123456789)"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="15sp" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/mobileNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:minLines="2"
+                android:text="Input mobile number without country code."
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/networklbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="NETWORK"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/network"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:focusable="false"
+                android:fontFamily="sans-serif"
+                android:inputType="text"
+                android:padding="15sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/prodtypelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="PRODUCT TYPE"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/loadtype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:focusable="false"
+                android:padding="15sp"
+                android:textAppearance="@style/roboto.regular"
+                android:textColor="@color/colorTextGrey"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/prodcodelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="PRODUCT CODE"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+
+            <EditText
+                android:id="@+id/productval"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/productcode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:drawableRight="@mipmap/arrow2"
+                android:focusable="false"
+                android:inputType="text"
+                android:onClick="getProductCode"
+                android:padding="15sp"
+                android:textAppearance="@style/roboto.regular"
+                android:textColor="@color/colorTextGrey"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/amountlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:inputType="number"
+                android:text="AMOUNT"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:maxLength="9"
+                android:padding="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/amounthint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="Note: Only accepts 300 and 500 to 20,000"
+                android:textAppearance="@style/roboto.italic"
+                android:textColor="@color/color_9E9E9E"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/proceed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/button"
+                android:onClick="proceedPayment"
+                android:text="PROCEED"
+                android:textColor="@color/colorwhite"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colortoolbar"
+            app:popupTheme="@style/MyMaterialTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</RelativeLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_bottom_item_darker"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/txvResultLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="REULTS"
+            android:textColor="@color/color_A5A5A5"
+            android:textSize="16dp" />
+
+       <LinearLayout
+           android:id="@+id/linearResultsDate"
+           android:orientation="horizontal"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1">
+
+           <TextView
+               android:id="@+id/txvResultValue"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:gravity="end"
+               android:text="AUGUST 13, 2018"
+               android:textColor="@color/color_ED2228"
+               android:textSize="16dp" />
+
+           <ImageView
+               android:id="@+id/imgAccordion"
+               android:layout_width="25dp"
+               android:layout_height="match_parent"
+               android:layout_gravity="right"
+               android:contentDescription="@null"
+               android:rotation="90"
+               android:layout_marginEnd="-1dp"
+               android:layout_marginRight="-1dp"
+               android:tint="@color/color_ED2228"
+               android:src="@mipmap/arrow2" />
+
+       </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearDynamicDigits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/txvJackpotLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_A5A5A5"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txvJackpotValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textColor="@color/color_ED2228"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout5hits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/txv5hitsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_A5A5A5"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txv5hitsValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textColor="@color/color_ED2228"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3hits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/txv3hitsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_A5A5A5"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txv3hitsValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textColor="@color/color_ED2228"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutrambolito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/txvRambolitoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_A5A5A5"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txvRambolitoValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textColor="@color/color_ED2228"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/txvNextJackpotLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_A5A5A5"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txvNextJackpotValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textColor="@color/color_ED2228"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

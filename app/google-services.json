@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "563066502305",
+    "firebase_url": "https://goodkredit-1487645836133.firebaseio.com",
+    "project_id": "firebase-goodkredit",
+    "storage_bucket": "goodkredit-1487645836133.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563066502305:android:4fc28d3496d054a1",
+        "android_client_info": {
+          "package_name": "com.goodkredit.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093875308819-kf2bbltobc6ng2nq1akkjane2u2r5sji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtXqr37FcWxb0q41vQINJ7ulgdsAfkBpE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

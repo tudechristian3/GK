@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FAFAFA"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--MAIN LAYOUT-->
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nested_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1" />
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="-20dp"
+                                    android:layout_weight="2">
+
+                                    <include layout="@layout/fragment_skycable_new_application_plans_item" />
+
+                                </FrameLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:text="Plan Information"
+                                android:textColor="@color/colortoolbar"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/colorwhite"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="15dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="start"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="20dp"
+                                        android:text="DESCRIPTION"
+                                        android:textSize="14dp" />
+
+                                    <TextView
+                                        android:id="@+id/txvDescription"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="start"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text=""
+                                        android:textColor="@color/colorblack"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="15dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="start"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="20dp"
+                                        android:text="INSTALLATION FEE"
+                                        android:textSize="14dp" />
+
+                                    <TextView
+                                        android:id="@+id/txvInstallationFee"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="start"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text=""
+                                        android:textColor="@color/colorblack"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="15dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="start"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="20dp"
+                                        android:text="MONTHLY FEE"
+                                        android:textSize="14dp" />
+
+                                    <TextView
+                                        android:id="@+id/txvMonthlyFee"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="start"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text=""
+                                        android:textColor="@color/colorblack"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="15dp"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="start"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="20dp"
+                                        android:text="INITIAL CASH-OUT"
+                                        android:textSize="14dp" />
+
+                                    <TextView
+                                        android:id="@+id/txvCashOut"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="start"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text=""
+                                        android:textColor="@color/colorblack"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="15dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="start"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="20dp"
+                                        android:text="DISCOUNT"
+                                        android:textSize="14dp" />
+
+                                    <TextView
+                                        android:id="@+id/txvDiscount"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="start"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text=""
+                                        android:textColor="@color/colorblack"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvInstallationAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Installation Address*"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/edtInstallationAddress"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/border"
+                                        android:enabled="false"
+                                        android:gravity="top|start"
+                                        android:inputType="textMultiLine|textPersonName|textNoSuggestions"
+                                        android:lines="8"
+                                        android:maxLines="10"
+                                        android:minLines="3"
+                                        android:padding="10dp"
+                                        android:scrollbars="vertical"
+                                        android:textColor="@color/colorTextGrey"
+                                        android:textSize="16dp" />
+
+                                    <ImageView
+                                        android:id="@+id/imgInstallationAddress"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_weight="0.2"
+                                        android:src="@drawable/ic_gk_store_map"
+                                        tools:ignore="ContentDescription" />
+
+                                </LinearLayout>
+
+                                <CheckBox
+                                    android:id="@+id/cbxInstallationAddress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="same with Address?"
+                                    android:textSize="14dp"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvFirstName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="First Name*"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtFirstName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvLastName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Last Name*"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtLastName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvGender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Gender*"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:id="@+id/edtGender"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/border"
+                                        android:focusable="false"
+                                        android:focusableInTouchMode="false"
+                                        android:inputType="textPersonName|textNoSuggestions"
+                                        android:longClickable="false"
+                                        android:padding="10dp"
+                                        android:textColor="@color/colorTextGrey"
+                                        android:textSize="16dp" />
+
+                                    <ImageView
+                                        android:id="@+id/imgGenderArrowRight"
+                                        android:layout_width="10dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="bottom|end"
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:contentDescription="@null"
+                                        android:rotation="180"
+                                        android:scaleType="fitCenter"
+                                        app:srcCompat="@drawable/ic_arrow_up_757575" />
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvBirthDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Birthdate*"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtBirthDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:longClickable="false"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvMobileNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Mobile Number*"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtMobileNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:digits="0123456789"
+                                    android:inputType="number|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvTelephoneNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Telephone Number"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtTelephoneNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:digits="0123456789"
+                                    android:inputType="number|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvEmailAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Email Address*"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtEmailAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textEmailAddress|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Address*"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/edtAddress"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/border"
+                                        android:gravity="top|start"
+                                        android:inputType="textMultiLine|textPersonName|textNoSuggestions"
+                                        android:lines="8"
+                                        android:maxLines="10"
+                                        android:minLines="3"
+                                        android:padding="10dp"
+                                        android:scrollbars="vertical"
+                                        android:textColor="@color/colorTextGrey"
+                                        android:textSize="16dp" />
+
+                                    <ImageView
+                                        android:id="@+id/imgAddress"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_weight="0.2"
+                                        android:src="@drawable/ic_gk_store_map"
+                                        tools:ignore="ContentDescription" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvCity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="City*"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtCity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvZipCode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Zip Code*"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtZipCode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:digits="1234567890"
+                                    android:inputType="number|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txvBillingAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Billing Address*"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/edtBillingAddress"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/border"
+                                        android:gravity="top|start"
+                                        android:inputType="textMultiLine|textPersonName|textNoSuggestions"
+                                        android:lines="8"
+                                        android:maxLines="10"
+                                        android:minLines="3"
+                                        android:padding="10dp"
+                                        android:scrollbars="vertical"
+                                        android:textColor="@color/colorTextGrey"
+                                        android:textSize="16dp" />
+
+
+                                    <ImageView
+                                        android:id="@+id/imgBillingAddress"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_weight="0.2"
+                                        android:src="@drawable/ic_gk_store_map"
+                                        tools:ignore="ContentDescription" />
+
+                                </LinearLayout>
+
+                                <CheckBox
+                                    android:id="@+id/cbxBillingAddress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="same with Address?"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Valid I.D."
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <!--TAKE A PICTURE-->
+                                <LinearLayout
+                                    android:id="@+id/profileCameraLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <ImageView
+                                        android:layout_width="0dp"
+                                        android:layout_height="64dp"
+                                        android:layout_weight="0.2"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_profile_camera" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:padding="5dp"
+                                        android:text="Take a picture of your valid I.D."
+                                        android:textSize="14dp" />
+
+                                </LinearLayout>
+
+                                <!--LOAD FROM GALLERY-->
+                                <LinearLayout
+                                    android:id="@+id/profileGalleryLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <ImageView
+                                        android:layout_width="0dp"
+                                        android:layout_height="64dp"
+                                        android:layout_weight="0.2"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_profile_gallery" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:padding="5dp"
+                                        android:text="Load from Gallery"
+                                        android:textSize="14dp" />
+
+                                </LinearLayout>
+
+                                <!--WITH PICTURE-->
+                                <LinearLayout
+                                    android:id="@+id/nationalidlayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:id="@+id/nationalIdImage"
+                                        android:layout_width="0dp"
+                                        android:layout_height="200dp"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:maxHeight="200dp"
+                                        android:paddingEnd="10dp"
+                                        android:paddingRight="10dp" />
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.2"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <ImageView
+                                            android:id="@+id/camera"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.2"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_profile_camera" />
+
+                                        <ImageView
+                                            android:id="@+id/gallery"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.2"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_profile_gallery" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Proof of Billing"
+                                    android:textColor="@color/colorsilver"
+                                    android:textSize="14dp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <!--TAKE A PICTURE-->
+                                <LinearLayout
+                                    android:id="@+id/profileCameraLayout2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <ImageView
+                                        android:layout_width="0dp"
+                                        android:layout_height="64dp"
+                                        android:layout_weight="0.2"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_profile_camera" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:padding="5dp"
+                                        android:text="Take a picture of your Proof of Billing"
+                                        android:textSize="14dp" />
+
+                                </LinearLayout>
+
+                                <!--LOAD FROM GALLERY-->
+                                <LinearLayout
+                                    android:id="@+id/profileGalleryLayout2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <ImageView
+                                        android:layout_width="0dp"
+                                        android:layout_height="64dp"
+                                        android:layout_weight="0.2"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_profile_gallery" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:padding="5dp"
+                                        android:text="Load from Gallery"
+                                        android:textSize="14dp" />
+
+                                </LinearLayout>
+
+                                <!--WITH PICTURE-->
+                                <LinearLayout
+                                    android:id="@+id/nationalidlayout2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:id="@+id/nationalIdImage2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="200dp"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:maxHeight="200dp"
+                                        android:paddingEnd="10dp"
+                                        android:paddingRight="10dp" />
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.2"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <ImageView
+                                            android:id="@+id/camera2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.2"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_profile_camera" />
+
+                                        <ImageView
+                                            android:id="@+id/gallery2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="0.2"
+                                            android:padding="7dp"
+                                            android:src="@drawable/ic_profile_gallery" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom">
+
+                            <Button
+                                android:id="@+id/btnProceed"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/color_24BDD9"
+                                android:text="PROCEED"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="18dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </LinearLayout>
+
+        <!--Layout for no connection -->
+        <RelativeLayout
+            android:id="@+id/nointernetconnection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/nointernet" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView1"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="30dp"
+                android:text="Opps! It looks like you're not connected. Please check your internet connection."
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/refreshnointernet"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:src="@drawable/refresh4" />
+
+            <ImageView
+                android:id="@+id/refreshdisabled1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:src="@drawable/refreshdisabled"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="8dp"
+                android:src="@drawable/logowatermark" />
+        </RelativeLayout>
+
+        <include layout="@layout/loader" />
+
+    </FrameLayout>
+
+</LinearLayout>

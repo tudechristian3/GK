@@ -1,0 +1,391 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/confirmationwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:id="@+id/tblrow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/confirmationlbl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="CHARGES"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="22dp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tblrow5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="start"
+                        android:paddingEnd="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="20dp"
+                        android:text="Recipient Mobile"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/popmobileval"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="end"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tblrow6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+
+                    <TextView
+                        android:id="@+id/popnamelbl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="start"
+                        android:paddingEnd="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="20dp"
+                        android:text="Recipient Name"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/popnameval"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="end"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tblrow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:weightSum="1">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="start"
+                        android:paddingEnd="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="20dp"
+                        android:text="Amount"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/popamounttopayval"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="end"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/mobilerow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="start"
+                        android:paddingEnd="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="20dp"
+                        android:text="Service Charge "
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/popservicechargeval"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="end"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/discountrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="start"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingStart="20dp"
+                        android:text="Discount"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/popdiscount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="end"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="end"
+                        android:paddingEnd="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="20dp"
+                        android:text="Other Charges:"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/popotherchargeval"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="end"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/emailrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif"
+                        android:gravity="start"
+                        android:paddingEnd="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="20dp"
+                        android:text="Total"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="19dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/poptotalval"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif"
+                        android:gravity="end"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="30dp"
+                    android:paddingTop="5dp"
+                    android:weightSum="1">
+
+
+                    <TextView
+                        android:id="@+id/popcancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingStart="20dp"
+                        android:text="CANCEL"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/popok"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingStart="10dp"
+                        android:text="CONFIRM"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

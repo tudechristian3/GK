@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/loader" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/home_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:overScrollMode="never"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/maincontainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/mPicLogo"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginBottom="10dp"
+                        android:contentDescription="@null"
+                        />
+
+                    <TextView
+                        android:id="@+id/txv_event_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/votes_darkgreen"
+                        android:textAppearance="@style/roboto.bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="start"
+                        android:text="Cast Your Vote For Your Favorite \nContestant."
+                        android:textColor="@color/color_053139"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cbx_sortbyvotes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="0.5"
+                            android:checked="false"
+                            android:text="Sort By Votes"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:text="VOTING CLOSES ON"
+                                android:textColor="@color/color_053139"
+                                android:textAppearance="@style/roboto.regular"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/txv_vote_dateclose"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:text="02/05/2019 11:00PM"
+                                android:textColor="@color/color_053139"
+                                android:textAppearance="@style/roboto.regular"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- PARTICIPANTS -->
+                    <LinearLayout
+                        android:id="@+id/rv_participants_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_participants"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_donate_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/btn_donate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txv_donate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/votes_donate_action_button"
+                                android:gravity="center_horizontal"
+                                android:padding="10dp"
+                                android:text="DONATE"
+                                android:textAppearance="@style/roboto.bold"
+                                android:textColor="@color/color_24BDD9"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include layout="@layout/global_noresult" />
+
+    <!--Layout for no connection -->
+    <RelativeLayout
+        android:id="@+id/nointernetconnection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorwhite"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/nointernet" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView1"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="Opps! It looks like you're not connected. Please check your internet connection."
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/refreshnointernet"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/textView2"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:src="@drawable/refresh4" />
+
+        <ImageView
+            android:id="@+id/refreshdisabled1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/textView2"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:src="@drawable/refreshdisabled"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="8dp"
+            android:src="@drawable/logowatermark" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/viewarchive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Load More"
+        android:visibility="gone" />
+
+</LinearLayout>

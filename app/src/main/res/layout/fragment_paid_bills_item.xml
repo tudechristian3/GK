@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorwhite"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp">
+
+    <TextView
+        android:id="@+id/transactionnolbl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:textAppearance="@style/roboto.regular"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/transactionno"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:textAppearance="@style/roboto.bold"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/totalamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/transactionnolbl"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="2dp"
+        android:textAppearance="@style/roboto.bold"
+        android:textColor="@color/colorblack"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalamount"
+        android:paddingBottom="6dip"
+        android:paddingLeft="8dip"
+        android:textAppearance="@style/roboto.bold"
+        android:textColor="@color/color_676767"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="left"
+        android:layout_marginTop="25dp"
+        android:src="@mipmap/arrow2" />
+
+
+</RelativeLayout>

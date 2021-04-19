@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notificationrow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/voucherimage"
+                android:layout_width="87dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:scaleType="fitCenter" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/totalnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:gravity="left"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="26sp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingLeft="15dp"
+                    android:text="PCS"
+                    android:textSize="14sp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/color_6C6C6C"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </TableRow>
+
+        <TextView
+            android:id="@+id/totaldenom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/totalbalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="BAL: 90000.00"
+        android:textColor="@color/color_6C6C6C"
+        android:textSize="14sp"
+        android:textAppearance="@style/roboto.bold"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

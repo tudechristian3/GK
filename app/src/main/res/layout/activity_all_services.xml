@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.gkservices.AllServicesActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+
+    <!--Layout for no connection -->
+    <RelativeLayout
+        android:id="@+id/nointernetconnection_allservices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorwhite"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logowatermark"
+            android:padding="10dp"
+            android:background="#34FFFFFF"/>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_centerInParent="true">
+
+           <TextView
+               android:id="@+id/textView2"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:drawableTop="@drawable/nointernet"
+               android:gravity="center"
+               android:padding="30dp"
+               android:text="@string/no_internet_string"
+               android:textSize="20sp" />
+
+           <Button
+               android:id="@+id/refreshnointernet"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Refresh"
+               android:textSize="16sp"
+               android:textStyle="bold"
+               android:visibility="visible"
+               android:layout_gravity="center_horizontal"
+               style="@style/Widget.AppCompat.Button.Borderless"/>
+
+       </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/allservices_swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:background="@color/color_F1F1F1"
+                 android:scrollbars="vertical"
+                 android:visibility="visible"
+                 android:layoutAnimation="@anim/layout_animation"
+                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                 android:nestedScrollingEnabled="false"
+                 tools:targetApi="lollipop"
+                />
+
+         </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

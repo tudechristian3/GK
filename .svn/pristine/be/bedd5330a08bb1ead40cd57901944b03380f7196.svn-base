@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FAFAFA"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--MAIN LAYOUT-->
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nested_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/skycableNewApplication"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/color_193B97"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txvLinkAccount"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="LINK ACCOUNT"
+                                android:gravity="center|center_vertical"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="30sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="Mobile Number*"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtMobileNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="number|textNoSuggestions"
+                                    android:digits="1234567890"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <!--SKYCABLE-->
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="SKYCABLE Account No*"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtSkycableAccountNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <!--SKYCABLE-->
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="4dp"
+                                    android:text="SKYCABLE Account Name*"
+                                    android:textColor="@color/colorsilver"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <EditText
+                                    android:id="@+id/edtSkycableAccountName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom">
+
+                            <Button
+                                android:id="@+id/btnSubmit"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/color_24BDD9"
+                                android:text="SUBMIT"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </LinearLayout>
+
+        <!--Layout for no connection -->
+        <RelativeLayout
+            android:id="@+id/nointernetconnection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/nointernet" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView1"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="30dp"
+                android:text="Opps! It looks like you're not connected. Please check your internet connection."
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/refreshnointernet"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:src="@drawable/refresh4" />
+
+            <ImageView
+                android:id="@+id/refreshdisabled1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:src="@drawable/refreshdisabled"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="8dp"
+                android:src="@drawable/logowatermark" />
+        </RelativeLayout>
+
+        <include layout="@layout/loader" />
+
+    </FrameLayout>
+
+</LinearLayout>

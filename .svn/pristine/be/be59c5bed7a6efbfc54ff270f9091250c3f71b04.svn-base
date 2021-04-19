@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/merchantid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dip"
+        android:paddingLeft="8dip"
+        android:paddingStart="8dip"
+        android:paddingTop="8dip"
+        android:textAppearance="@style/roboto.bold"
+        android:textColor="@color/color_676767"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/merchantid"
+        android:paddingBottom="6dip"
+        android:paddingLeft="8dip"
+        android:paddingStart="8dip"
+        android:textAppearance="@style/roboto.regular"
+        android:textColor="@color/colorsilver"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/totalamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="8dip"
+        android:textAppearance="@style/roboto.bold"
+        android:textColor="@color/color_676767"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

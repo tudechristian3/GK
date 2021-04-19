@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/framePlaceAutocompleteLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <fragment
+                android:id="@+id/place_autocomplete_fragment"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_757575">
+
+                    <fragment
+                        android:id="@+id/map"
+                        class="com.goodkredit.myapplication.utilities.CustomMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </FrameLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <!--hint for street view-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_0160B0"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|center_vertical"
+                    android:text="Tap on the map label to see the actual street view."
+                    android:textColor="@color/colorwhite"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <!--hint for location-->
+            <LinearLayout
+                android:id="@+id/hintlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_0160B0"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/lblyourloc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center_vertical"
+                    android:text="Your location is important so that we would know where to deliver your goods."
+                    android:textColor="@color/colorwhite"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textSize="14dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/lbltosetyourloc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="TO SET YOUR LOCATION"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/lblsearchforyour"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="1 Search for your address or"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/lblpressandhold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="2 Press and Hold on the map"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <!--hint for location is set-->
+            <LinearLayout
+                android:id="@+id/hintsetlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_0160B0"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="YOUR SELECTED ADDRESS IS:"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/txvaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center_vertical"
+                    android:paddingBottom="15dp"
+                    android:text="Poblacion, Compostela, Cebu, Philippines"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/btnsetaddress"
+                    android:layout_width="140dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/gk_store_btn_set_address"
+                    android:text="SET ADDRESS"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameOverlayMapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucentblack"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Where is your Installation Address?"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="36dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorwhite">
+
+                <fragment
+                    android:id="@+id/place_autocomplete_fragment_overlay"
+                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
+

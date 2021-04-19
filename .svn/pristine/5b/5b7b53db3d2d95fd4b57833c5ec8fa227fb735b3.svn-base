@@ -1,0 +1,15 @@
+
+
+#BASE URL
+OLD_LINK = "http://172.16.16.100:8089/"
+SECURED_LINK = "http://7f4b44e17e98.ngrok.io/"
+PUSH_NOTIFICATION_LINK = "http://172.16.16.100:8084/"
+S3_LINK = "https://s3-us-west-1.amazonaws.com/goodkredit/"
+DEBUG_MODE = "true"
+BUCKET_NAME = "gk-profile"
+SUPPORT_BUCKET_NAME = "gk-support"
+FREE_NET_KEY = "b2JHRJTbjaAOVXVo7X6eZx8iihiDDR70sb6dijJm3Oe8S5K"
+SPONSOR_TERMS_AND_CONDITION_URL = "http://dev.goodkredit.com/#/sponsor/termsandconditions/"
+HTTP_LOGS = "true"
+ENCRYPT = "true"
+TERMS_GUARANTOR_SIGN_UP = "https://www.goodkredit.com/#/termsofuse"

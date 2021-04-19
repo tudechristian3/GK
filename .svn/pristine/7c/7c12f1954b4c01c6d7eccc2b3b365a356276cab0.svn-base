@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="175dp">
+
+
+    <ImageView
+        android:id="@+id/imv_merchant_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tv_merchant_initials"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textAppearance="@style/roboto.bold"
+        android:textColor="@color/whitePrimary"
+        android:textSize="36sp"
+        android:visibility="gone" />
+
+
+</FrameLayout>

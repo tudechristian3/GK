@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="16dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txnImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="50dp"
+        app:contentPadding="@dimen/padding_10"
+        app:cardBackgroundColor="@color/whitePrimary"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true">
+
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+             <ImageView
+                 android:id="@+id/txnLoadType"
+                 android:layout_width="60dp"
+                 android:layout_height="60dp"
+                 app:srcCompat="@drawable/pldt"
+                 android:layout_centerInParent="true"
+                 />
+
+             <ImageView
+                 android:id="@+id/txn_medium"
+                 android:layout_width="28dp"
+                 android:layout_height="28dp"
+                 android:layout_alignBottom="@id/txnLoadType"
+                 app:srcCompat="@drawable/messenger"
+                 android:paddingTop="@dimen/padding_10"
+                 android:layout_alignEnd="@id/txnLoadType"
+                 />
+
+         </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding_bottom"
+        android:paddingStart="@dimen/padding_10"
+        android:layout_toRightOf="@id/txnImg"
+        tools:ignore="RtlSymmetry"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/txn_no"
+            android:layout_width="wrap_content"
+            android:text="0123456789"
+            android:textColor="@color/colortoolbar"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/inner_padding_right"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/txn_mobile"
+            android:layout_width="wrap_content"
+            android:text="09561845979"
+            android:ellipsize="end"
+            android:textColor="@color/quantum_black_text"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingStart="@dimen/inner_padding_right"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/txn_loadDescription"
+            android:layout_width="wrap_content"
+            android:text="WRTSCTC10, 10.00"
+            android:paddingTop="4dp"
+            android:ellipsize="end"
+            android:paddingStart="@dimen/inner_padding_right"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding_bottom">
+
+        <TextView
+            android:id="@+id/txn_time"
+            android:layout_width="wrap_content"
+            android:text="04:53 PM"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"/>
+
+        <TextView
+            android:id="@+id/txnStatus"
+            android:layout_width="wrap_content"
+            android:text="Active"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:textColor="#369E32"
+            android:drawablePadding="10dp"
+            app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+
+    </LinearLayout>
+</RelativeLayout>

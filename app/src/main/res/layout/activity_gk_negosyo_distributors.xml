@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar" />
+
+        <com.claudiodegio.msv.MaterialSearchView
+            android:id="@+id/sv_distro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dip" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_last3months"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#E6F7FD"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Distributor"
+            android:textAppearance="@style/roboto.bold"
+            android:textColor="#009CE0"
+            android:paddingLeft="6sp"
+            />
+
+    </LinearLayout>
+
+    <include layout="@layout/generic_list" />
+
+</LinearLayout>

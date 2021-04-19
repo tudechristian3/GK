@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    tools:context="com.goodkredit.myapplication.common.PaymentConfirmation">
+
+    <ScrollView
+        android:id="@+id/home_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:id="@+id/maincontainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp"
+                android:text="Confirm Transaction"
+                android:textColor="@color/colortoolbar"
+                android:textSize="16dp"
+                android:textAppearance="@style/roboto.bold"
+                android:textStyle="bold" />
+
+            <TableRow
+                android:id="@+id/mobilerow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="MOBILE NO"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/mobileval"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="093232313"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/networkrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/networklbl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="NETWORK"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/networkval"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="GLOBE"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/productrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="PRODUCT TYPE"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/productval"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="SPECIAL"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/productcoderow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="PRODUCT CODE"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/productcodeval"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="AT10"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <!--AMOUNT-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="AMOUNT"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txvAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="10"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <!--RESELLER DISCOUNT-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="RESELLER DISCOUNT"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txvResellerDiscount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="10"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="AMOUNT TO PAY"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/amounttopayval"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="10"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="AMOUNT TENDERED"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/amounttenderedval"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="10"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-1dp"
+                android:background="@color/colorwhite"
+                android:gravity="bottom"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="CHANGE"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/amountchangeval"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="0"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colortoolbar"
+            app:popupTheme="@style/MyMaterialTheme.PopupOverlay">
+
+            <!--<Button-->
+            <!--android:id="@+id/proceed"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@color/colortoolbar"-->
+            <!--android:onClick="proceedConfirmation"-->
+            <!--android:text="CONFIRM"-->
+            <!--android:textSize="18dp"-->
+            <!--android:textStyle="bold"/>-->
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right">
+
+                <Button
+                    android:id="@+id/proceed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:background="@null"
+                    android:onClick="proceedConfirmation"
+                    android:text="CONFIRM"
+                    android:textSize="18dp"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/arrowright" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</RelativeLayout>

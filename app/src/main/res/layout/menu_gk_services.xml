@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_gk_services"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="0dp"
+    android:visibility="gone">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--main layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--searchbar-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="7dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingEnd="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="3dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|end"
+                        android:src="@drawable/ic_search" />
+
+                    <EditText
+                        android:id="@+id/edt_search_box"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|start|center_vertical"
+                        android:background="@null"
+                        android:hint="Search"
+                        android:maxLines="1"
+                        android:paddingEnd="30dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="30dp"
+                        android:paddingStart="15dp"
+                        android:textSize="16sp" />
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/gks_pay_by_qr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/bg_gks_pay_qr"
+                    android:gravity="center"
+                    android:minWidth="180dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_qr_icon" />
+
+                    <View
+                        android:layout_width="1.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/whitePrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Pay by QR"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="18sp"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--gks main services-->
+            <FrameLayout
+                android:id="@+id/gks_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E1F5FE"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_goodapps_gks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+            <!--recently used-->
+            <LinearLayout
+                android:id="@+id/gks_recent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Recently Used"
+                    android:textColor="@color/buttons"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_recently_used"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <!--all services-->
+            <LinearLayout
+                android:id="@+id/gks_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="All Services"
+                    android:textColor="@color/buttons"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.goodkredit.myapplication.view.WrapContentHeightViewPager
+                    android:id="@+id/gks_vpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorsilver" />
+
+
+                <com.github.jrejaud.viewpagerindicator2.CirclePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    app:fillColor="#26BED9"
+                    app:radius="4dp"
+                    app:strokeColor="#BEBEBE"
+                    app:strokeWidth="0.5dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@color/whiteTrans" />
+
+            </LinearLayout>
+            <!--search result-->
+            <LinearLayout
+                android:id="@+id/gks_search_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/gks_gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:layoutAnimation="@anim/layout_to_left"
+                    android:overScrollMode="never"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@color/whiteTrans" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+
+

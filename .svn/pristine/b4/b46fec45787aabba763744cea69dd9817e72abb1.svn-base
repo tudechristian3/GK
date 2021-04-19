@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitePrimary"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/colortoolbar"
+            app:popupTheme="@style/MyMaterialTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/spscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/guarantorlogo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:src="@drawable/emptylogdefault" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/horizontal_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fafafa"
+                android:padding="5dp"
+                android:layout_marginTop="23dp"
+                android:layout_below="@+id/guarantorlogo"/>
+
+            <!--<TableLayout-->
+                <!--android:id="@+id/tbllayout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@+id/guarantorlogo"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_marginTop="23dp"-->
+                <!--android:background="#fafafa"-->
+                <!--android:stretchColumns="*">-->
+
+              <!---->
+
+                <!--<TableRow-->
+                    <!--android:id="@+id/tblrowdetails"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="#fafafa"-->
+                    <!--android:paddingBottom="15dp"-->
+                    <!--android:paddingTop="15dp"-->
+                    <!--android:weightSum="100">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/viewwebsite"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="49"-->
+                        <!--android:gravity="center"-->
+                        <!--android:paddingLeft="8dp"-->
+                        <!--android:text="VIEW WEBSITE"-->
+                        <!--android:textColor="@color/tabcolor"-->
+                        <!--android:textSize="16dp"-->
+                        <!--android:textStyle="bold"-->
+
+                        <!--/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/divider"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:background="@color/colorgainsboro"-->
+
+                        <!--/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/viewpromotions"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="50"-->
+                        <!--android:gravity="center"-->
+                        <!--android:paddingLeft="4dp"-->
+                        <!--android:text="VIEW PROMOTIONS"-->
+                        <!--android:textColor="@color/tabcolor"-->
+                        <!--android:textSize="16dp"-->
+                        <!--android:textStyle="bold"-->
+
+                        <!--/>-->
+                <!--</TableRow>-->
+            <!--</TableLayout>-->
+
+            <!--<TableLayout-->
+                <!--android:id="@+id/tbllayout2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@+id/tbllayout"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:stretchColumns="*"-->
+                <!--&gt;-->
+
+                <!--<TableRow-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:paddingBottom="15dp"-->
+                    <!--android:weightSum="100"-->
+                    <!--android:paddingRight="20dp"-->
+                    <!--android:paddingLeft="10dp">-->
+
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/sponsorDetailsName"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="70"-->
+                        <!--android:text="(CPMC) Cebu Peoples Multipurpose Coorperative"-->
+                        <!--android:textColor="@color/tabcolor"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:padding="5dp"/>-->
+
+
+
+
+                <!--</TableRow>-->
+            <!--</TableLayout>-->
+
+            <TableLayout
+                android:id="@+id/layoutinfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/horizontal_recycler_view"
+                android:layout_centerInParent="true"
+                android:stretchColumns="*"
+                android:layout_marginTop="20dp"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp"
+                    android:weightSum="100"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="10dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70"
+                        android:layout_marginTop="0dp"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="25dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/sponsorDetailsName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(CPMC) Cebu Peoples Multipurpose Coorperative"
+                            android:textColor="@color/tabcolor"
+                            android:textSize="16sp"/>
+
+
+                        <TextView
+                            android:id="@+id/sponsorAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:text="Mandaue"
+                            android:layout_below="@+id/sponsorDetailsName"/>
+
+                        <TextView
+                            android:id="@+id/sponsorDetailsEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/sponsorAddress"
+                            android:text="anncamarador@gmail.com" />
+
+                        <TextView
+                            android:id="@+id/sponsorDetailsTelephone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/sponsorDetailsEmail"
+                            android:text="09232274448" />
+
+                        <TextView
+                            android:id="@+id/sponsorDetailsMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/sponsorDetailsTelephone"
+                            android:text="09323123213" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:layout_gravity="center">
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button"
+                            android:onClick="RegisterToSponsor"
+                            android:text="APPLY"
+                            android:gravity="center"
+                            android:textColor="@color/whitePrimary" />
+
+                    </RelativeLayout>
+
+
+                </TableRow>
+            </TableLayout>
+
+
+            <TextView
+                android:id="@+id/aboutuslabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutinfo"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:text="About Us : "
+                android:textColor="@color/tabcolor"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/aboutusval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutuslabel"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:text="Sample about us" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/termscondition"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/aboutusval"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:paddingLeft="20dp"-->
+               <!--android:text="@string/termsandconditions"-->
+                <!--android:textColor="@color/tabcolor"-->
+                <!--android:onClick="openSponsorTermandCondition"/>-->
+
+            <TextView
+                android:id="@+id/locationlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutusval"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:text="Location : "
+                android:textColor="@color/tabcolor"
+                android:textSize="16dp" />
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationlbl"
+                android:layout_marginBottom="20dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <fragment
+                        android:id="@+id/map"
+                        class="com.goodkredit.myapplication.utilities.CustomMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="20dp" />
+
+                </FrameLayout>
+
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/container_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorwhite"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+
+</LinearLayout>

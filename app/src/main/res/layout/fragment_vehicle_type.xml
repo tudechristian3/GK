@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FAFAFA"
+    android:orientation="vertical">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--MAIN LAYOUT-->
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/nested_scroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusableInTouchMode="true"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:contentDescription="@null"
+                                    android:gravity="center_vertical"
+                                    android:maxHeight="150dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/paramount_header" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="20dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/string_select_your_vehicle"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/color_4A90E2"
+                                    android:textSize="20sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="4dp"
+                                        android:text="@string/string_year_model"
+                                        android:textColor="@color/colorsilver"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <EditText
+                                            android:id="@+id/edtYearModel"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/border"
+                                            android:focusable="false"
+                                            android:focusableInTouchMode="false"
+                                            android:inputType="text"
+                                            android:padding="10dp"
+                                            android:textColor="@color/colorTextGrey"
+                                            android:textSize="16sp" />
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="bottom|end"
+                                            android:layout_marginEnd="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:contentDescription="@null"
+                                            android:rotation="180"
+                                            android:scaleType="fitCenter"
+                                            app:srcCompat="@drawable/ic_arrow_up_757575" />
+
+                                    </FrameLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="4dp"
+                                        android:text="@string/string_vehicle_maker"
+                                        android:textColor="@color/colorsilver"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <EditText
+                                            android:id="@+id/edtMaker"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/border"
+                                            android:focusable="false"
+                                            android:focusableInTouchMode="false"
+                                            android:inputType="text"
+                                            android:padding="10dp"
+                                            android:textColor="@color/colorTextGrey"
+                                            android:textSize="16sp" />
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="bottom|end"
+                                            android:layout_marginEnd="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:contentDescription="@null"
+                                            android:rotation="180"
+                                            android:scaleType="fitCenter"
+                                            app:srcCompat="@drawable/ic_arrow_up_757575" />
+
+                                    </FrameLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="4dp"
+                                        android:text="@string/string_series"
+                                        android:textColor="@color/colorsilver"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <EditText
+                                            android:id="@+id/edtSeries"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/border"
+                                            android:enabled="false"
+                                            android:focusable="false"
+                                            android:focusableInTouchMode="false"
+                                            android:inputType="text"
+                                            android:padding="10dp"
+                                            android:textColor="@color/colorTextGrey"
+                                            android:textSize="16sp" />
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="bottom|end"
+                                            android:layout_marginEnd="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:contentDescription="@null"
+                                            android:rotation="180"
+                                            android:scaleType="fitCenter"
+                                            app:srcCompat="@drawable/ic_arrow_up_757575" />
+
+                                    </FrameLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="4dp"
+                                        android:text="@string/string_color"
+                                        android:textColor="@color/colorsilver"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <EditText
+                                        android:id="@+id/edtColor"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/border"
+                                        android:inputType="textPersonName|textNoSuggestions"
+                                        android:padding="10dp"
+                                        android:textColor="@color/colorTextGrey"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom">
+
+                                <Button
+                                    android:id="@+id/btnNext"
+                                    style="?android:attr/borderlessButtonStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/color_0160B0"
+                                    android:text="@string/string_next"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorwhite"
+                                    android:textSize="18sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!--Layout for no connection -->
+    <RelativeLayout
+        android:id="@+id/nointernetconnection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorwhite"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/nointernet" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView1"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="Opps! It looks like you're not connected. Please check your internet connection."
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/refreshnointernet"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/textView2"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:src="@drawable/refresh4" />
+
+        <ImageView
+            android:id="@+id/refreshdisabled1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/textView2"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:src="@drawable/refreshdisabled"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="8dp"
+            android:src="@drawable/logowatermark" />
+    </RelativeLayout>
+
+    <include layout="@layout/loader" />
+
+</FrameLayout>

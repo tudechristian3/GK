@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.goodkredit.myapplication.activities.transfer.TransferVerifySMS">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:id="@+id/scrollView">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imagewrapper">
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/country"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Country"
+                android:background="@drawable/border"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:padding="15sp"
+                android:inputType="number"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="10dp"
+                android:focusable="false"
+                android:drawableRight="@mipmap/arrow2"
+                android:onClick="openCountryList"/>
+
+            <EditText
+                android:id="@+id/countrycode"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+
+                <TableRow
+                    android:id="@+id/tblrow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tblrow1"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:weightSum="1"
+                    >
+
+
+                    <EditText
+                        android:id="@+id/code"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:background="@drawable/bordertopbottomleft"
+                        android:paddingTop="15sp"
+                        android:paddingBottom="15sp"
+                        android:inputType="number"
+                        android:textColor="@color/colorblack"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:focusable="false"
+                        android:layout_weight="0.25"/>
+
+
+                    <EditText
+                        android:id="@+id/receivermobile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Mobile number"
+                        android:background="@drawable/borderbottomtopright"
+                        android:layout_weight="0.75"
+                        android:padding="15sp"
+                        android:inputType="number"
+                        android:fontFamily="sans-serif"
+                        android:maxLength="12"/>
+
+                </TableRow>
+            </TableLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mobile number without country code. \n (ex: 9123456789)"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:text="VALIDATE"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorwhite"
+                android:background="@color/buttons"
+                android:onClick="validateMobile"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colortoolbar"
+            app:popupTheme="@style/MyMaterialTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</RelativeLayout>

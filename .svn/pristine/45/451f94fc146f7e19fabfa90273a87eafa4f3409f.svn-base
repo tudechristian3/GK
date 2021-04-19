@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<ScrollView
+    android:id="@+id/home_body"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="3dp"
+    android:overScrollMode="never"
+    android:scrollbarFadeDuration="4"
+    android:scrollbarSize="5dp"
+    android:scrollbars="vertical"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/shift_focus" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="CHOOSE PAYMENT OPTIONS"
+                android:textAppearance="@style/roboto.bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_payment_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:id="@+id/rb_channel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:text="@string/school_paymentchan"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_voucher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/school_gkvoucher"
+                    android:textAppearance="@style/roboto.regular"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="16dp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_amount_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="Enter Amount to Pay"
+                android:textAppearance="@style/roboto.regular"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/edt_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:digits="1234567890"
+                android:hint=""
+                android:inputType="numberDecimal"
+                android:padding="15dp"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="Remarks (Optional)"
+                android:textAppearance="@style/roboto.regular"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/edt_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="15dp"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="16dp"
+                android:minLines="4"
+                android:gravity="top|start|left"
+                android:inputType="textMultiLine"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_proceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/buttons"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="PROCEED"
+            android:textAllCaps="true"
+            android:textAppearance="@style/roboto.regular"
+            android:textColor="@color/whitePrimary" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+<RelativeLayout
+    android:id="@+id/layout_req_via_payment_channel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="gone">
+
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_close_icon_round"
+        tools:ignore="ContentDescription" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/roboto.regular"
+            android:textColor="@color/colorwhite"
+            android:textSize="20dp"
+
+            />
+
+        <!--android:textSize="16dp"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/btn_cancel_request"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttonred"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="Cancel"
+                android:textAllCaps="true"
+                android:textAppearance="@style/roboto.bold"
+                android:textColor="@color/colorwhite"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/btn_paynow_request"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="PAY NOW"
+                android:textAllCaps="true"
+                android:textAppearance="@style/roboto.bold"
+                android:textColor="@color/colorwhite"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+</RelativeLayout>

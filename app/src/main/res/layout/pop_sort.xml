@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/radiusallside">
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/sortoptn"
+        android:layout_below="@+id/sortlbl"
+        android:checkedButton="@+id/asc">
+
+        <RadioButton android:id="@+id/asc"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text=" Ascending"
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            />
+        <RadioButton android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text=" Descending"
+            android:scaleX="0.75"
+            android:scaleY="0.75"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colordarkgrey"
+        android:layout_below="@+id/sortoptn"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/divider1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/sortwrap">
+        <RadioButton android:id="@+id/lastupdated"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text=" By Date        "
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            />
+        <RadioButton android:id="@+id/amount"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text=" By Denom"
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            />
+
+        <RadioButton android:id="@+id/remainingamount"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text=" By Balance"
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            />
+
+
+
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colordarkgrey"
+        android:layout_below="@+id/sortwrap"/>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_gravity="right"
+            android:gravity="right">
+            <TextView
+                android:id="@+id/cancelsort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_toLeftOf="@+id/popconfirm"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="left"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:textStyle="bold"
+                android:text="CANCEL"
+                android:textColor="@color/colordimgray"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/sortbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="left"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:text="SORT"
+                android:textStyle="bold"
+                android:textColor="@color/colortoolbar"
+                android:textSize="16dp" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sort Voucher"
+        android:paddingLeft="30dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/sortlbl"
+        android:textColor="@color/colorwhite"
+        android:background="@drawable/radiusfiltertop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txvOpenCase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/skycable_border_bottom_item"
+        android:padding="30dp"
+        android:text="OPEN CASES"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txvCloseCase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/skycable_border_bottom_item"
+        android:padding="30dp"
+        android:text="CLOSED CASES"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linearThreadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="end"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="Ticket#:"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txvTicketNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="SPTNO000014"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="end"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="Topic:"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txvTopic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Others"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="end"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="Subject:"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txvSubject"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="tonyo"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="end"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="Date/Time In:"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txvDate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="May 15, 2018 02:20 pm"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

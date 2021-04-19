@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goodkredit.myapplication.activities.merchants.MerchantDetailsActivity">
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/menudetails"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/merchantDetailsToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colortoolbar"
+            app:popupTheme="@style/MyMaterialTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--</RelativeLayout>-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarwrap">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollmaincontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbarwrap">
+
+        <LinearLayout
+            android:id="@+id/maincontainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--   Merchant  Container  -->
+
+                <LinearLayout
+                    android:id="@+id/merchantheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:orientation="horizontal">
+
+
+                        <FrameLayout
+                            android:id="@+id/frameLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_toLeftOf="@+id/merchantdropbtn"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/noLogoPic"
+                                android:layout_width="150dp"
+                                android:layout_height="58dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:text=""
+                                android:textColor="@color/colorblack"
+                                android:textSize="35dp"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/mLogoPic"
+                                android:layout_width="match_parent"
+                                android:layout_height="58dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:scaleType="fitStart"
+                                android:src="@drawable/logo_login"
+                                tools:ignore="ContentDescription" />
+
+                        </FrameLayout>
+
+                        <ImageView
+                            android:id="@+id/merchantdropbtn"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="15dp"
+                            android:contentDescription="@null"
+                            android:rotation="180"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/ic_arrow_up_dropdown" />
+
+                    </RelativeLayout>
+
+                    <!-- Line Seperator Merchant Container -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/darker_gray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- Merchant  Description Container -->
+
+                <LinearLayout
+                    android:id="@+id/merchantdescheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <TableRow
+                                android:id="@+id/tblrow3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tblrow1"
+                                android:layout_marginTop="10dp"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:weightSum="1">
+
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="right"
+                                    android:paddingLeft="20dp"
+                                    android:text="Merchant Name :"
+                                    android:textColor="@color/colortoolbar"
+                                    android:textSize="14sp" />
+
+
+                                <TextView
+                                    android:id="@+id/desmerchantname"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="09225090290"
+                                    android:textSize="14sp" />
+
+                            </TableRow>
+
+
+                            <TableRow
+                                android:id="@+id/emailrow"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tblrow3"
+                                android:paddingBottom="5dp"
+
+                                android:paddingTop="5dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="right"
+                                    android:paddingLeft="20dp"
+                                    android:text="Address:"
+                                    android:textColor="@color/colortoolbar"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/desaddress"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="Call"
+                                    android:textSize="14sp" />
+
+
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tblrow6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tblrow5"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="right"
+                                    android:paddingLeft="20dp"
+                                    android:text="City:"
+                                    android:textColor="@color/colortoolbar"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/descity"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="34567890"
+                                    android:textSize="14sp" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tblrow7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tblrow6"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="right"
+                                    android:paddingLeft="20dp"
+                                    android:text="Province:"
+                                    android:textColor="@color/colortoolbar"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/despronvince"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="500"
+                                    android:textSize="14sp" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tblrow8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tblrow7"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="right"
+                                    android:paddingLeft="20dp"
+                                    android:text="ZIP:"
+                                    android:textColor="@color/colortoolbar"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/deszip"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="500"
+                                    android:textSize="14sp" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tblrow9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tblrow8"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="right"
+                                    android:paddingLeft="20dp"
+                                    android:text="Country:"
+                                    android:textColor="@color/colortoolbar"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/descountry"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="500"
+                                    android:textSize="14sp" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tblrow10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tblrow9"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="right"
+                                    android:paddingLeft="20dp"
+                                    android:text="Email:"
+                                    android:textColor="@color/colortoolbar"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/desemail"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="500"
+                                    android:textSize="14sp" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tblrow13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tblrow10"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="right"
+                                    android:paddingLeft="20dp"
+                                    android:text="Mobile Number:"
+                                    android:textColor="@color/colortoolbar"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/mobilenoval"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="500"
+                                    android:textSize="14sp" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tblrow11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tblrow13"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="right"
+                                    android:paddingLeft="20dp"
+                                    android:text="Nature of Business:"
+                                    android:textColor="@color/colortoolbar"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/desnatureofbusiness"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="500"
+                                    android:textSize="14sp" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tblrow11"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="right"
+                                    android:paddingLeft="20dp"
+                                    android:text="No of Branches:"
+                                    android:textColor="@color/colortoolbar"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/desnoofbranches"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:fontFamily="sans-serif-light"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="500"
+                                    android:textSize="14sp" />
+
+                            </TableRow>
+
+                        </TableLayout>
+
+                    </LinearLayout>
+
+                    <!-- Line Seperator Merchant Desc Container -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/darker_gray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--                  Branches Container                      -->
+
+                <LinearLayout
+                    android:id="@+id/branchesheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_toLeftOf="@+id/branchesdropbtn"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="58dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:text="BRANCHES"
+                                android:textColor="@color/colorblack"
+                                android:textSize="20sp" />
+
+
+                        </FrameLayout>
+
+                        <ImageView
+                            android:id="@+id/branchesdropbtn"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="15dp"
+                            android:contentDescription="@null"
+                            android:rotation="180"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/ic_arrow_up_dropdown" />
+
+                    </RelativeLayout>
+
+                    <!-- Line Seperator Branches Container -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/darker_gray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- Branches  Description Container -->
+
+                <LinearLayout
+                    android:id="@+id/branchesdescheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/branchesdesbody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/staticmapcontainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/staticmap"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/mapcontainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <fragment
+                                android:id="@+id/map"
+                                android:name="com.goodkredit.myapplication.view.WorkaroundMapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buttonmapviewchanges"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:text="FULL VIEW" />
+
+                        <TextView
+                            android:id="@+id/emptybranch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:text="No Branches found."
+                            android:textSize="16sp"
+                            android:textStyle="italic"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/branches_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/activity_merchant_details_branches_items" />
+
+
+                    </LinearLayout>
+
+                    <!-- Line Seperator Branches Desc Container -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/darker_gray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--                  PRODUCT PROMOTIONS  Container                      -->
+
+                <LinearLayout
+                    android:id="@+id/productheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_toLeftOf="@+id/productdropbtn"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="58dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:text="PRODUCT PROMOTION"
+                                android:textColor="@color/colorblack"
+                                android:textSize="20sp" />
+
+
+                        </FrameLayout>
+
+                        <ImageView
+                            android:id="@+id/productdropbtn"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="15dp"
+                            android:contentDescription="@null"
+                            android:rotation="180"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/ic_arrow_up_dropdown" />
+                    </RelativeLayout>
+
+                    <!-- Line Seperator Branches Container -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/darker_gray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- Branches  Description Container -->
+
+                <LinearLayout
+                    android:id="@+id/productdescheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/emptypromo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:text="No Promotion yet."
+                            android:textSize="16sp"
+                            android:textStyle="italic" />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/product_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/activity_merchant_details_products_items" />
+
+
+                    </LinearLayout>
+
+                    <!-- Line Seperator Branches Desc Container -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/darker_gray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--  BODY  -->
+            </LinearLayout>
+
+            <!-- MAIN -->
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include
+        layout="@layout/loader"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/toolbarwrap" />
+
+</RelativeLayout>
+

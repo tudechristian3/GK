@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/member_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_5sdp"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:id="@+id/personalinfo_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp"
+        >
+
+        <TextView
+            android:id="@+id/txv_personalinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Personal Information"
+            android:textAppearance="@style/roboto.bold"
+            android:textColor="@color/color_418E6B" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_personalinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/accountsinfo_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp"
+        >
+
+        <TextView
+            android:id="@+id/txv_accounts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Accounts"
+            android:textAppearance="@style/roboto.bold"
+            android:textColor="@color/color_418E6B" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_accountsinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<html>
+<head>
+    <style>
+
+			ul{
+				display: block;
+				list-style-type: disc;
+			}
+
+			.small-alpha{
+			   list-style: lower-alpha;
+			}
+
+			ol li.float { position: initial; }
+			.float-x { counter-reset: float-x; padding-left:40px; }
+			ol.float-x li.float{ list-style: lower-alpha; }
+			ol.float-x li.float:before {
+			   counter-increment: float-x;
+			   content: "1";
+			   position: absolute;
+			   margin-right: 100%;
+			   left: 60px;
+			}
+
+			.float-y { counter-reset: float-y; padding-left:40px; }
+			ol.float-y li.float{ list-style: lower-alpha; }
+			ol.float-y li.float:before {
+			   counter-increment: float-y;
+			   content: "2";
+			   position: absolute;
+			   margin-right: 100%;
+			   left: 58px;
+			}
+
+    </style>
+</head>
+
+<b>MECHANICS:</b>
+<ol>
+    <li>If member is not yet a GoodKredit subscriber:</li>
+    <ol class="small-alpha float-x">
+        <li class="float">Download <b>GoodKredit Philippines</b> in Google Play Store.</li>
+        <li class="float">Click on ‘Not yet a member?Sign up’.</li>
+        <li class="float">Provide the necessary information then click START.</li>
+    </ol>
+    <li>If member is already a GoodKredit subscriber:</li>
+    <ol class="small-alpha float-y">
+        <li class="float">Open the GK app.</li>
+    </ol>
+    <li>Tap <b>CPMPC</b> icon. Then click <b>P2S PLAY TO SAVE</b>.</li>
+    <li>Scroll down to <b>Play the Game</b>.</li>
+    <li>Select the game that you want to play.</li>
+    <ul>
+        <li>Click <b>Play Three (3) Digits</b> and fill in the 3 circles with your combination
+            numbers, between <b>0-9</b>.
+        </li>
+        <li>Click <b>Play Six (6) Digits</b> and fill in the 6 circles with your combination
+            numbers, between <b>1-46</b>.
+        </li>
+    </ul>
+    <li>Enter the required information to continue.</li>
+    <li>Drag vouchers to cover the amount needed to pay. Click <b>PROCEED</b>.</li>
+    <li>Check and verify the information and payment details. Click <b>CONFIRM</b>.</li>
+    <li>Wait for the confirmation of successful transaction.</li>
+    <li>Cut-off time of the game is 3:00 pm and will resume at 6:00 pm. Raffle draw is scheduled every
+        4:00-4:30pm, except weekends and holidays.
+    </li>
+</ol>
+
+<b>DRAW:</b>
+<ol>
+    <li>The draw will be held every 4:00-4:30pm of CPMPC working day at the head office (may be
+        aired in all branches through internet technology).
+    </li>
+    <li>The draw uses a raffle machine that jumbles numbered "ping-pong" balls inside a transparent
+        draw machine. A commission-appointed representative will facilitate the draw.
+    </li>
+    <li>On or before 6:00 pm, draw must be completed and results will be presented to all members
+        via official website, <a href="http://www.mycoop.ph/">www.mycoop.ph</a>, and CPMPC mini app in the
+        GoodKredit app.
+    </li>
+</ol>
+
+</html>

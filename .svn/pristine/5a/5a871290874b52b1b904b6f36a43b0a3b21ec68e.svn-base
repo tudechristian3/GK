@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <base-config cleartextTrafficPermitted="true" />
+    <!--DURING RELEASE: SET all cleartextTrafficPermitted to false-->
+    <domain-config cleartextTrafficPermitted="true">
+
+        <domain includeSubdomains="true">goodkredit.com</domain>
+        <pin-set expiration="2021-05-09">
+            <!--Note: These values may change over time, so be sure to use the values that you obtained from the ssllabs lookup-->
+            <!--LINK: https://www.ssllabs.com/ssltest/analyze.html?d=goodkredit.com&s=2606%3a4700%3a10%3a0%3a0%3a0%3a6814%3ae42c-->
+            <pin digest="SHA-256">jYsT926GTtvpsiiwKd/TXCiVMKmm6u861wHaZk7S5tk=</pin>
+            <pin digest="SHA-256">RkhWTcfJAQN/YxOR12VkPo+PhmIoSfWd/JVkg44einY=</pin>
+        </pin-set>
+
+        <domain includeSubdomains="true">172.16.16.100</domain> <!--DEV-->
+        <domain includeSubdomains="true">172.16.16.112</domain> <!--KRIS-->
+        <domain includeSubdomains="true">172.16.16.191</domain> <!--VANESSA-->
+        <domain includeSubdomains="true">172.16.16.248</domain> <!--RONEL-->
+        <domain includeSubdomains="true">172.16.16.192</domain> <!--KENJI-->
+
+    </domain-config>
+
+</network-security-config>
+

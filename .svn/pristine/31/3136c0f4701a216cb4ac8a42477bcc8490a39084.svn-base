@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitePrimary"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/btn_make_new_drop_off"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_make_new_dropoff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/dropoff_header" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Make a new drop-off"
+            android:textAllCaps="true"
+            android:textAppearance="@style/roboto.regular"
+            android:textColor="@color/whitePrimary"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_make_new_drop_off"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_margin="25dp"-->
+    <!--android:background="@drawable/btn_make_new_dropoff"-->
+    <!--android:minWidth="220dp"-->
+    <!--android:text="Make a new drop-off"-->
+    <!--android:textAllCaps="true"-->
+    <!--android:textAppearance="@style/roboto.bold"-->
+    <!--android:textColor="@color/whitePrimary"-->
+    <!--android:textSize="16dp" />-->
+
+    <FrameLayout
+        android:id="@+id/container_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

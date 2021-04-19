@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toastmaincontainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/custom_toast_info_background"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="24dp"
+        android:contentDescription="@null"
+        app:srcCompat="@drawable/ic_baseline_check_circle_24"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/toastmessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="GoodKredit PH"
+        android:textAppearance="@style/roboto.regular"
+        android:textColor="@color/colorwhite"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"/>
+
+
+</LinearLayout>

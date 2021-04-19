@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/home_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:id="@+id/home_body_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_gkearn_blue"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_gkearn_blue"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <!--REFERRAL CODE-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:paddingEnd="5dp"
+                            android:paddingRight="5dp"
+                            android:text="Referral Code: "
+                            android:textAppearance="@style/roboto.bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <!-- REFERRAL CODE LAYOUT -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shadow_box"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/txv_referral"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:hint="Code"
+                                    android:maxLength="12"
+                                    android:maxLines="1"
+                                    android:textAppearance="@style/roboto.bold"
+                                    android:textColor="@color/color_gkearn_blue"
+                                    android:textColorHint="@color/color_silver"
+                                    android:textSize="15sp" />
+
+                                <ImageView
+                                    android:id="@+id/imv_edit_code"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:contentDescription="@null"
+                                    android:padding="5dp"
+                                    android:src="@drawable/gkearn_edit" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <!--AVAILABLE POINTS-->
+                    <LinearLayout
+                        android:id="@+id/points_body_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+                        <!-- AVAILABLE POINTS LAYOUT -->
+                        <LinearLayout
+                            android:id="@+id/points_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/shadow_box"
+                            android:orientation="vertical"
+                            android:padding="15dp">
+
+
+                            <!-- AVAILABLE POINTS (LABEL) -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imv_available_credits"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:contentDescription="@null"
+                                    android:padding="5dp"
+                                    android:src="@drawable/gkearn_points" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:text="Available Points:"
+                                    android:textAppearance="@style/roboto.bold"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+
+                            <!-- AVAILABLE POINTS (VALUE) -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/txv_available_points"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:gravity="center"
+                                    android:maxWidth="200dp"
+                                    android:minWidth="50dp"
+                                    android:padding="5dp"
+                                    android:text="0"
+                                    android:textAppearance="@style/roboto.bold"
+                                    android:textColor="@color/color_gkearn_blue"
+                                    android:textSize="18sp" />
+
+
+                                <LinearLayout
+                                    android:id="@+id/btn_topup"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:background="@drawable/bg_round_shadow"
+                                    android:elevation="5dp"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/bg_round_shadow"
+                                        android:contentDescription="@null"
+                                        android:src="@drawable/gkearn_topup_yellow_icon" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!-- NOTE -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:text="NOTE: "
+                                    android:textAppearance="@style/roboto.bold"
+                                    android:textColor="@color/color_gkearn_blue"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="One (1) point is equal to one (1) peso worth of GK voucher."
+                                    android:textAppearance="@style/roboto.regular"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <!-- CONVERT TO VOUCHER -->
+                            <LinearLayout
+                                android:id="@+id/btn_convert_to_voucher"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/bg_rounded_gkearn_corners_blue"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Convert to Voucher"
+                                    android:textAppearance="@style/roboto.regular"
+                                    android:textColor="@color/whitePrimary" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--DOWNLINES-->
+                    <LinearLayout
+                        android:id="@+id/downlines_body_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <!-- DOWNLINES LAYOUT-->
+                        <LinearLayout
+                            android:id="@+id/downlines_points_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/shadow_box"
+                            android:orientation="vertical"
+                            android:padding="15dp">
+
+                            <!-- DOWNLINES (LABEL) -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imv_downlines"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:contentDescription="@null"
+                                    android:padding="5dp"
+                                    android:src="@drawable/gkearn_downlines" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:text="Your Downlines: "
+                                    android:textAppearance="@style/roboto.bold"
+                                    android:textColor="@color/colorTextGrey"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+
+                            <!-- DOWNLINES(VALUE) -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txv_downlines"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:gravity="center"
+                                    android:maxWidth="200dp"
+                                    android:minWidth="50dp"
+                                    android:padding="5dp"
+                                    android:text="0"
+                                    android:textAppearance="@style/roboto.bold"
+                                    android:textColor="@color/color_gkearn_blue"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+
+                            <!-- INVITE A FRIEND-->
+                            <LinearLayout
+                                android:id="@+id/btn_invite_friend"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/bg_rounded_gkearn_corners_blue"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Invite a Friend"
+                                    android:textAppearance="@style/roboto.regular"
+                                    android:textColor="@color/whitePrimary" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--APPLY AS STOCKIST-->
+                        <LinearLayout
+                            android:id="@+id/btn_apply_stockist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="25dp"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_white_button"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="15dp"
+                                android:paddingBottom="10dp"
+                                android:text="APPLY AS STOCKIST"
+                                android:textColor="@color/color_gkearn_blue"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <!--BUY ACTIVATION VOUCHER-->
+                        <LinearLayout
+                            android:id="@+id/btn_activation_voucher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="25dp"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_white_button"
+                                android:paddingLeft="35dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="35dp"
+                                android:paddingBottom="10dp"
+                                android:textSize="16sp"
+                                android:text="Buy Activation Voucher"
+                                android:textColor="@color/color_gkearn_blue"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/frame_conversion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/txv_conversion_history"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Conversion History "
+                            android:textSize="@dimen/_15ssp"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frame_topup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/txv_topup_history"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Top-up History "
+                            android:textSize="@dimen/_15ssp"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/whitePrimary"
+                    android:orientation="vertical">
+
+                    <!--CONVERSION HISTORY-->
+                    <LinearLayout
+                        android:id="@+id/layout_conversion_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_conversion_history"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:visibility="gone"
+                            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+                        <!--EMPTY-->
+                        <include layout="@layout/global_empty" />
+
+                        <LinearLayout
+                            android:id="@+id/btn_view_archive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/bg_rounded_gkearn_corners_blue"
+                            android:orientation="vertical"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp">
+
+                            <TextView
+                                android:id="@+id/txv_view_archive"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="View Archive"
+                                android:textAppearance="@style/roboto.regular"
+                                android:textColor="@color/whitePrimary" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--TOP-UP HISTORY-->
+                    <LinearLayout
+                        android:id="@+id/layout_topup_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_topup_history"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+                        <!--EMPTY-->
+                        <!--include layout="@layout/global_empty" />-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txv_topup_empty"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:padding="15dp"
+                                android:text="No top-up history yet."
+                                android:textColor="@color/colorTextGrey"
+                                android:textSize="18sp"
+                                android:textStyle="italic" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_topup_view_archive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/bg_rounded_gkearn_corners_blue"
+                            android:orientation="vertical"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp">
+
+                            <TextView
+                                android:id="@+id/txv_topup_view_archive"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="View Archive"
+                                android:textAppearance="@style/roboto.regular"
+                                android:textColor="@color/whitePrimary" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include layout="@layout/global_layout_error" />
+
+    <!--PAYMENT CHANNEL-->
+    <include layout="@layout/payment_channel" />
+
+</RelativeLayout>

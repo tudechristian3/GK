@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightgray"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_20sdp"
+            android:background="@color/whitePrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/bg_coopassistant_blue">
+
+                    <TextView
+                        android:id="@+id/txv_coop_paymenttype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MEMBERSHIP"
+                        android:layout_gravity="center"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/whitePrimary"
+                        android:textStyle="bold"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_15sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Payment Txn#"
+                            android:layout_weight="0.5"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txv_coop_paymenttxnid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Regular Loan"
+                            android:layout_weight="0.5"
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Date/Time Paid"
+                            android:layout_weight="0.5"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txv_coop_datetimepaid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Regular Loan"
+                            android:layout_weight="0.5"
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Merchant Name"
+                            android:layout_weight="0.5"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txv_coop_merchantname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Regular Loan"
+                            android:layout_weight="0.5"
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Amount"
+                            android:layout_weight="0.5"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txv_coop_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Regular Loan"
+                            android:layout_weight="0.5"
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Customer Service Charge"
+                            android:layout_weight="0.5"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txv_coop_custsercharge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Regular Loan"
+                            android:layout_weight="0.5"
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Merchant Service Charge"
+                            android:layout_weight="0.5"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txv_coop_merchsercharge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Regular Loan"
+                            android:layout_weight="0.5"
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Amount Paid"
+                            android:layout_weight="0.5"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txv_coop_totalamountpaid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Regular Loan"
+                            android:layout_weight="0.5"
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Transaction Medium"
+                            android:layout_weight="0.5"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txv_coop_transactionmedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Regular Loan"
+                            android:layout_weight="0.5"
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Payment Option"
+                            android:layout_weight="0.5"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txv_coop_paymentoption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Regular Loan"
+                            android:layout_weight="0.5"
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Status"
+                            android:layout_weight="0.5"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txv_coop_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Regular Loan"
+                            android:layout_weight="0.5"
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</ScrollView>

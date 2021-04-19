@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    tools:context="com.goodkredit.myapplication.activities.account.WelcomePageActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeSkycableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:gravity="center">
+
+        <!--skycable_header-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:gravity="center_vertical"
+            android:maxHeight="160dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/skycable_header" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/skycable_close" />
+
+    <TextView
+        android:id="@+id/txvNotice"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/relativeSkycableLayout"
+        android:background="@color/color_F33D2C"
+        android:gravity="center"
+        android:text="BROADCAST"
+        android:textColor="@color/colorwhite"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/txvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvNotice"
+        android:gravity="start"
+        android:paddingBottom="15dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:text="Your application requet with the transaction number 985345345"
+        android:textColor="@color/color_333333"
+        android:textSize="18sp" />
+
+</RelativeLayout>

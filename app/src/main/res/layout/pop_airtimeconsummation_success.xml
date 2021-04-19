@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/successwrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/success"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/subject"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="TRANSACTION ON PROCESS"
+                android:textAppearance="@style/roboto.bold"
+                android:textColor="@color/colortoolbar"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/successMessage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Your prepaid load transaction is still in process. You will receive a notification once it's done. Please monitor your transaction under Usage Menu."
+                android:textSize="16sp" />
+
+            <TableRow
+                android:id="@+id/approvalcodewrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tblrow1"
+                android:visibility="gone"
+                android:weightSum="1">
+
+
+                <ImageView
+                    android:id="@+id/leftarrow"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_weight="0.3"
+                    android:gravity="right"
+                    android:rotation="180"
+                    android:src="@mipmap/arrow2" />
+
+
+                <ImageView
+                    android:id="@+id/successBarcode"
+                    android:layout_width="210dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="0.4"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/successQRCode"
+                    android:layout_width="210dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="0.4"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/rightarrow"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_weight="0.3"
+                    android:src="@mipmap/arrow2" />
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/barcodeValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/merchantRefCodeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="(Approval Code)"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/dialogNote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:text=" Thank you for using GoodKredit."
+                android:textSize="16sp" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/popok"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:fontFamily="sans-serif-medium"-->
+            <!--android:gravity="right"-->
+            <!--android:paddingBottom="30dp"-->
+            <!--android:paddingRight="30dp"-->
+            <!--android:text="CLOSE"-->
+            <!--android:textColor="@color/colortoolbar"-->
+            <!--android:textSize="16dp" />-->
+
+            <LinearLayout
+                android:id="@+id/linearGkNegosyoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/color_037BD3"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txvGkNegosyoDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/txvGkNegosyoRedirection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_gknegosyo_rounded_sides"
+                    android:gravity="center"
+                    android:textColor="@color/whitePrimary"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_gravity="right"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/popok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_toLeftOf="@+id/popconfirm"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="left"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="20dp"
+                        android:text="CLOSE"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/colordimgray"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/retrybtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="left"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="20dp"
+                        android:text="RETRY"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/colortoolbar"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

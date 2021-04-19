@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/lightgray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_active_rfid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/whitePrimary">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ACTIVE"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:textColor="@color/color_rfid_lightblue"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_15ssp"/>
+
+                        <View
+                            android:id="@+id/view_rfid_active"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.8dp"
+                            android:background="@color/text_darkgray"
+                            android:visibility="gone"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_active_rfid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txv_no_active_rfid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No Active RFID."
+                            android:textColor="@color/text_lightgray"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="italic"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/_5sdp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_inactive_rfid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/whitePrimary">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="INACTIVE"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:textColor="@color/color_rfid_lightblue"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_15ssp"/>
+
+                        <View
+                            android:id="@+id/view_rfid_inactive"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.8dp"
+                            android:background="@color/text_darkgray"
+                            android:visibility="gone"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_inactive_rfid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txv_no_inactive_rfid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No Inactive RFID."
+                            android:textColor="@color/text_lightgray"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:textStyle="italic"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/_5sdp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--Layout for empty data-->
+        <RelativeLayout
+            android:id="@+id/emptyvoucher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="No enrolled RFID."
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:paddingLeft="30dp"
+                android:src="@drawable/emptybox2" />
+
+            <ImageView
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/imageView"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:src="@drawable/refresh4"
+                android:text="REFRESH"
+                android:textColor="@color/colorwhite"
+                android:textSize="16sp"
+                android:textAppearance="@style/roboto.bold"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/refreshdisabled"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/imageView"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:src="@drawable/refreshdisabled"
+                android:text="REFRESH"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="8dp"
+                android:src="@drawable/logowatermark" />
+        </RelativeLayout>
+
+        <!--Layout for no connection -->
+        <RelativeLayout
+            android:id="@+id/nointernetconnection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/nointernet" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView1"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="30dp"
+                android:text="Opps! It looks like you're not connected. Please check your internet connection."
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/refreshnointernet"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:src="@drawable/refresh4" />
+
+            <ImageView
+                android:id="@+id/refreshdisabled1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:src="@drawable/refreshdisabled"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="8dp"
+                android:src="@drawable/logowatermark" />
+        </RelativeLayout>
+
+        <include layout="@layout/loader" />
+
+        <include layout="@layout/rfid_not_connected"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

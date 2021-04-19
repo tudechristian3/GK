@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.goodkredit.myapplication.activities.transfer.TransferThruEmail">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colortoolbar"
+            app:popupTheme="@style/MyMaterialTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imagewrapper">
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:gravity="center"
+                android:text="A verification code was sent to the receiver's email. Kindly ask the code and enter the code to proceed. "/>
+
+            <EditText
+                android:id="@+id/code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Verification Code"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:padding="15sp"
+                android:inputType="number"
+                android:fontFamily="sans-serif"
+                android:maxLength="4"
+                android:background="@drawable/border"
+
+                />
+            <EditText
+                android:id="@+id/receivername"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Receivers Name"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:padding="15sp"
+                android:inputType="text"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/border"
+                android:visibility="gone"
+
+                />
+
+
+
+            <Button
+                android:id="@+id/proceed"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:text="PROCEED"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorwhite"
+                android:background="@color/buttons"
+                android:onClick="tranferThruEmail"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

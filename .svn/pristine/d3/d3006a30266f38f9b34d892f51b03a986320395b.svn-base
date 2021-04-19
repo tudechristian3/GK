@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whitePrimary"
+    >
+
+    <include layout="@layout/toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_50sdp"
+            android:paddingBottom="@dimen/_50sdp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            >
+
+            <ImageView
+                android:id="@+id/imv_logo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txv_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Scan for Attendance"
+                android:textAppearance="@style/roboto.regular"
+                android:textColor="@color/color_506072"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/fair_child_action_button"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="SCAN FOR ATTENDANCE"
+            android:textAllCaps="true"
+            android:textAppearance="@style/roboto.bold"
+            android:visibility="gone"
+            android:textColor="@color/whitePrimary" />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:gravity="center_horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/placeholderImage"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/activityPadding"
+        android:layout_marginTop="@dimen/padding_10"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/shimmerbackground"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/placeholderImage"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/activityPadding"
+        android:layout_marginTop="@dimen/padding_10"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/shimmerbackground"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/placeholderImage"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/activityPadding"
+        android:layout_marginTop="@dimen/padding_10"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/shimmerbackground"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/placeholderImage"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/activityPadding"
+        android:layout_marginTop="@dimen/padding_10"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/shimmerbackground"
+        />
+
+
+</LinearLayout>

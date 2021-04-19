@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/text_darkgray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:paddingBottom="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RFID: "
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_13ssp"/>
+
+                <TextView
+                    android:id="@+id/txv_rfid_accountno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1234567890"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/color_rfid_lightblue"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"/>
+
+            <LinearLayout
+                android:id="@+id/linear_rfid_spin_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SPIN: "
+                    android:textSize="@dimen/_13ssp"/>
+
+                <TextView
+                    android:id="@+id/txv_rfid_spin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1234"
+                    android:textSize="@dimen/_13ssp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"/>
+
+            <LinearLayout
+                android:id="@+id/layout_rfid_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BALANCE: "
+                    android:textSize="@dimen/_13ssp"/>
+
+                <TextView
+                    android:id="@+id/txv_rfid_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textSize="@dimen/_13ssp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"/>
+
+            <LinearLayout
+                android:id="@+id/layout_rfid_minamount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MINIMUM AMOUNT: "
+                    android:textSize="@dimen/_13ssp"/>
+
+                <TextView
+                    android:id="@+id/txv_rfid_minamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textSize="@dimen/_13ssp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:src="@mipmap/arrow2" />
+
+    </LinearLayout>
+
+</LinearLayout>

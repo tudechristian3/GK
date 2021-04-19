@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarTransferred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/colortoolbar"
+            app:popupTheme="@style/MyMaterialTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarTransferred">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="24dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingStart="24dp"
+            android:paddingTop="16dp">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/transferredDetailsType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="19sp"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="Transfer Type"
+                app:met_floatingLabelTextSize="15sp"
+                app:met_textColor="@color/colortoolbar" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/transferredDetailsFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="19sp"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="Transfer From"
+                app:met_floatingLabelTextSize="15sp"
+                app:met_textColor="@color/colortoolbar" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/transferredDetailsTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="19sp"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="Transfer To"
+                app:met_floatingLabelTextSize="15sp"
+                app:met_textColor="@color/colortoolbar" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/transferredDetailsMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="19sp"
+                android:visibility="gone"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="Mobile Number"
+                app:met_floatingLabelTextSize="15sp"
+                app:met_textColor="@color/colortoolbar" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/transferredDetailsEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="19sp"
+                android:visibility="gone"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="Email Address"
+                app:met_floatingLabelTextSize="15sp"
+                app:met_textColor="@color/colortoolbar" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/transferredDetailsVoucherCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="19sp"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="Voucher ID"
+                app:met_floatingLabelTextSize="15sp"
+                app:met_textColor="@color/colortoolbar" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/transferredDetailsAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="19sp"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="Amount"
+                app:met_floatingLabelTextSize="15sp"
+                app:met_textColor="@color/colortoolbar" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/transferredDetailsDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="19sp"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="Date/Time Transferred"
+                app:met_floatingLabelTextSize="15sp"
+                app:met_textColor="@color/colortoolbar" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

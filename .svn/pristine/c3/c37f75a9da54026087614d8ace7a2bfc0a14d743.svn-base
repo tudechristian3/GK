@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/btn_view_partners"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingStart="10dp">
+
+                <ImageView
+                    android:id="@+id/imgv_view_partners"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_claim_partners" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imgv_view_partners"
+                    android:layout_toStartOf="@+id/imgv_view_partners"
+                    android:padding="5dp"
+                    android:text="Payment Channels"
+                    android:textAllCaps="true"
+                    android:textColor="#02bbff" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:background="#00bbd3">
+
+                <EditText
+                    android:id="@+id/edt_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp"
+                    android:textColor="@color/whitePrimary"
+                    android:textColorHint="@color/grey_85"
+                    android:textCursorDrawable="@drawable/cursor_white"
+                    android:textSize="48sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_choose_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingEnd="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingStart="10dp">
+
+                <ImageView
+                    android:id="@+id/imgv_choose_contact"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_contacts2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imgv_choose_contact"
+                    android:layout_toStartOf="@+id/imgv_choose_contact"
+                    android:padding="5dp"
+                    android:text="Choose from Contacts"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorTextGrey" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edt_receiver_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/border"
+                    android:hint="Receiver's name"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edt_receiver_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/border"
+                    android:hint="Receiver's mobile number"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_send_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/buttons"
+            android:text="SEND"
+            android:textAllCaps="true"
+            android:textColor="@color/whitePrimary" />
+    </FrameLayout>
+
+</LinearLayout>

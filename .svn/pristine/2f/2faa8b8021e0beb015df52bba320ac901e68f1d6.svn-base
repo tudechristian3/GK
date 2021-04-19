@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/home_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="3dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbarFadeDuration="4"
+        android:scrollbarSize="5dp"
+        android:scrollbars="vertical"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/whitePrimary"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imv_btn_close_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:minWidth="50dp"
+                android:minHeight="50dp"
+                android:padding="10dp"
+                android:tint="@color/color_mdp_gray"
+                app:srcCompat="@drawable/ic_close_white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                >
+
+                <TextView
+                    android:id="@+id/txv_packages_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="PACKAGE"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txv_packages_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="5000"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/color_gkearn_blue"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txv_packages_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="200dp"
+                android:padding="15dp"
+                android:text="Package 100 entitles you to register as Stockist......"
+                android:textAppearance="@style/roboto.bold"
+                android:textColor="@color/colordarkgrey"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:gravity="bottom|center"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/btn_package_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/gkearn_check_action_bg"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txv_package"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="5dp"
+                        android:text="Get this package."
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/colorwhite"
+                        android:textSize="20dp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--PAYMENT CHANNEL-->
+    <include layout="@layout/payment_channel" />
+
+</RelativeLayout>

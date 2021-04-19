@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:focusable="true">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:id="@+id/btn_view_sent_messages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@color/whitePrimary">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:src="@drawable/ic_freesms_history"
+                        android:padding="@dimen/_10sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Sent History"
+                        android:textColor="#009CE0"
+                        android:textAppearance="@style/roboto.bold"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Send to :"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/color_757575"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tblrow1"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#DBDBDB"
+                            android:focusable="false"
+                            android:gravity="center"
+                            android:hint=""
+                            android:inputType="number"
+                            android:paddingBottom="15sp"
+                            android:paddingTop="15sp"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/colorblack"
+                            android:text="+63"/>
+
+
+                        <EditText
+                            android:id="@+id/edt_sendto"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4.7"
+                            android:background="@drawable/border_freesms_bordertopbottomright"
+                            android:fontFamily="sans-serif"
+                            android:hint="(ex. 9123456789)"
+                            android:digits="0123456789"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:padding="14.4sp"
+                            android:textColor="@color/freesms_textcolor"
+                            android:textSize="16sp"/>
+
+                        <ImageView
+                            android:id="@+id/btn_open_contacts"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@null"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_contacts"
+                            android:padding="2dp"/>
+
+                    </TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_5ssp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="From :"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textColor="@color/color_757575"
+                            android:textSize="@dimen/_16ssp"/>
+
+                        <TextView
+                            android:id="@+id/txv_sendfrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_15ssp"
+                            android:textColor="@color/freesms_textcolor"
+                            android:layout_marginLeft="@dimen/_8ssp"
+                            android:textAppearance="@style/roboto.regular"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_marginTop="-8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Message :"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/color_757575"
+                        android:textSize="@dimen/_16ssp"/>
+
+                    <EditText
+                        android:id="@+id/edt_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@drawable/border_freesms_message"
+                        android:gravity="top|start|left"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:minLines="6"
+                        android:textColor="@color/freesms_textcolor"
+                        android:padding="@dimen/_10ssp"/>
+
+                    <TextView
+                        android:id="@+id/txv_char_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:textStyle="italic"
+                        android:textColor="@color/color_757575"
+                        android:layout_marginBottom="@dimen/_5ssp"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_send_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SEND"
+                    android:background="@drawable/button"
+                    android:textColor="@color/whitePrimary"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/_9sdp"
+                    android:padding="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

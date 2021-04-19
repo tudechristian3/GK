@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/gk_negosyo_refer_a_reseller"
+        android:icon="@drawable/ic_action_refer_a_reseller"
+        android:title="REFER"
+        android:visible="true"
+        app:showAsAction="always" />
+</menu>

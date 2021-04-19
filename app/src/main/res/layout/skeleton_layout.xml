@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        shimmer:duration="2000"
+        app:shimmer_auto_start="true"
+        app:shimmer_repeat_mode="restart">
+
+        <!-- Adding 7 rows of placeholders -->
+        <LinearLayout
+            android:id="@+id/skeleton_services"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+        </LinearLayout>
+
+        <!--FOR PUBLIC SPONSOR SKELETON LAYOUT-->
+        <LinearLayout
+            android:id="@+id/skeleton_public_sponsor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/layout_public_sponsors_skeleton"/>
+            <include layout="@layout/layout_public_sponsors_skeleton"/>
+            <include layout="@layout/layout_public_sponsors_skeleton"/>
+            <include layout="@layout/layout_public_sponsors_skeleton"/>
+            <include layout="@layout/layout_public_sponsors_skeleton"/>
+            <include layout="@layout/layout_public_sponsors_skeleton"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+</LinearLayout>

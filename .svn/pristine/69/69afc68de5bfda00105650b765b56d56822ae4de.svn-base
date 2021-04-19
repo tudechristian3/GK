@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/detailsVoucherImage"
+                android:layout_width="match_parent"
+                android:layout_height="116dp"
+                android:layout_gravity="top|end"
+                android:contentDescription="@null"
+                android:scaleType="fitStart" />
+
+            <ImageView
+                android:id="@+id/prepaid_tag"
+                android:layout_width="14dp"
+                android:layout_height="25.5dp"
+                android:layout_gravity="top|end"
+                android:layout_marginRight="-1dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/prepaid_voucher_tag1"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-3dp"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|right"
+                    android:text="GK Transaction No.:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/detailsTransNo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"
+                    android:paddingStart="8dp"
+                    android:text="gk txn no"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:gravity="end"
+                    android:text="Voucher Serial No.:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/detailsSerial"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"
+                    android:paddingStart="8dp"
+                    android:text="serial"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:gravity="end"
+                    android:text="Voucher ID:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/detailsCode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"
+                    android:paddingStart="8dp"
+                    android:text="code"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:gravity="end"
+                    android:text="Amount Consumed:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/detailsConsumed"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"
+                    android:paddingStart="8dp"
+                    android:text="consuemd"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="-3dp"-->
+        <!--android:layout_weight="2"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="end|right"-->
+        <!--android:text="GK Transaction No.:"-->
+        <!--android:textSize="12dp" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:gravity="end"-->
+        <!--android:text="Voucher Serial No.:"-->
+        <!--android:textSize="12dp" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:gravity="end"-->
+        <!--android:text="Voucher ID:"-->
+        <!--android:textSize="12dp" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:gravity="end"-->
+        <!--android:text="Amount Consumed:"-->
+        <!--android:textSize="12dp" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="-3dp"-->
+        <!--android:layout_weight="2"-->
+        <!--android:orientation="vertical"-->
+        <!--android:paddingLeft="8dp"-->
+        <!--android:paddingStart="8dp">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/detailsTransNo"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="gk txn no"-->
+        <!--android:textSize="12dp" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/detailsSerial"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:text="serial"-->
+        <!--android:textSize="12dp" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/detailsCode"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:text="code"-->
+        <!--android:textSize="12dp" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/detailsConsumed"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:text="consuemd"-->
+        <!--android:textSize="12dp" />-->
+
+        <!--</LinearLayout>-->
+
+    </LinearLayout>
+
+</RelativeLayout>

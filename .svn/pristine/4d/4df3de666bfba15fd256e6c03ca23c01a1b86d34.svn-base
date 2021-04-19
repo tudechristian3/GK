@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1dp"
+        android:visibility="gone"
+       >
+      <!--<ListView-->
+            <!--android:id="@android:id/list"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/currentbill"/>-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ExpandableListView
+                android:id="@+id/list"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <Button
+                android:id="@+id/btn_more"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/list"
+                android:background="@color/colorwhite"
+                android:text="VIEW ARCHIVE"
+                android:textAllCaps="true"
+                android:textColor="@color/buttons"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!--Layout for empty -->
+   <include layout="@layout/global_empty_layout"/>
+
+    <!--Layout for empty filtering-->
+    <include layout="@layout/global_empty_filtering"/>
+
+    <!--Layout for no connection -->
+    <include layout="@layout/global_new_nointernetlayout"/>
+
+    <include layout="@layout/loader" />
+
+
+</RelativeLayout>

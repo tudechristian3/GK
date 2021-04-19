@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.goodkredit.myapplication">
+
+    <uses-sdk tools:overrideLibrary="ph.com.voyagerinnovation.freenet.applink" />
+
+    <permission
+        android:name="com.goodkredit.myapplication.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.goodkredit.myapplication.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:name=".application.GKApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup"
+        android:icon="@mipmap/appicon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme"
+        tools:replace="android:theme,android:icon"
+        tools:targetApi="n">
+
+        <!-- NEWLY ADDED FOR LOAD MESSENGER -->
+
+        <activity android:name=".activities.loadmessenger.ViewLoadTransactionsActivity"
+            android:launchMode="singleInstance"
+            android:label="View Load Transactions"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme">
+
+        </activity>
+        <activity android:name=".activities.loadmessenger.ViewFBDetailsActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:label="Account Details"
+            android:theme="@style/MyMaterialTheme">
+
+        </activity>
+        <activity android:name=".activities.loadmessenger.ConnectedAccountsActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:label="Connected Accounts"
+            android:theme="@style/MyMaterialTheme">
+
+        </activity>
+        <!-- NEWLY ADDED FOR TRANSFER VOUCHERS -->
+        <activity
+            android:name=".activities.transfer.TransferVouchersActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" /> <!-- ******NEW ACTIVITIES****** -->
+        <activity
+            android:name=".activities.gkservices.GKSpecificServicesActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.gkservices.AllServicesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.gkservices.AllServicesActivity" />
+        </activity>
+        <activity
+            android:name=".activities.gkservices.AllServicesActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity> <!-- **************************** -->
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.account.SignInActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.account.SignUpActivity"
+            android:label="Create Account"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.account.CodeVerificationActivity"
+            android:label="Enter Verification Code"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.account.GuarantorVerificationActivity"
+            android:label="Enter Sponsor Code"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.settings.ChangePasswordActivity"
+            android:label="Change Password"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.settings.AboutActivity"
+            android:label="About Us"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.prepaidload.BuyPrepaidLoadActivity"
+            android:label="Prepaid Load"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.airtime.AirtimePurchase"
+            android:label="Prepaid Load"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.vouchers.AvailableVoucherDetails"
+            android:label="Voucher Details"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.transfer.TransferThruSMS"
+            android:label="Transfer Thru SMS"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.transfer.TransferThruEmail"
+            android:label="Transfer Thru Email"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.transfer.TransferThruBorrower"
+            android:label="Transfer to a Subscriber"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.transfer.TransferVerifySMS"
+            android:label="Transfer Thru SMS"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.transfer.TransferVerifyEmail"
+            android:label="Transfer Thru Email"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.account.CountryCodeListActivity"
+            android:label="Select Country"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.account.SetupPasswordActivity"
+            android:label="Setup Account"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.notification.NotificationsActivity"
+            android:label="Notifications"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".fragments.transactions.ConsummatedDetails"
+            android:label="Consummation Details"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".fragments.transactions.BorrowingsDetails"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.prepaidload.PrepaidLoadProductCodesActivity"
+            android:label="Product Codes"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.airtime.ProductCodes"
+            android:label="Product Codes"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".common.PaymentConfirmation"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.profile.SubscriberProfileActivity"
+            android:label="Profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.account.WelcomePageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".common.Payment"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.vouchers.AvailableVoucherDetailsTransaction"
+            android:label="Voucher Transactions"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.notification.NotificationDetailsActivity"
+            android:label="Notification Details"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity android:name=".fragments.soa.SettlementDetailsActivity" />
+        <activity
+            android:name=".activities.profile.SubscriberProfileImageCroppingActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" /> <!-- <receiver android:name=".broadcastreceiver.CodeVerificationSMSBroadcastListener"> -->
+        <!-- <intent-filter android:priority="99999"> -->
+        <!-- <action android:name="android.provider.Telephony.SMS_RECEIVED" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <activity
+            android:name=".activities.settings.TermsAndConditions"
+            android:label="Terms &amp; Conditions"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.payviaqrcode.PayViaQRCodeActivity"
+            android:label="Scan QR Code"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.payviaqrcode.PayMerchantActivity"
+            android:label="Pay by QR code"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".fragments.sponsors.SponsorDetails"
+            android:label="Sponsor Details"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".fragments.transactions.TransferredDetails"
+            android:label="Transferred Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.merchants.OutletsActivity"
+            android:label="Outlets"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.account.GKAppIntroActivity"
+            android:label="GoodKredit"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.settings.SupportFAQActivity"
+            android:label="FAQ"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.settings.SupportSendMessageActivity"
+            android:label="Send Message"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.merchants.FullMerchantGridActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.vouchers.grouping.GroupVoucherActivity"
+            android:label="Group Voucher"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.vouchers.GroupedVouchersActivity"
+            android:label="Grouped Voucher Details"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.transactions.PurchasesTransactionDetailsActivity"
+            android:label="Purchase Details"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.billspayment.BillsPaymentActivity"
+            android:label="Bills Payment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.billspayment.BillsPaymentBillerDetailsActivity"
+            android:label="Billers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.billspayment.BillsPaymentConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.statementofaccount.SOAActivityDetails"
+            android:label="Bill View"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.transactions.ViewOthersTransactionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.notification.NotificationProcessSuccessActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentActivityTheme" />
+        <activity
+            android:name=".activities.transactions.V2ProcessQueueActivity"
+            android:label="Transactions In Progress"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.profile.V2ViewProfileActivity"
+            android:label="Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".activities.profile.V2EditProfileActivity"
+            android:label="Edit Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.reloadretailer.PurchaseRetailerLoadActivity"
+            android:label="Smart Retailer Wallet"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.reloadretailer.RetailerLoadConfirmationActivity" />
+        <activity
+            android:name=".activities.gkservices.GKServicesSearchActivity"
+            android:label="GK Services"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.prepaidrequest.VoucherPrepaidRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.prepaidrequest.ViewPaymentChannelsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.csbrewards.CSBRewardsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.paramount.ParamountInsuranceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.promo.SuccessPromoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.promo.ScanPromoActivity"
+            android:label="Scan QR"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.merchants.MerchantDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.merchants.ViewAllMerchantsByOrganizationTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.viewpendingorders.ViewPendingOrdersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.paramount.ParamountInsuranceConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.paramount.ViewParamountHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.promo.ScanPromoHistoryActivity"
+            android:label="Scan QR History"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.petron.PetronValueCardActivity"
+            android:label="Petron Value Card"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkservices.medpadala.MedPadalaActivity"
+            android:label="MEDPadala"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkservices.medpadala.MedPadalaConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkstore.GKStoreDetailsActivity"
+            android:label="GK Store Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.billspayment.ViewAllBillersByCategoryActivity"
+            android:label="Bills Payment Category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkstore.GKStoreConfirmationActivity"
+            android:label="GK Store Confirmation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkstore.GkStoreHistoryActivity"
+            android:label="GK Store History"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkstore.GKStoreHistoryDetailsActivity"
+            android:label="GK Store History Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkservices.medpadala.MedPadalaTransactionHistoryActivity"
+            android:label="MEDPadala"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.skycable.SkyCableActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activities.gkstore.GKStoreInformationActivity"
+            android:label="Gk Store Information"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.sendmoney.SendMoneyActivity"
+            android:label="Send Money"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.sendmoney.ClaimCentersActivity"
+            android:label="Send Money"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".common.PaymentActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.delivery.SetupDeliveryAddressActivity"
+            android:label="Add Address"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkstore.GKStoreFullScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.csbrewards.CSBSettingsActivity"
+            android:label="CSB Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.csbrewards.CSBSettingsCommonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.csbrewards.CSBSettingsChangeMobileConfimationActivity"
+            android:label="Verification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragments.sponsors.PublicPonsorPromos"
+            android:label="Public Sponsor Promo"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.cooperative.CoopLandingPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoPackagesActivity"
+            android:label="GK Negosyo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoPackageDetailsActivity"
+            android:label="Package Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoPackageConfirmationActivity"
+            android:label="GK Negosyo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoDistributorsActivity"
+            android:label="GK Negosyo"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoPackageBillinReferenceActivity"
+            android:label="Billing"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoDashboardActivity"
+            android:label="GK Negosyo Dashboard"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name=".common.PaymentChannelsActivity" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoDistributorDetailsActivity"
+            android:label=" "
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.gknegosyo.GKNegosyoPaymentConfirmationActivity" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoRedirectionActivity"
+            android:label="GK Negosyo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragments.sponsors.SponsorTermsAndConditions"
+            android:label="Sponsor Terms and Conditions"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.projectcoop.ProjectCoopActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoResellerLocationActivity"
+            android:label="GK Negosyo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoPackageTermsandCondition"
+            android:label="GK Negosyo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.schoolmini.SchoolMiniActivity"
+            android:label="School Mini"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.schoolmini.SchoolMiniConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.schoolmini.SchoolMiniBillingReferenceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.schoolmini.SchoolMiniBulletinWebView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoPackageMerchantsWithDiscountPQR"
+            android:label="Merchants"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.uno.UnoRewardsActivity" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoEarningDetailsActivity"
+            android:label="Transactions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.account.ReferralCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.account.ReferralSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.notification.NotificationReferralSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoReferAResellerActivity"
+            android:label="Refer a Reseller"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gknegosyo.GKNegosyoEnterReferralCodeActivity"
+            android:label="Enter Referral Code"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.notification.NotificationResellerReferralSuccessActivity" />
+        <activity
+            android:name=".activities.dropoff.PaymentRequestActivity"
+            android:label="Payment Request"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.dropoff.PaymentRequestDetailsActivity"
+            android:label="Payment Request"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.dropoff.PaymentRequestOptionActivity"
+            android:label="Payment Request"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.dropoff.PaymentRequestPayViaPartnerActivity"
+            android:label="Payment Request"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.dropoff.PaymentRequestConfirmationActivity"
+            android:label="Payment Request"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.mdp.MDPActivity"
+            android:label="Payment Request"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.mdp.MDPBulletinActivity"
+            android:label="Payment Request"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.mdp.MDPSupportActivity"
+            android:label="Payment Request"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.dropoff.DropOffActivity"
+            android:label="Drop-Off"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.dropoff.MakeNewDropOffActivity"
+            android:label="Make a New Drop-Off"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.dropoff.DropOffConfirmationActivity"
+            android:label="Confirmation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.dropoff.DropOffMerchantsActivity"
+            android:label="Search Results"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.prepaidrequest.VirtualVoucherProductConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.whatsnew.GKAdsActivity"
+            android:label="Transactions"
+            android:theme="@style/TranslucentActivityThemeBlack" />
+        <activity
+            android:name=".activities.whatsnew.GKWhatsNewCommonDetailsActivity"
+            android:label="New Updates"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.notification.NotificationGKAdsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PushNotification" />
+        <activity
+            android:name=".activities.vouchers.VoucherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.publicsponsor.RegisterToPublicSponsorActivity"
+            android:label="Register To Sponsor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.publicsponsor.PublicSponsorDetailsActivity"
+            android:label="Public Sponsor Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.publicsponsor.V2PublicSponsorPromotionsActivity"
+            android:label="Public Sponsor Promo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.publicsponsor.PublicSponsorWebViewCostumizedActivity"
+            android:label="Register To Sponsor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.freesms.FreeSMSActivity"
+            android:label="Free SMS"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.freesms.FreeSMSHistoryActivity"
+            android:label="Sent Messages"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.voting.VotesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.voting.VotesParticipantDetailsActivity"
+            android:theme="@style/TranslucentActivityThemeBlack" />
+        <activity
+            android:name=".activities.voting.VotesPaymentOptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.voting.VotesBillingReferenceActivity"
+            android:label="Votes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.voting.VotesConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.voting.VotesHistoryActivity"
+            android:label="Votes History"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.voting.VotesPendingActivity"
+            android:label="Pending Votes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.fairchild.FairChildAttendanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.fairchild.FairChildVoteInstructionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.fairchild.FairChildVoteActivity"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name=".activities.mysterybox.MysteryBoxWonActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".activities.fairchild.FairChildDeadEndActivity"
+            android:screenOrientation="portrait" /> <!-- COOP ASSISTANT -->
+        <activity
+            android:name=".activities.coopassistant.CoopAssistantHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.coopassistant.nonmember.CoopAssistantTermsandConditionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.coopassistant.nonmember.CoopAssistantPMESActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.coopassistant.CoopAssistantPaymentOptionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.coopassistant.CoopAssistantConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.coopassistant.nonmember.CoopAssistantApplyMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.coopassistant.member.CoopAssistantTransactionHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.vouchers.rfid.RFIDDetailsActivity"
+            android:label="RFID Details"
+            android:screenOrientation="portrait" /> <!-- GK EARN -->
+        <activity
+            android:name=".activities.gkearn.GKEarnHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkearn.GKEarnPaymentOptionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkearn.stockist.GKEarnStockistPackagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkearn.stockist.GKEarnStockistPackagesDetailsActivity"
+            android:theme="@style/TranslucentActivityThemeBlack" />
+        <activity
+            android:name=".activities.gkearn.GKEarnConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkearn.GKEarnRegistrationConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.gkearn.GKEarnBuyActivationHistoryActivity"
+            android:screenOrientation="portrait" /> <!-- PAYOUT ONE -->
+        <activity
+            android:name=".activities.vouchers.payoutone.VoucherPayoutOneDetailsActivity"
+            android:label="Cheque Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.vouchers.payoutone.VoucherPayoutOneDepositToBankActivity"
+            android:label="Deposit to Bank"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.vouchers.payoutone.VoucherPayoutOneDepositConfirmationActivity"
+            android:label="Deposit to Bank"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.vouchers.payoutone.VoucherPayoutOneAddBankAccountActivity"
+            android:label="Add Bank"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.vouchers.payoutone.VoucherPayoutOneAccreditedBankActivity"
+            android:label="Add Bank"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.vouchers.payoutone.VoucherPayoutOneBankDepositDetailsActivity"
+            android:screenOrientation="portrait" /> <!-- RFID -->
+        <activity
+            android:name=".activities.vouchers.rfid.RFIDPaymentOptionsActvity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.vouchers.rfid.RFIDConfirmationActivity"
+            android:screenOrientation="portrait" /> <!-- SYNC CONTACTS -->
+        <activity
+            android:name=".activities.syncontacts.SyncContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentActivityThemeBlack" /> <!-- EGAME -->
+        <activity
+            android:name=".activities.egame.EGameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.egame.EGameProductsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.egame.EGameTransactionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.egame.EGameConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.egame.EGameTransactionDetailsActivity"
+            android:screenOrientation="portrait" /> <!-- API KEY AND SERVICE -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyASnOCtIJeeIz37NyJfpbV7-lvOrJPo1mo" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+        <service
+            android:name=".gcmpush.GCMService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".gcmpush.GCMInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".gcmpush.RegistrationIntentService"
+            android:exported="false" />
+        <service
+            android:name=".utilities.GPSTracker"
+            android:enabled="true" />
+    </application>
+
+</manifest>

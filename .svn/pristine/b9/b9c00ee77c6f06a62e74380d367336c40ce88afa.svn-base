@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical">
+
+    <!--<TextView-->
+    <!--android:id="@+id/guarantorname"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_margin="4dp"-->
+    <!--android:textSize="18sp"-->
+
+    <!--android:textStyle="bold" />-->
+
+    <!--<TextView-->
+    <!---->
+    <!--android:id="@+id/guarantoraddress"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/guarantorname"-->
+    <!--android:layout_margin="4dp"-->
+    <!--android:textSize="14sp" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_box">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:scaleType="fitStart"
+            android:src="@drawable/emptylogdefault"
+            android:id="@+id/guarantorlogoskelton"
+            app:cardBackgroundColor="@color/shimmerbackground"
+            android:padding="10dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/guarantornameskeleton"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/guarantorlogoskelton"
+            android:layout_margin="6dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:cardBackgroundColor="@color/shimmerbackground" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/guarantoraddress"
+            android:layout_width="100dp"
+            android:layout_height="5dp"
+            android:layout_below="@id/guarantornameskeleton"
+            app:cardBackgroundColor="@color/shimmerbackground"
+            android:layout_margin="6dp"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

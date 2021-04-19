@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nested_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorwhite"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/header_buy_voucher"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <!--PENDING VOUCHERS-->
+                                <LinearLayout
+                                    android:id="@+id/btnViewPendingOrders"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="45dp"
+                                    android:layout_gravity="center_vertical|center_horizontal"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginEnd="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:background="@drawable/bg_btn_view_pending_orders"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/txvPendingOrders"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_horizontal|center_vertical"
+                                        android:paddingStart="15dp"
+                                        android:paddingEnd="15dp"
+                                        android:text="VIEW PENDING ORDERS"
+                                        android:textColor="@color/colorwhite"
+                                        android:textSize="14sp" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/layout_badge"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_horizontal|center_vertical"
+                                        android:paddingStart="10dp"
+                                        android:paddingLeft="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:paddingRight="10dp"
+                                        android:visibility="gone">
+
+                                        <TextView
+                                            android:id="@+id/pendingOrderBadge"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:background="@drawable/badge_background"
+                                            android:gravity="center_horizontal|center_vertical"
+                                            android:padding="3dp"
+                                            android:text="0"
+                                            android:textColor="@color/color_BD3632"
+                                            android:textSize="18sp" />
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_payment_channels_note"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingStart="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="You can pay through any of the following Payment Channels"
+                                    android:textAppearance="@style/roboto.regular"
+                                    android:textColor="@color/color_757575"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_payment_channels"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/txv_cardnote"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:gravity="center"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:text="You can also pay through debit/credit cards"
+                                    android:textAppearance="@style/roboto.regular"
+                                    android:textColor="@color/color_757575"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:id="@+id/linear_cardlogo_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:id="@+id/eghlLogoVisa"
+                                        android:layout_width="0dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="@null" />
+
+                                    <ImageView
+                                        android:id="@+id/eghlLogoMasterCard"
+                                        android:layout_width="0dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="@null" />
+
+                                    <!--<ImageView-->
+                                    <!--android:id="@+id/eghlLogoBancnet"-->
+                                    <!--android:layout_width="0dp"-->
+                                    <!--android:layout_height="80dp"-->
+                                    <!--android:layout_marginLeft="15dp"-->
+                                    <!--android:layout_marginRight="15dp"-->
+                                    <!--android:layout_weight="1"-->
+                                    <!--android:contentDescription="@null" />-->
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/txvOrderVouchersLabel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:background="@color/colorwhite"
+                                    android:gravity="center|center_vertical"
+                                    android:text="Order Vouchers"
+                                    android:textSize="24sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/header_points"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingStart="20dp"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="25dp"
+                                android:paddingEnd="20dp"
+                                android:paddingRight="20dp"
+                                android:paddingBottom="25dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="YOUR POINTS"
+                                        android:textColor="@color/whitePrimary"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_points"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:textColor="@color/whitePrimary"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/refresh_points"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="start|center"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/ic_refresh_csb" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </FrameLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view_virtual_vouchers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorwhite"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="5dp" />
+
+                        <!--tools:listitem="@layout/fragment_virtual_voucher_product_item" />-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_F1F1F1"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:paddingStart="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingEnd="20dp"
+                            android:paddingRight="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/shadow_box"
+                                android:orientation="vertical"
+                                android:paddingStart="5dp"
+                                android:paddingLeft="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingRight="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border_bottom_item"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="20dp"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingEnd="20dp"
+                                    android:paddingRight="20dp"
+                                    android:paddingBottom="10dp">
+
+                                    <TextView
+                                        android:id="@+id/txvTotalVouchers"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="start|center_vertical"
+                                        android:text="TOTAL VOUCHERS"
+                                        android:textColor="@color/color_757575"
+                                        android:textSize="18sp" />
+
+                                    <TextView
+                                        android:id="@+id/txvTotalVouchersValue"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="end|center_vertical"
+                                        android:text="0"
+                                        android:textColor="@color/color_4988A5"
+                                        android:textSize="20sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border_bottom_item"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="20dp"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingEnd="20dp"
+                                    android:paddingRight="20dp"
+                                    android:paddingBottom="10dp"
+
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/txvTotaAmount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="start|center_vertical"
+                                        android:text="TOTAL AMOUNT"
+                                        android:textColor="@color/color_757575"
+                                        android:textSize="18sp" />
+
+                                    <TextView
+                                        android:id="@+id/txvTotalAmountValue"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="end|center_vertical"
+                                        android:text="0"
+                                        android:textColor="@color/color_4988A5"
+                                        android:textSize="20sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!--PAYMENT OPTION-->
+                            <LinearLayout
+                                android:id="@+id/layout_payment_options"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/border"
+                                android:orientation="vertical"
+                                android:padding="10dp"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:gravity="end"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/item_info_circle"
+                                        android:src="@drawable/ic_action_info"
+                                        android:tint="@color/coopassist_info"
+                                        tools:ignore="ContentDescription" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:text="Payment Options"
+                                    android:textAppearance="@style/roboto.bold"
+                                    android:textColor="@color/coopassist_green"
+                                    android:textSize="18sp" />
+
+
+                                <LinearLayout
+                                    android:id="@+id/payment_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="vertical">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/rv_paymentoptions"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/btnGenerate"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/bg_btn_accent_pay"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </RelativeLayout>
+
+        <!--Layout for empty-->
+        <include layout="@layout/global_empty" />
+
+        <!--Layout for no connection -->
+        <include layout="@layout/global_nointernet" />
+
+        <include layout="@layout/global_loaderv2" />
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

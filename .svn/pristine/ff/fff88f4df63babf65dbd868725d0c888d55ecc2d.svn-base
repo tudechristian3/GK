@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_refer_a_reseller"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:background="#FF0018"
+                        android:padding="15dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/arrrow"
+                            android:layout_toLeftOf="@+id/arrrow"
+                            android:text="Get FREE voucher, REFER A RESELLER!"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textColor="@color/whitePrimary"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/arrrow"
+                            android:layout_width="18dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:padding="5dp"
+                            android:src="@drawable/arrowright" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="260dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/gkay" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/str_gk_negosyo_redirection_note1"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/colorTextGrey"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/notes2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/str_gk_negosyo_redirection_note2"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/colorTextGrey"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/btn_show_more_less"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_more_less"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="more"
+                                android:textAlignment="center"
+                                android:textAppearance="@style/roboto.bold"
+                                android:textColor="@color/colorsilver" />
+
+                            <ImageView
+                                android:id="@+id/img_more_less"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@null"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_arrow_gk_negosyo_notes" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/proceed_to_gk_negosyo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/button"
+                            android:padding="15dp"
+                            android:text="PROCEED TO GK NEGOSYO"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layout_req_via_payment_channel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_close_icon_round"
+            tools:ignore="ContentDescription" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="You have a pending payment for your reseller package. Please pay in order for you to get discount on your transactions. "
+                android:textAlignment="center"
+                android:textAppearance="@style/roboto.regular"
+                android:textColor="@color/colorwhite"
+                android:textSize="20dp"
+
+                />
+
+            <!--android:textSize="16dp"-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/btn_cancel_request"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonred"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:text="Cancel"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/btn_paynow_request"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:text="PAY NOW"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_reseller_deactivated"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="Your GK Negosyo Package has already expired. Earn more by enrolling to a new Reseller program."
+                android:textAlignment="center"
+                android:textAppearance="@style/roboto.regular"
+                android:textColor="@color/colorwhite"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/btn_activate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/button"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="10dp"
+                    android:text="ACTIVATE ACCOUNT"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/roboto.bold"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_reseller_blocked"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="You account has been blocked. Please contact GoodKredit Support via support@goodkredit.com."
+                android:textAlignment="center"
+                android:textAppearance="@style/roboto.regular"
+                android:textColor="@color/colorwhite"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_95sdp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLineDivider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="match_parent"
+            android:background="@drawable/votes_outline_picture"
+            android:padding="0.5dp">
+
+            <com.goodkredit.myapplication.utilities.PercentageCropImageView
+                android:id="@+id/img_candidate_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="matrix"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:background="@color/votes_darkgreen">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_magnifier" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/txv_candidate_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Candidate #1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+            <TextView
+                android:id="@+id/txv_candidate_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gefre-Guy_Buyco"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="0.1">
+
+            <CheckBox
+                android:id="@+id/chk_fairchild"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

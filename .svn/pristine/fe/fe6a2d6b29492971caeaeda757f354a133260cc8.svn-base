@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/personalinfo_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:id="@+id/personalinfo_details_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/txv_basicinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="Basic Information"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/color_418E6B" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_personalinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+                    <!--MEMBER ID-->
+                    <LinearLayout
+                        android:id="@+id/layout_memberid_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Member ID"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_memberid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--MEMBER TYPE-->
+                    <LinearLayout
+                        android:id="@+id/layout_membershiptype_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Membership Type"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_membershiptype"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--SURNAME-->
+                    <LinearLayout
+                        android:id="@+id/layout_surname_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Surname"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_surname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--GIVEN NAME-->
+                    <LinearLayout
+                        android:id="@+id/layout_givenname_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Given Name"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_givenname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--MIDDLE NAME-->
+                    <LinearLayout
+                        android:id="@+id/layout_middlename_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Middle Name"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_middlename"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--MOBILE NUMBER-->
+                    <LinearLayout
+                        android:id="@+id/layout_mobileno_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mobile Number"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_mobileno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--EMAIL ADDRESS-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Email Address"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_emailaddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--GENDER-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gender"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--BIRTHDATE-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Birthdate"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_birthdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--CIVILSTATUS-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Civil Status"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_civilstatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--NATIONALITY-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nationality"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_national"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--HOMETOWN ADD-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Place of Birth"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_hometown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--CURRENT ADDRESS-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Current Address"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_currentadd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!--OCCUPATION-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Occupation"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_green"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txv_occupation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/coopassist_gray1"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                <!--OTHER INFORMATION-->
+                    <TextView
+                        android:id="@+id/txv_otherinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="Other Information"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/color_418E6B" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_otherdetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

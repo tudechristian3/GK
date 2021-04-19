@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/optionwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiusfiltertop"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/filteroption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="Filter Options"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/editsearches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="30dp"
+            android:text="EDIT SEARCHES"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/clearsearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radiusfilterbottom"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingBottom="40dp"
+            android:paddingTop="20dp"
+            android:text="CLEAR SEARCHES"
+            android:textSize="18dp"
+
+            />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/filterwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/zxing_transparent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+
+                >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+
+                        android:id="@+id/tblrow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/radiusfiltertop"
+                        android:gravity="center"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/confirmationlbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="View Archive"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tblrow7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tblrow6"
+                        android:background="@color/colorwhite"
+                        android:padding="25dp">
+
+                        <Spinner
+                            android:id="@+id/year"
+                            style="@style/spin_header"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="24dp" />
+
+                        <Spinner
+                            android:id="@+id/month"
+                            style="@style/spin_header"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="20dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="24dp" />
+
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/sortwrap"
+                    android:background="@color/colordarkgrey" />
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radiusfilterbottom">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_gravity="right"
+                        android:gravity="right">
+
+                        <TextView
+                            android:id="@+id/cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toLeftOf="@+id/popconfirm"
+                            android:background="@color/colorwhite"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="left"
+                            android:paddingBottom="12dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="12dp"
+                            android:text="CANCEL"
+                            android:textColor="@color/colordimgray"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/colorwhite"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="left"
+                            android:paddingBottom="12dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="12dp"
+                            android:text="FILTER"
+                            android:textColor="@color/colortoolbar"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/archive_search"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

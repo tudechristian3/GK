@@ -1,0 +1,108 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/logowatermarklayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"
+                android:paddingBottom="8dp"
+                android:src="@drawable/logowatermark" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nested_scroll_logs_prepaid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="blocksDescendants"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pagetitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_vertical"
+                            android:padding="10dp"
+                            android:text="@string/string_logs_of_prepaid_load"
+                            android:textAllCaps="true"
+                            android:textColor="@color/color_676767" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view_logs_prepaid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginStart="1dp"
+                            android:paddingEnd="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            tools:listitem="@layout/fragment_transactions_logs_prepaid_item" />
+
+                        <Button
+                            android:id="@+id/btn_more"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@color/colorwhite"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </RelativeLayout>
+
+        <!--Layout for empty-->
+        <include layout="@layout/global_empty_layout"/>
+
+        <!--Layout for empty filtering-->
+       <include layout="@layout/global_empty_filtering"/>
+
+        <!--Layout for no connection -->
+        <include layout="@layout/global_new_nointernetlayout"/>
+
+        <include layout="@layout/loader" />
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

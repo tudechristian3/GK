@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/global_new_layout_drawable"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="10dp"
+          >
+          <TextView
+              android:id="@+id/title_allservices"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp"
+              android:fontFamily="@font/robotobold"
+              android:padding="10dp"
+              android:textAlignment="center"
+              android:textColor="@color/colorblack"
+              android:textSize="18sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/message_allservices"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp"
+              android:layout_marginStart="10dp"
+              android:layout_marginEnd="10dp"
+              android:fontFamily="@font/robotoregular"
+              android:padding="5dp"
+              android:textAlignment="center"
+              android:textColor="@color/colorblack" />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_margin="10dp">
+
+              <Button
+                  android:id="@+id/cancelBtn_allservices"
+                  style="@style/Widget.AppCompat.Button.Borderless"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:fontFamily="@font/robotobold"
+                  android:textStyle="bold" />
+
+              <Button
+                  android:id="@+id/positiveBtn_allservices"
+                  style="@style/Widget.AppCompat.Button.Borderless"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:fontFamily="@font/robotobold"
+                  android:textStyle="bold" />
+
+          </LinearLayout>
+
+      </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:shimmer="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/layout_gk_services"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:paddingBottom="0dp">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--main layout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+                    <!--gks main services-->
+                    <FrameLayout
+                        android:id="@+id/gks_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:visibility="visible">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_goodapps_gks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layoutAnimation="@anim/item_animation"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                    </FrameLayout>
+                    <!--search result-->
+                    <LinearLayout
+                        android:id="@+id/gks_search_results"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layoutAnimation="@anim/item_animation"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="50dp"
+                            android:background="@color/whiteTrans" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/gks_gridView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:layoutAnimation="@anim/layout_to_left"
+                            android:overScrollMode="never"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!--Layout for skeleton loader-->
+    <include layout="@layout/skeleton_layout"/>
+
+    <!--Layout for no connection -->
+    <include layout="@layout/global_new_nointernetlayout"/>
+
+    <FrameLayout
+        android:id="@+id/fab_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_floating_button"
+        android:layout_gravity="bottom|end">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fab_plus"
+            android:visibility="invisible"
+            app:backgroundTint="@color/fabNormal"
+            app:borderWidth="0dp"
+            app:elevation="12dp" />
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBtnVoucher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:borderWidth="0dp"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/gk_logo_sky_blue"
+        app:backgroundTint="@color/color_115D84"
+        app:elevation="12dp"/>
+
+
+
+</FrameLayout>
+
+
+

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/colorwhite"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/dropoff_header" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txv_merchant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="Chooks to Go"
+                    android:textColor="@color/color_00BCD4"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/txv_totalamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="200 PHP"
+                    android:textColor="@color/color_3B3B3B"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/txv_txnno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:text="TXV#: 0005"
+                    android:textColor="@color/color_757575"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txvDateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="5/11/2018 03:27 PM"
+                    android:textColor="@color/color_757575"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/txv_purpose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="Collection"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_757575"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/txvStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="FOR PAYMENT"
+                    android:textColor="@color/color_9A9A9A"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical|end"
+            android:src="@drawable/ic_chevron_right"
+            android:tint="@color/color_9D9D9D" />
+
+    </FrameLayout>
+
+</LinearLayout>

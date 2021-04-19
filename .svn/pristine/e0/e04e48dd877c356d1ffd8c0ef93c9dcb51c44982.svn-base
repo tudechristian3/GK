@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        tools:context=".activities.transfer.TransferVouchersActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colortoolbar"
+                app:popupTheme="@style/MyMaterialTheme.PopupOverlay">
+
+                <!--<Button-->
+                <!--android:id="@+id/proceed"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:background="@color/colortoolbar"-->
+                <!--android:onClick="proceedConfirmation"-->
+                <!--android:text="PROCEED"-->
+                <!--android:textSize="16dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:drawableRight="@drawable/arrowright"/>-->
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right">
+
+                    <Button
+                        android:id="@+id/proceed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:background="@null"
+                        android:text="PROCEED"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/arrowright" />
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/horizontal_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/colorwhite"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/emptyvoucherPayment"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:text="No vouchers yet."
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="24dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logowatermark" />
+
+            <RelativeLayout
+                android:id="@+id/dropareawrap"
+                android:layout_width="110dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="2dp"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:id="@+id/droparea"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/border"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/dropareatext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Drop voucher \n here"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/horizontal_recycler_view2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="120dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/sidemenucolor"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TableRow
+                    android:id="@+id/tblrow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:fontFamily="sans-serif"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:text="Number of Vouchers:"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/grey_85"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/totalnoofvouchers"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:fontFamily="sans-serif"
+                        android:gravity="right"
+                        android:text="0"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/colorwhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:weightSum="1">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:fontFamily="sans-serif"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:text="AMOUNT :"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/colorwhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/amounttenval"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:fontFamily="sans-serif"
+                        android:gravity="right"
+                        android:text="0.00"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/colorwhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#80000000"
+        android:padding="8dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="43dp"
+            android:contentDescription="@null"
+            android:src="@drawable/drag_tuts" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,15 @@
+
+
+#BASE URL
+OLD_LINK = "https://wsborrower.goodkredit.com/"
+SECURED_LINK = "https://wsborrowerv2.goodkredit.com/"
+PUSH_NOTIFICATION_LINK = "https://wspush.goodkredit.com/"
+S3_LINK = "https://s3-us-west-1.amazonaws.com/goodkredit-final/"
+DEBUG_MODE = "false"
+BUCKET_NAME = "gk-profile-final"
+SUPPORT_BUCKET_NAME = "gk-support-final"
+FREE_NET_KEY = "b2JHRJTbjaAOVXVo7X6eZx8iihiDDR70sb6dijJm3Oe8S5K"
+SPONSOR_TERMS_AND_CONDITION_URL = "https://www.goodkredit.com/#/sponsor/termsandconditions/"
+HTTP_LOGS = "false"
+ENCRYPT = "false"
+TERMS_GUARANTOR_SIGN_UP = "https://www.goodkredit.com/#/termsofuse"

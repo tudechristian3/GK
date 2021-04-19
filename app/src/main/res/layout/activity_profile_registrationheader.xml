@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/layout_header_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_default_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/emptyprofilepic" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/imageprogressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/uploadlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Uploading. Please wait.."
+                android:textColor="@color/colorwhite"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_header_image"
+            android:layout_marginTop="-46dp"
+            android:paddingBottom="11dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="11dp"
+            android:text="63923227444"
+            android:textColor="@color/colorwhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnSelectPhoto"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/layout_header_image"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="-40dp"
+            android:background="@drawable/cameraicon"
+            android:scaleType="fitStart" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last Name" />
+
+        <EditText
+            android:id="@+id/lastname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:focusable="true"
+            android:fontFamily="sans-serif"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="First Name" />
+
+        <EditText
+            android:id="@+id/firstname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:fontFamily="sans-serif"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Middle Name" />
+
+        <EditText
+            android:id="@+id/middlename"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:fontFamily="sans-serif"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Gender" />
+
+        <Spinner
+            android:id="@+id/loadtype"
+            style="@style/spin_header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Email Address" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:fontFamily="sans-serif"
+            android:inputType="textEmailAddress"
+            android:padding="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Street Address" />
+
+        <EditText
+            android:id="@+id/streetaddress"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:fontFamily="sans-serif"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:padding="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="City" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:fontFamily="sans-serif"
+            android:inputType="text"
+            android:padding="15dp" />
+
+
+        <TextView
+            android:id="@+id/messagelbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Your message to the sponsor" />
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/messagelbl"
+            android:layout_gravity="top"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:fontFamily="sans-serif"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:padding="15dp" />
+
+        <TextView
+            android:id="@+id/guarantoridlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:focusable="false"
+            android:text="Sponsor Code"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/guarantoridval"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:focusable="false"
+            android:fontFamily="sans-serif"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:padding="15dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/buttons"
+            android:onClick="SaveProfile"
+            android:text="Register"
+            android:textColor="@color/colorwhite"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.loadmessenger.ConnectedAccountsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:theme="@style/MyMaterialTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <EditText
+        android:id="@+id/et_lm_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:maxLines="1"
+        android:inputType="text"
+        android:layout_margin="16dp"
+        android:hint="Search people/ FB Name"
+        android:imeOptions="actionSearch"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="@dimen/default_padding_bottom"
+        android:background="#EFEFEF"/>
+
+   <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+       android:id="@+id/swipeRefresh_lm"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:animateLayoutChanges="true">
+
+           <LinearLayout
+               android:id="@+id/layout_lm_empty"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:visibility="gone">
+
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:text="No Accounts Found. Pull to refresh"/>
+
+           </LinearLayout>
+
+           <androidx.core.widget.NestedScrollView
+               android:id="@+id/connected_nested"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:visibility="gone">
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/rv_lm_connectedacc"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   tools:listitem="@layout/connected_acc_item"
+                   tools:targetApi="lollipop"
+                   android:visibility="visible"/>
+
+           </androidx.core.widget.NestedScrollView>
+
+
+       </LinearLayout>
+
+
+
+
+
+
+   </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

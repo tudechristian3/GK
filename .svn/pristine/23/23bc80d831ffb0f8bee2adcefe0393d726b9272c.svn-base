@@ -1,0 +1,812 @@
+package com.goodkredit.myapplication.fragments.transactions;
+
+import android.database.Cursor;
+import android.os.Bundle;
+import android.os.CountDownTimer;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.goodkredit.myapplication.R;
+import com.goodkredit.myapplication.adapter.transactions.BorrowingsRecyclerAdapter;
+import com.goodkredit.myapplication.base.BaseActivity;
+import com.goodkredit.myapplication.base.BaseFragment;
+import com.goodkredit.myapplication.bean.Transaction;
+import com.goodkredit.myapplication.common.CommonFunctions;
+import com.goodkredit.myapplication.common.CommonVariables;
+import com.goodkredit.myapplication.responses.GenericResponse;
+import com.goodkredit.myapplication.utilities.PreferenceUtils;
+import com.goodkredit.myapplication.database.DatabaseHandler;
+import com.goodkredit.myapplication.enums.GlobalToastEnum;
+import com.goodkredit.myapplication.utilities.RetrofitBuild;
+import com.goodkredit.myapplication.utilities.RetrofitBuilder;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+/**
+ * Created by User-PC on 8/2/2017.
+ */
+
+public class BorrowingsFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, View.OnClickListener {
+
+    private RecyclerView recyclerView;
+    private BorrowingsRecyclerAdapter mAdapter;
+
+    private String borrowerid = "";
+    private String imei = "";
+    //    private String sessionid = "";
+    private String userid = "";
+    private String authcode;
+
+    private Calendar c;
+    private DatabaseHandler db;
+    private SwipeRefreshLayout mSwipeRefreshLayout;
+    private List<Transaction> mGridData;
+    private TextView pagetitle;
+    private RelativeLayout logowatermarklayout;
+
+    private RelativeLayout emptyLayout;
+    private RelativeLayout emptyvoucherfilter;
+    private RelativeLayout nointernetconnection;
+    private Button refreshnointernet;
+    private ImageView imgVRefresh;
+    private TextView textView11;
+    private TextView filteroption;
+    private TextView viewarchive;
+
+    private RelativeLayout mLlLoader;
+    private TextView mTvFetching;
+    private TextView mTvWait;
+
+    private int currentyear = 0;//make this not changeable for (filter condition)
+    private int currentmonth = 0; //make this not changeable for (filter condition)
+    private int year;
+    private int month;
+    private int registrationyear;
+    private int registrationmonth;
+    private String dateregistered = "";
+
+    private MaterialDialog mDialog;
+    private ScrollView filterwrap;
+    private LinearLayout optionwrap;
+    private TextView editsearches;
+    private TextView clearsearch;
+    private Spinner spinType;
+    private Spinner spinType1;
+    private TextView popfilter;
+    private TextView popcancel;
+
+    private Button mBtnMore;
+
+    boolean isyearselected = false;
+    private boolean ismonthselected = false;
+
+    private NestedScrollView nested_scroll_logs_prepaid;
+
+    //UNIFIED SESSION
+    private String sessionid = "";
+
+    //NEW VARIABLES FOR SECURITY
+    private String index;
+    private String authenticationid;
+    private String keyEncryption;
+    private String param;
+
+    private  View view;
+
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        view = inflater.inflate(R.layout.fragment_borrowings, container, false);
+
+        db = new DatabaseHandler(getViewContext());
+        mGridData = new ArrayList<>();
+
+        //UNIFIED SESSION
+        sessionid = PreferenceUtils.getSessionID(getViewContext());
+
+        //get account information
+        imei = PreferenceUtils.getImeiId(getViewContext());
+        userid = PreferenceUtils.getUserId(getViewContext());
+        borrowerid = PreferenceUtils.getBorrowerId(getViewContext());
+
+        nested_scroll_logs_prepaid = view.findViewById(R.id.nested_scroll_logs_prepaid);
+
+        pagetitle = view.findViewById(R.id.pagetitle);
+        logowatermarklayout = view.findViewById(R.id.logowatermarklayout);
+
+        mSwipeRefreshLayout = view.findViewById(R.id.swipe_container);
+        mSwipeRefreshLayout.setEnabled(false);
+
+        mBtnMore = view.findViewById(R.id.btn_more);
+        recyclerView = view.findViewById(R.id.recycler_view_borrowings);
+        emptyLayout = view.findViewById(R.id.emptyLayout);
+        emptyvoucherfilter = view.findViewById(R.id.emptyvoucherfilter);
+        nointernetconnection = view.findViewById(R.id.nointernetconnection);
+        refreshnointernet = view.findViewById(R.id.refreshnointernet);
+        filteroption = view.findViewById(R.id.filteroption);
+        viewarchive = view.findViewById(R.id.viewarchive);
+        imgVRefresh =view.findViewById(R.id.refresh);
+
+        textView11 = view.findViewById(R.id.textView11);
+        textView11.setText("No borrowings for this month.");
+
+        mLlLoader = view.findViewById(R.id.loaderLayout);
+        mTvFetching = view.findViewById(R.id.fetching);
+        mTvWait = view.findViewById(R.id.wait);
+
+
+
+        //initialize date
+        year = Calendar.getInstance().get(Calendar.YEAR);
+        month = Calendar.getInstance().get(Calendar.MONTH) + 1;
+        currentyear = Calendar.getInstance().get(Calendar.YEAR);
+        currentmonth = Calendar.getInstance().get(Calendar.MONTH) + 1;
+
+        //get account information
+        Cursor cursor = db.getAccountInformation(db);
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            do {
+                dateregistered = cursor.getString(cursor.getColumnIndex("dateregistration"));
+
+                String CurrentString = dateregistered;
+                String[] separated = CurrentString.split("-");
+                registrationyear = Integer.parseInt(separated[0]);
+                registrationmonth = Integer.parseInt(separated[1]);
+
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+
+        mLoaderTimer = new CountDownTimer(30000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+            }
+
+            @Override
+            public void onFinish() {
+                mLlLoader.setVisibility(View.GONE);
+            }
+        };
+
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getViewContext()));
+        recyclerView.setNestedScrollingEnabled(false);
+        mAdapter = new BorrowingsRecyclerAdapter(getViewContext(), mGridData, BorrowingsFragment.this);
+        recyclerView.setAdapter(mAdapter);
+        recyclerView.setOnScrollListener(scrollListener);
+
+
+        listener();
+
+        getSession();
+
+
+        return view;
+    }
+
+    private void listener(){
+        imgVRefresh.setOnClickListener(this);
+        viewarchive.setOnClickListener(this);
+        filteroption.setOnClickListener(this);
+        refreshnointernet.setOnClickListener(this);
+        mBtnMore.setOnClickListener(this);
+        mSwipeRefreshLayout.setOnRefreshListener(this);
+
+        nested_scroll_logs_prepaid.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                if (scrollY > oldScrollY) {
+//                    Logger.debug("antonhttp", "Scroll DOWN");
+                    mSwipeRefreshLayout.setEnabled(false);
+                }
+                if (scrollY < oldScrollY) {
+//                    Logger.debug("antonhttp", "Scroll UP");
+                    mSwipeRefreshLayout.setEnabled(false);
+                }
+
+                if (scrollY == 0) {
+//                    Logger.debug("antonhttp", "TOP SCROLL");
+                    mSwipeRefreshLayout.setEnabled(true);
+                }
+
+                if (scrollY == (v.getChildAt(0).getMeasuredHeight() - v.getMeasuredHeight())) {
+//                    Logger.debug("antonhttp", "======BOTTOM SCROLL=======");
+                    mSwipeRefreshLayout.setEnabled(false);
+
+                }
+            }
+        });
+
+    }
+
+    private void getSession() {
+
+        showNoInternetConnection(false);
+
+        mLoaderTimer.cancel();
+        mLoaderTimer.start();
+
+        mTvFetching.setText("Fetching borrowings.");
+        mTvWait.setText(" Please wait...");
+        mLlLoader.setVisibility(View.VISIBLE);
+
+        if (CommonFunctions.getConnectivityStatus(getContext()) > 0) {
+
+            authcode = CommonFunctions.getSha1Hex(imei + userid + sessionid);
+            //getBorrowingsObject(getBorrowingsSession);
+            getBorrowingsV2();
+
+        } else {
+            mSwipeRefreshLayout.setEnabled(false);
+            mLlLoader.setVisibility(View.GONE);
+            mSwipeRefreshLayout.setRefreshing(false);
+            showNoInternetConnection(true);
+            //showError(getString(R.string.generic_internet_error_message));
+        }
+
+    }
+
+    private void getBorrowingsObject(Callback<String> getBorrowingsCallback) {
+        Call<String> getborrowings = RetrofitBuild.getBorrowingsService(getViewContext())
+                .getBorrowingsCall(sessionid,
+                        imei,
+                        authcode,
+                        userid,
+                        borrowerid,
+                        String.valueOf(year), String.valueOf(month));
+        getborrowings.enqueue(getBorrowingsCallback);
+    }
+
+    private final Callback<String> getBorrowingsSession = new Callback<String>() {
+
+        @Override
+        public void onResponse(Call<String> call, Response<String> response) {
+            mLlLoader.setVisibility(View.GONE);
+            mSwipeRefreshLayout.setRefreshing(false);
+
+            String responseData = response.body();
+            if (!responseData.isEmpty()) {
+                if (responseData.equals("001")) {
+                    showToast("Session: Invalid session.", GlobalToastEnum.NOTICE);
+                } else if (responseData.equals("error")) {
+                    showToast("Session: Something went wrong. Please try again.", GlobalToastEnum.NOTICE);
+                } else if (responseData.contains("<!DOCTYPE html>")) {
+                    showToast("Session: Something went wrong. Please try again.", GlobalToastEnum.NOTICE);
+                } else {
+                    db.truncateTable(db, DatabaseHandler.BORROWINGS);
+                    List<Transaction> borrowings = new ArrayList<>();
+
+                    try {
+                        JSONArray jsonArr = new JSONArray(response.body());
+                        if (jsonArr.length() > 0) {
+                            for (int i = 0; i < jsonArr.length(); i++) {
+                                JSONObject jsonObj = jsonArr.getJSONObject(i);
+                                String transactionno = jsonObj.getString("TransactionNo");
+                                String datecompleted = jsonObj.getString("DateTimeCompleted");
+                                String totalvoucheramount = jsonObj.getString("TotalVoucherAmount");
+                                String totalnumofvoucher = jsonObj.getString("TotalNoOfVouchers");
+                                DecimalFormat formatter = new DecimalFormat("#,###,##0.00");
+                                totalvoucheramount = formatter.format(Double.parseDouble(totalvoucheramount));
+
+                                //insert local
+                                borrowings.add(new Transaction(transactionno, datecompleted, totalvoucheramount, totalnumofvoucher));
+                            }
+                            for (Transaction item : borrowings) {
+                                db.insertBorrowingsData(db, item);
+                            }
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    updateList(db.getBorrowingsData(db));
+                }
+            } else {
+                mLlLoader.setVisibility(View.GONE);
+                mSwipeRefreshLayout.setRefreshing(false);
+                showNoInternetConnection(true);
+                showToast("Something went wrong. Please try again.", GlobalToastEnum.NOTICE);
+            }
+        }
+
+        @Override
+        public void onFailure(Call<String> call, Throwable t) {
+            mLlLoader.setVisibility(View.GONE);
+            mSwipeRefreshLayout.setRefreshing(false);
+            showNoInternetConnection(true);
+            showToast("Something went wrong. Please try again.", GlobalToastEnum.NOTICE);
+        }
+    };
+
+    @Override
+    public void onRefresh() {
+        db.truncateTable(db, DatabaseHandler.BORROWINGS);
+        Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container_body, new BorrowingsFragment())
+                .commit();
+    }
+
+
+    private void updateList(List<Transaction> data) {
+        if (data.size() > 0) {
+            mSwipeRefreshLayout.setEnabled(true);
+            emptyLayout.setVisibility(View.GONE);
+            emptyvoucherfilter.setVisibility(View.GONE);
+            logowatermarklayout.setVisibility(View.VISIBLE);
+            pagetitle.setVisibility(View.VISIBLE);
+            mBtnMore.setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.VISIBLE);
+            mAdapter.setBorrowingsData(data);
+
+        } else {
+            mSwipeRefreshLayout.setEnabled(false);
+            logowatermarklayout.setVisibility(View.GONE);
+            pagetitle.setVisibility(View.GONE);
+            mBtnMore.setVisibility(View.GONE);
+            recyclerView.setVisibility(View.GONE);
+            if (isyearselected && ismonthselected) {
+                emptyvoucherfilter.setVisibility(View.VISIBLE);
+            } else {
+                emptyLayout.setVisibility(View.VISIBLE);
+            }
+        }
+    }
+    private void showNoInternetConnection(boolean isShow) {
+        if (isShow) {
+            emptyLayout.setVisibility(View.GONE);
+            emptyvoucherfilter.setVisibility(View.GONE);
+            nointernetconnection.setVisibility(View.VISIBLE);
+        } else {
+            emptyLayout.setVisibility(View.GONE);
+            emptyvoucherfilter.setVisibility(View.GONE);
+            nointernetconnection.setVisibility(View.GONE);
+        }
+    }
+
+    private void hidealllayouts() {
+            emptyLayout.setVisibility(View.GONE);
+            emptyvoucherfilter.setVisibility(View.GONE);
+            nointernetconnection.setVisibility(View.GONE);
+    }
+
+
+    private RecyclerView.OnScrollListener scrollListener = new RecyclerView.OnScrollListener() {
+        @Override
+        public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+            super.onScrollStateChanged(recyclerView, newState);
+        }
+
+        @Override
+        public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+            super.onScrolled(recyclerView, dx, dy);
+
+            if (db.getBorrowingsData(db).size() > 0) {
+                mBtnMore.setVisibility(View.VISIBLE);
+                if (isyearselected && ismonthselected) {
+                    mBtnMore.setText("FILTER OPTIONS");
+                } else {
+                    mBtnMore.setText("VIEW ARCHIVE");
+                }
+            }
+
+        }
+    };
+
+    private void showViewArchiveDialog() {
+        mDialog = new MaterialDialog.Builder(getContext())
+                .customView(R.layout.pop_filtering, false)
+                .cancelable(true)
+                .backgroundColorRes(R.color.zxing_transparent)
+                .show();
+
+        mDialog.getWindow().setBackgroundDrawableResource(R.color.zxing_transparent);
+
+        View dialog = mDialog.getCustomView();
+
+        filterwrap = dialog.findViewById(R.id.filterwrap);
+        optionwrap = dialog.findViewById(R.id.optionwrap);
+        editsearches = dialog.findViewById(R.id.editsearches);
+        clearsearch = dialog.findViewById(R.id.clearsearch);
+        spinType = dialog.findViewById(R.id.month);
+        spinType1 = dialog.findViewById(R.id.year);
+        popfilter = dialog.findViewById(R.id.filter);
+        popcancel = dialog.findViewById(R.id.cancel);
+
+        filterwrap.setVisibility(View.VISIBLE);
+        optionwrap.setVisibility(View.GONE);
+
+        createMonthSpinnerAddapter();
+        createYearSpinnerAddapter();
+
+//        spinType.setVisibility(View.GONE);
+        spinType1.setOnItemSelectedListener(yearItemListener);
+        spinType.setOnItemSelectedListener(monthItemListener);
+
+        popfilter.setOnClickListener(this);
+        popcancel.setOnClickListener(this);
+    }
+
+    private void showFilterOptionDialog() {
+        mDialog = new MaterialDialog.Builder(getContext())
+                .customView(R.layout.pop_filtering, false)
+                .cancelable(true)
+                .backgroundColorRes(R.color.zxing_transparent)
+                .show();
+
+        mDialog.getWindow().setBackgroundDrawableResource(R.color.zxing_transparent);
+
+        View dialog = mDialog.getCustomView();
+
+        filterwrap = dialog.findViewById(R.id.filterwrap);
+        optionwrap = dialog.findViewById(R.id.optionwrap);
+        editsearches = dialog.findViewById(R.id.editsearches);
+        clearsearch = dialog.findViewById(R.id.clearsearch);
+        spinType = dialog.findViewById(R.id.month);
+        spinType1 = dialog.findViewById(R.id.year);
+        popfilter = dialog.findViewById(R.id.filter);
+        popcancel = dialog.findViewById(R.id.cancel);
+
+        createMonthSpinnerAddapter();
+        createYearSpinnerAddapter();
+
+        filterwrap.setVisibility(View.GONE);
+        optionwrap.setVisibility(View.VISIBLE);
+
+        spinType.setOnItemSelectedListener(monthItemListener);
+        spinType1.setOnItemSelectedListener(yearItemListener);
+
+        clearsearch.setOnClickListener(this);
+        editsearches.setOnClickListener(this);
+        popfilter.setOnClickListener(this);
+        popcancel.setOnClickListener(this);
+    }
+
+    //create spinner for month list
+    void createMonthSpinnerAddapter() {
+        try {
+            ArrayAdapter<String> monthadapter;
+            ArrayList<String> spinmonthlist = new ArrayList<String>();
+            spinmonthlist = monthlist();
+            monthadapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, spinmonthlist);
+            monthadapter.setDropDownViewResource(R.layout.spinner_arrow);
+            spinType.setAdapter(monthadapter);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    //create spinner for year list
+    private void createYearSpinnerAddapter() {
+        try {
+            ArrayAdapter<String> yearadapter;
+            yearadapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, yearList());
+            yearadapter.setDropDownViewResource(R.layout.spinner_arrow);
+            spinType1.setAdapter(yearadapter);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private AdapterView.OnItemSelectedListener yearItemListener = new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            try {
+                String spinyear = parent.getItemAtPosition(position).toString();
+                if (!spinyear.equals("Select Year")) {
+                    year = Integer.parseInt(parent.getItemAtPosition(position).toString());
+                    createMonthSpinnerAddapter();
+                    isyearselected = true;
+                } else {
+                    isyearselected = false;
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+            isyearselected = false;
+        }
+    };
+
+    private AdapterView.OnItemSelectedListener monthItemListener = new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            try {
+                if (position > 0) {
+                    String monthstring = parent.getItemAtPosition(position).toString();
+                    Calendar cal = Calendar.getInstance();
+                    cal.setTime(new SimpleDateFormat("MMM").parse(monthstring));
+                    month = cal.get(Calendar.MONTH) + 1;
+                    ismonthselected = month > 0;
+                } else {
+                    ismonthselected = false;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+            ismonthselected = false;
+        }
+    };
+
+    //create year list
+    private ArrayList<String> yearList() {
+
+        ArrayList<String> xVals = new ArrayList<String>();
+        xVals.add("Select Year");
+        for (int i = registrationyear; i <= currentyear; i++) {
+            xVals.add(Integer.toString(i));
+        }
+
+        return xVals;
+    }
+
+    //make the number month to month name
+    private ArrayList<String> monthlist() {
+
+
+        int[] months = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+        ArrayList<String> xVals = new ArrayList<String>();
+        xVals.add("Select Month");
+
+        for (int i = 0; i < months.length; i++) {
+            Calendar cal = Calendar.getInstance();
+            SimpleDateFormat month_date = new SimpleDateFormat("MMMM");
+            cal.set(Calendar.MONTH, months[i]);
+            String month_name = month_date.format(cal.getTime());
+            if (registrationyear == year && year != currentyear) { //meaning we need to filter the month range of the borrower
+                if (i >= registrationmonth - 1 && (registrationyear - year) == 0) {
+                    xVals.add(month_name);
+                }
+            } else if (year == currentyear) {
+                if (i <= currentmonth - 1) {
+                    xVals.add(month_name);
+                }
+            } else {
+                xVals.add(month_name);
+            }
+        }
+
+        return xVals;
+    }
+
+    @Override
+    public void onClick(@NonNull View v) {
+        switch (v.getId()) {
+            case R.id.viewarchive: {
+                showViewArchiveDialog();
+                break;
+            }
+            case R.id.cancel: {
+                mDialog.dismiss();
+                break;
+            }
+            case R.id.filter: {
+                if (isyearselected && ismonthselected) {
+                    if (mBtnMore.getText().equals("VIEW ARCHIVE")) {
+                        mBtnMore.setText("FILTER OPTIONS");
+                    }
+                    getSession();
+                    mDialog.dismiss();
+                } else {
+                    ((BaseActivity) getActivity()).showToast("Please select a date.", GlobalToastEnum.WARNING);
+                }
+                break;
+            }
+            case R.id.btn_more: {
+                if (mBtnMore.getText().equals("VIEW ARCHIVE"))
+                    showViewArchiveDialog();
+                else
+                    showFilterOptionDialog();
+                break;
+            }
+            case R.id.editsearches: {
+                filterwrap.setVisibility(View.VISIBLE);
+                optionwrap.setVisibility(View.GONE);
+                break;
+            }
+            case R.id.clearsearch: {
+                mDialog.dismiss();
+                db.truncateTable(db, DatabaseHandler.BORROWINGS);
+                Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.container_body, new BorrowingsFragment())
+                        .commit();
+                break;
+            }
+            case R.id.filteroption: {
+                showFilterOptionDialog();
+                break;
+            }
+            case R.id.refreshnointernet:
+            case R.id.refresh:
+                db.truncateTable(db, DatabaseHandler.BORROWINGS);
+                Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.container_body, new BorrowingsFragment())
+                        .commit();
+                break;
+
+        }
+    }
+
+    /*
+     * SECURITY UPDATE
+     * AS OF
+     * OCTOBER 2019
+     * */
+    private void getBorrowingsV2() {
+
+            if (CommonFunctions.getConnectivityStatus(getViewContext()) > 0) {
+
+                LinkedHashMap<String, String> parameters = new LinkedHashMap<>();
+                parameters.put("imei", imei);
+                parameters.put("userid", userid);
+                parameters.put("borrowerid", borrowerid);
+                parameters.put("year", String.valueOf(year));
+                parameters.put("month", String.valueOf(month));
+                parameters.put("devicetype", CommonVariables.devicetype);
+
+                LinkedHashMap indexAuthMapObject;
+                indexAuthMapObject = CommonFunctions.getIndexAndAuthIDWithSession(getViewContext(), parameters, sessionid);
+                String jsonString = new Gson().toJson(indexAuthMapObject, Map.class);
+                index = CommonFunctions.parseJSON(String.valueOf(jsonString), "index");
+
+                parameters.put("index", index);
+                String paramJson = new Gson().toJson(parameters, Map.class);
+
+                //ENCRYPTION
+                authenticationid = CommonFunctions.parseJSON(jsonString, "authenticationid");
+                keyEncryption = CommonFunctions.getSha1Hex(authenticationid + sessionid + "getBorrowingsV2");
+                param = CommonFunctions.encryptAES256CBC(keyEncryption, String.valueOf(paramJson));
+
+                getBorrowingsV2(getBorrowingsV2Session);
+
+            } else {
+                mSwipeRefreshLayout.setEnabled(false);
+                mLlLoader.setVisibility(View.GONE);
+                mSwipeRefreshLayout.setRefreshing(false);
+                showNoInternetConnection(true);
+                //showError(getString(R.string.generic_internet_error_message));
+            }
+
+    }
+
+    private void getBorrowingsV2(Callback<GenericResponse> getBorrowingsCallback) {
+        Call<GenericResponse> getborrowings = RetrofitBuilder.getTransactionsV2APIService(getViewContext())
+                .getBorrowings(authenticationid,
+                        sessionid,
+                        param);
+        getborrowings.enqueue(getBorrowingsCallback);
+    }
+
+    private final Callback<GenericResponse> getBorrowingsV2Session = new Callback<GenericResponse>() {
+
+        @Override
+        public void onResponse(Call<GenericResponse> call, Response<GenericResponse> response) {
+            mLlLoader.setVisibility(View.GONE);
+            mSwipeRefreshLayout.setRefreshing(false);
+            ResponseBody errorBody = response.errorBody();
+
+            if (errorBody == null) {
+                String decryptedMessage = CommonFunctions.decryptAES256CBC(keyEncryption, response.body().getMessage());
+                switch (response.body().getStatus()) {
+                    case "000":
+
+                        String decryptedData = CommonFunctions.decryptAES256CBC(keyEncryption, response.body().getData());
+
+                        if (decryptedMessage.equalsIgnoreCase("error") || decryptedData.equalsIgnoreCase("error")) {
+                            showErrorToast();
+                        } else {
+                            db.truncateTable(db, DatabaseHandler.BORROWINGS);
+                            List<Transaction> borrowings = new ArrayList<>();
+                            try {
+                                JSONArray jsonArr = new JSONArray(decryptedData);
+                                if (jsonArr.length() > 0) {
+                                    for (int i = 0; i < jsonArr.length(); i++) {
+                                        JSONObject jsonObj = jsonArr.getJSONObject(i);
+                                        String transactionno = jsonObj.getString("TransactionNo");
+                                        String datecompleted = jsonObj.getString("DateTimeCompleted");
+                                        String totalvoucheramount = jsonObj.getString("TotalVoucherAmount");
+                                        String totalnumofvoucher = jsonObj.getString("TotalNoOfVouchers");
+                                        DecimalFormat formatter = new DecimalFormat("#,###,##0.00");
+                                        totalvoucheramount = formatter.format(Double.parseDouble(totalvoucheramount));
+
+                                        //insert local
+                                        borrowings.add(new Transaction(transactionno, datecompleted, totalvoucheramount, totalnumofvoucher));
+                                    }
+                                    for (Transaction item : borrowings) {
+                                        db.insertBorrowingsData(db, item);
+                                    }
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            updateList(db.getBorrowingsData(db));
+
+                        }
+                        break;
+                    default:
+                        if (CommonFunctions.decryptAES256CBC(keyEncryption, response.body().getData()).contains("<!DOCTYPE html>")) {
+                            showToast("Something went wrong. Please try again.", GlobalToastEnum.NOTICE);
+                        } else if (response.body().getStatus().equalsIgnoreCase("error")) {
+                            showToast("Something went wrong. Please try again.", GlobalToastEnum.NOTICE);
+                        } else if (response.body().getStatus().equals("003") || response.body().getStatus().equals("002")) {
+                            showAutoLogoutDialog(getString(R.string.logoutmessage));
+                        } else {
+                            showErrorToast(decryptedMessage);
+                        }
+                        break;
+                }
+
+            } else {
+                assert response.body() != null;
+                mLlLoader.setVisibility(View.GONE);
+                mSwipeRefreshLayout.setRefreshing(false);
+                showNoInternetConnection(true);
+                mSwipeRefreshLayout.setEnabled(false);
+                showToast("Something went wrong. Please try again.", GlobalToastEnum.NOTICE);
+            }
+        }
+
+        @Override
+        public void onFailure(Call<GenericResponse> call, Throwable t) {
+            mLlLoader.setVisibility(View.GONE);
+            mSwipeRefreshLayout.setRefreshing(false);
+            mSwipeRefreshLayout.setEnabled(false);
+            showNoInternetConnection(true);
+            showToast("Something went wrong. Please try again.", GlobalToastEnum.NOTICE);
+        }
+    };
+
+
+}
+

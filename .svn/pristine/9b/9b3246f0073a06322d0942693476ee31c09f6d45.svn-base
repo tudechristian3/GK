@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wrap"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorwhite"
+    android:orientation="vertical"
+    android:paddingBottom="5dip"
+    android:paddingLeft="10dip">
+
+    <TextView
+        android:id="@+id/transactionnolbl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingBottom="4dip"
+        android:paddingLeft="8dip"
+        android:paddingTop="8dip"
+        android:text="TOTAL AMOUNT DUE"
+        android:textSize="12dip" />
+
+    <TextView
+        android:id="@+id/transactionno"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dip"
+        android:paddingLeft="8dip"
+        android:paddingTop="8dip"
+        android:text="90903213"
+        android:textAppearance="@style/roboto.bold"
+        android:textSize="16dip"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/totalamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/transactionnolbl"
+        android:paddingBottom="8dip"
+        android:paddingLeft="8dip"
+        android:paddingTop="2dip"
+        android:text="100.00"
+        android:textAppearance="@style/roboto.bold"
+        android:textColor="@color/colorblack"
+        android:textSize="20dip"
+        android:textStyle="bold" />/
+
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalamount"
+        android:paddingBottom="6dip"
+        android:paddingLeft="8dip"
+        android:text="Payment due on Nov 15 2016"
+        android:textAppearance="@style/roboto.bold"
+        android:textColor="@color/color_676767"
+        android:textSize="14dip"
+        android:textStyle="bold" />
+
+    <!--<TextView android:id="@+id/arrow"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@mipmap/arrow2"-->
+    <!--android:layout_marginTop="25dp"-->
+    <!--android:layout_gravity="left"/>-->
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="left"
+        android:layout_marginTop="25dp"
+        android:src="@mipmap/arrow2" />
+
+
+</RelativeLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Order Details"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/buttons"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/whitePrimary"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Vouchers :"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textColor="@color/colorsilver" />
+
+                        <TextView
+                            android:id="@+id/txvTotalVouchers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/colorTextGrey" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Amount :"
+                            android:textAppearance="@style/roboto.bold"
+                            android:textColor="@color/colorsilver" />
+
+                        <TextView
+                            android:id="@+id/txvTotalAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/roboto.regular"
+                            android:textColor="@color/colorTextGrey" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_discountcontainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Discount :"
+                                android:textAppearance="@style/roboto.bold"
+                                android:textColor="@color/colorsilver" />
+
+                            <TextView
+                                android:id="@+id/txvDiscount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/roboto.regular"
+                                android:textColor="@color/colorTextGrey" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:background="@color/lightgray" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Amount to Pay :"
+                                android:textAppearance="@style/roboto.bold"
+                                android:textColor="@color/colorsilver" />
+
+                            <TextView
+                                android:id="@+id/txvTotalAmountToPay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end|right"
+                                android:textAppearance="@style/roboto.bold"
+                                android:textColor="@color/colorTextGrey" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Voucher Details"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/buttons"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Payment Options"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/buttons"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/whitePrimary"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupPaymentOptions"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_PCP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:checked="true"
+                                android:drawableTop="@drawable/eghl_logo_payment_channel"
+                                android:padding="5dp"
+                                android:text="Payment Channel"
+                                android:textAppearance="@style/roboto.regular"
+                                android:textColor="@color/colorsilver"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_CC"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:checked="false"
+                                android:drawableTop="@drawable/eghl_logo_payment_visa_mastercard"
+                                android:padding="5dp"
+                                android:text="Visa/Mastercard"
+                                android:textAppearance="@style/roboto.regular"
+                                android:textColor="@color/colorsilver"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:checked="false"
+                                android:drawableTop="@drawable/eghl_logo_payment_bancnet"
+                                android:padding="5dp"
+                                android:text="BancNet"
+                                android:textAppearance="@style/roboto.regular"
+                                android:textColor="@color/colorsilver"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <Button
+                        android:id="@+id/btnContinue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button"
+                        android:text="CONTINUE"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/roboto.bold"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <include layout="@layout/loader" />
+
+    </FrameLayout>
+
+</LinearLayout>
